@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/css/output.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/fav.ico"
+      type="image/x-icon"
+    />
+    <title>Potfolio-Armel Demanou</title>
+  </head>
+  <body class="bg-black">
+    <header
+      id="header"
+      class="bg-black px-6 py-4 text-white fixed top-0 left-0 right-0 z-10 transition-shadow duration-300"
+    >
+      <nav class="flex items-center justify-between">
+        <img
+          src="./assets/images/logo_white.png"
+          alt="logo"
+          class="h-12 w-auto"
+        />
+
+        <ul class="hidden md:flex space-x-6 font-bold text-sm">
+          <li><a href="#Home" class="link">Home</a></li>
+          <li><a href="#Services" class="link">About</a></li>
+          <li><a href="#About" class="link">Services</a></li>
+          <li><a href="#" class="link">Portfolio</a></li>
+          <li><a href="#" class="link">Resume</a></li>
+          <li><a href="#" class="link">Pricing</a></li>
+          <li><a href="#" class="link">Blog</a></li>
+          <li><a href="#" class="link">Contact</a></li>
+        </ul>
+
+        <ul class="hidden md:flex space-x-4 items-center">
+          <li
+            class="icon h-9 w-9 flex items-center justify-center rounded-full"
+          >
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          </li>
+          <li
+            class="icon h-9 w-9 flex items-center justify-center rounded-full"
+          >
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+          <li
+            class="icon h-9 w-9 flex items-center justify-center rounded-full"
+          >
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          </li>
+          <li
+            class="icon h-9 w-9 flex items-center justify-center rounded-full"
+          >
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+        </ul>
+
+        <button
+          id="burger"
+          class="md:hidden text-3xl focus:outline-none text-blue-600"
+        >
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </nav>
+
+      <!-- Menu Mobile -->
+      <div
+        id="mobileMenu"
+        class="hidden flex-col mt-4 space-y-4 md:hidden bg-neutral-800 right-0 left-0 px-[30px] py-[20px] absolute"
+      >
+        <a href="#" class="block">Home</a>
+        <a href="#" class="block">About</a>
+        <a href="#" class="block">Services</a>
+        <a href="#" class="block">Portfolio</a>
+        <a href="#" class="block">Resume</a>
+        <a href="#" class="block">Pricing</a>
+        <a href="#" class="block">Blog</a>
+        <a href="#" class="block">Contact</a>
+
+        <!-- icon su tel -->
+        <div class="flex space-x-4 pt-4">
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </div>
+      </div>
+    </header>
+
+    <main class=" ">
+      <section
+        id="Home"
+        class="bg-black text-white px-[50px] py-[100px] flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="max-w-xl">
+          <p class="text-[#5037F7] uppercase font-semibold tracking-wide mb-4">
+            Welcome to my world
+          </p>
+          <h1
+            class="lg:text-[60px] md:text-[40px] sm:text-[25px] text-[25px] font-bold leading-tight"
+          >
+            I’m Armel Demanou<br />
+            A <span id="typed" class="text-[#5037F7]"></span>
+          </h1>
+          <p class="text-gray-400 mt-6">
+            A personal portfolio is a collection of your work, achievements, and
+            skills that highlights your abilities and professional growth.
+          </p>
+
+          <p class="mt-6 mb-3 font-medium">Find me on</p>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
+            >
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a
+              href="#"
+              class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
+            >
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a
+              href="#"
+              class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
+            >
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a
+              href="#"
+              class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
+            >
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="relative mt-10 md:mt-0 w-[450px] p-5 bg-neutral-900 rounded-lg transition-transform duration-300 overflow-hidden"
+        >
+          <img src="./assets/images/Armel-D.jpg" alt="Armel Demanou" class="" />
+          <p
+            class="absolute right-[40px] top-1/3 -translate-y-1/2 font-bold t text-[20px] text-white"
+          >
+            Armel Demanou
+          </p>
+        </div>
+      </section>
+
+      <!-- barre de progres  -->
+      <div id="progressContainer" class="fixed bottom-6 right-6 z-50">
+        <svg class="w-14 h-14 transform -rotate-90">
+          <circle
+            cx="28"
+            cy="28"
+            r="25"
+            stroke="#1e3a8a"
+            stroke-width="4"
+            fill="none"
+            stroke-linecap="round"
+            opacity="0.3"
+          ></circle>
+          <circle
+            id="progressCircle"
+            cx="28"
+            cy="28"
+            r="25"
+            stroke="#1e3a8a"
+            stroke-width="4"
+            fill="none"
+            stroke-linecap="round"
+            stroke-dasharray="157"
+            stroke-dashoffset="157"
+          ></circle>
+        </svg>
+        <button
+          onclick="scrollToTop()"
+          class="absolute inset-0 flex items-center justify-center text-white"
+        >
+          ↑
+        </button>
+      </div>
+      <!-- message -->
+      <div
+        class="flex items-center justify-center text-white h-[54px] w-[54px] bg-[#5037F7] rounded-full fixed z-50 bottom-24 right-6 cursor-pointer"
+        id="message"
+      >
+        <ion-icon
+          name="chatbubble-ellipses-outline"
+          class="font-bold text-2xl"
+        ></ion-icon>
+      </div>
+      <div
+        class="w-[350px] shadow-lg p rounded-lg z-50 right-7 bottom-[160px] fixed bg-black px-[20px] py-[20px] hidden"
+        id="page"
+      >
+        <div class="bg-blue-600 p-3 text-white rounded-t-lg mb-[20px]">
+          Let's chat with me? -Online
+        </div>
+        <p class="text-center mb-[30px] text-gray-300">
+          Please fill out the form below to start chatting with me directy.
+        </p>
+        <div class="text-center">
+          <form
+            action=""
+            method="post"
+            class="w-full place-items-center p-4 border border-gray-300 rounded-lg"
+          >
+            <div class="mb-[10px] w-full">
+              <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                class="text-white border bg-transparent border-gray-300 focus:outline-none focus:border-none w-full focus:border-blue-500 focus:ring-2 focus:ring-blue0 p-2"
+              />
+            </div>
+
+            <div class="mb-[10px] w-full">
+              <input
+                type="email"
+                placeholder="Email"
+                id="email"
+                class="text-white border bg-transparent border-gray-300 focus:outline-none w-full focus:border-none focus:border-blue-500 focus:ring-2 focus:ring-blue0 p-2"
+              />
+            </div>
+            <div class="mb-[10px] w-full">
+              <textarea
+                name="message"
+                id="message"
+                cols="23"
+                rows="2"
+                placeholder="Your message"
+                class="border text-white bg-transparent w-full focus:border-none border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue0 p-2"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="bg-[#5037F7] text-white font-semibold p-3 rounded-lg w-full"
+            >
+              Send message
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <section class="bg-black text-white py-16 px-4" id="Services">
+        <div class="text-center mb-10">
+          <p class="text-[#5037F7] tracking-widest text-sm font-bold">
+            WHAT I DO
+          </p>
+          <h2
+            class="lg:text-[45px] md:text-[35px] sm:text-2xl text-2xl font-bold"
+          >
+            What I Provide For You
+          </h2>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div
+            class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
+              >
+                <ion-icon
+                  name="code-slash-outline"
+                  class="text-2xl font-bold"
+                ></ion-icon>
+              </div>
+              <h3 class="ml-4 text-lg font-bold">Ui/Ux Design</h3>
+            </div>
+            <p class="text-gray-400">
+              Each one showcases my approach and dedication to detail,
+              creativity Each one showcases my approach and dedication to
+              detail, creativity
+            </p>
+          </div>
+
+          <div
+            class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
+              >
+                <ion-icon name="globe-outline" class="text-2xl"></ion-icon>
+              </div>
+              <h3 class="ml-4 text-lg font-bold">Web Development</h3>
+            </div>
+            <p class="text-gray-400">
+              Business consulting consul us to a provide expert advice
+              businesses Each one showcases my approach and dedication to
+              detail, creativity
+            </p>
+          </div>
+
+          <div
+            class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
+              >
+                <ion-icon name="briefcase-outline" class="text-2xl"></ion-icon>
+              </div>
+              <h3 class="ml-4 text-lg font-bold">Business Solutions</h3>
+            </div>
+            <p class="text-gray-400">
+              Each one showcases my approach and dedication to detail,
+              creativity Each one showcases my approach and dedication to
+              detail, creativity
+            </p>
+          </div>
+
+          <div
+            class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
+              >
+                <ion-icon name="people-outline" class="text-2xl"></ion-icon>
+              </div>
+              <h3 class="ml-4 text-lg font-bold">Profit Partners</h3>
+            </div>
+            <p class="text-gray-400">
+              Business consulting consul us to a provide expert advice
+              businesses Each one showcases my approach and dedication to
+              detail, creativity
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-black text-white py-16 px-[50px]" id="About">
+        <div class="grid lg:grid-cols-2 gap-10 items-center mb-[60px]">
+          <div
+            class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out"
+          >
+            <div
+              class="lg:h-[350px] lg:w-[350px] md:w-[300px] md:h-[300px] sm:w-[200px] sm:h-[200px] h-[200px] w-[200px] rounded-full bg-blue-700 relative"
+            ></div>
+
+            <div
+              class="bg-transparent/30 backdrop-blur-md lg:p-20 p-10 rounded-2xl absolute z-10 lg:-mt-[450px] -mt-[300px] lg:ml-[100px] shadow-lg"
+            >
+              <h2 class="text-6xl font-bold">
+                <span id="experience-count">0</span>+
+              </h2>
+              <p class="text-2xl font-semibold mt-2">Years Of Experience</p>
+            </div>
+
+            <div
+              class="bg-transparent/30 backdrop-blur-md lg:p-10 p-3 rounded-2xl absolute z-10 lg:-mt-[160px] -mt-[100px] lg:ml-[100px] flex items-center w-[300px]"
+            >
+              <div
+                class="h-12 w-12 rounded-full bg-transparent border flex items-center justify-center"
+              >
+                <ion-icon name="bag-outline"></ion-icon>
+              </div>
+              <div>
+                <p class="text-2xl font-semibold mt-2 ml-4">UX/UI Design</p>
+                <h3>6 projects</h3>
+              </div>
+            </div>
+
+            <!-- <div></div> -->
+          </div>
+
+          <div class="space-y-6">
+            <h3
+              class="text-sm font-bold tracking-widest text-[#5037F7] scroll-fade opacity-0 translate-y-10"
+            >
+              ABOUT ME
+            </h3>
+            <h2
+              class="lg:text-[45px] md:text-[35px] sm:text-3xl text-3xl font-bold scroll-fade opacity-0 translate-y-10"
+            >
+              Boost Business Strategic Solutions with Us
+            </h2>
+            <p class="text-gray-400 scroll-fade opacity-0 translate-y-10">
+              Business consulting consultants provide expert advice and guide
+              businesses to help them improve their performance, efficiency, and
+              organization.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div
+                class="bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40"
+              >
+                <div class="flex items-center mb-4">
+                  <div
+                    class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
+                  >
+                    <ion-icon
+                      name="pricetags-outline"
+                      class="text-2xl"
+                    ></ion-icon>
+                  </div>
+                  <h4 class="font-bold text-lg text-[#5037F7] ml-4">
+                    Business Solutions
+                  </h4>
+                </div>
+                <p class="text-gray-400 mt-2">
+                  Each one showcases my approach and dedication to detail,
+                  creativity.
+                </p>
+              </div>
+              <div
+                class="bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40"
+              >
+                <div class="flex items-center mb-4">
+                  <div
+                    class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
+                  >
+                    <ion-icon
+                      name="notifications-outline"
+                      class="text-2xl"
+                    ></ion-icon>
+                  </div>
+                  <h4 class="font-bold text-lg text-[#5037F7] ml-4">
+                    Profit Partners
+                  </h4>
+                </div>
+                <p class="text-gray-400 mt-2">
+                  Business consulting provide expert advice businesses.
+                </p>
+              </div>
+            </div>
+
+            <button
+              class="bg-[#5037F7] font-bold text-white px-[30px] py-[20px] rounded-[50px]"
+            >
+              Read More About Me
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+        <div
+          class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out"
+        >
+          <div
+            class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 lg:gap-[50px] md:gap-[30px] gap-[30px]"
+          >
+            <div
+              class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
+            >
+              <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
+                <span id="experience-counts">0</span>K
+              </h2>
+              <p class="text-gray-300">Notre projet termine</p>
+            </div>
+            <div
+              class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
+            >
+              <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
+                <span id="experience-countss">0</span>K
+              </h2>
+              <p class="text-gray-300">Our Natural Products</p>
+            </div>
+            <div
+              class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
+            >
+              <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
+                <span id="experience-countsss">0</span>+
+              </h2>
+              <p class="text-gray-300">Clients Reviews</p>
+            </div>
+            <div
+              class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
+            >
+              <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
+                <span id="experience-countse">0</span>K+
+              </h2>
+              <p class="text-gray-300">our Satisfied Clients</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="lg:px-[50px] md:px-[30px] px-[30px] "
+      >
+        <div
+          class="py-[60px] px-[50px] rounded-lg transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 bg-neutral-900"
+        >
+          <h3 class="font-bold text-[#5037F7] mb-[30px] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out">MY SKILL</h3>
+
+          <h1
+            class="lg:text-[45px] md:text-[35px] text-3xl font-bold text-white mb-[30px] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out"
+          >
+            My Experts Areas Where I <br />
+            <br class="lg:block hidden" />
+            Gained Skill
+          </h1>
+
+          <p class="text-gray-300 mb-[25px] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out">
+            Business consulting consultants provide expert advice and guida busi
+            nesses to help them improve their performance, efficiency, and organ
+            izational Business consulting consultants provide
+          </p>
+
+          <div class="grid lg:grid-cols-2 gap-[20px] text-white">
+            <div class="p-[20px] rounded-lg bord border border-gray-500 scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out">
+              <div
+                class="h-[50px] w-[50px] rounded-full border border-gray-500 flex justify-center items-center mb-[30px]"
+              >
+                <ion-icon name="logo-foursquare" class="text-3xl"></ion-icon>
+              </div>
+              <h1 class="font-bold text-[20px] mb-[30px]">Framer</h1>
+
+              <p class="text-gray-300">
+                The personal protfolio category include websites or physic Your
+                Journey Your Story
+              </p>
+            </div>
+            <div class="p-[20px] rounded-lg bord border border-gray-500 scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out">
+              <div
+                class="h-[50px] w-[50px] rounded-full border border-gray-500 flex justify-center items-center mb-[30px]"
+              >
+                <ion-icon name="logo-web-component" class="text-3xl"></ion-icon>
+              </div>
+              <h1 class="font-bold text-[20px] mb-[30px]">Webflow</h1>
+              <p class="text-gray-300">
+                The personal protfolio category include websites or physic Your
+                Journey Your Story
+              </p>
+            </div>
+            <div class="p-[20px] rounded-lg bord border border-gray-500 scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out">
+              <div
+                class="h-[50px] w-[50px] rounded-full border border-gray-500 flex justify-center items-center mb-[30px]"
+              >
+                <ion-icon name="logo-figma" class="text-3xl"></ion-icon>
+              </div>
+              <h1 class="font-bold text-[20px] mb-[30px]">Figma</h1>
+              <p class="text-gray-300">
+                The personal protfolio category include websites or physic Your
+                Journey Your Story
+              </p>
+            </div>
+            <div class="p-[20px] rounded-lg border border-gray-500 scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out">
+              <div
+                class="h-[50px] w-[50px] rounded-full border border-gray-500 flex justify-center items-center mb-[30px]"
+              >
+                <ion-icon name="logo-wordpress" class="text-3xl"></ion-icon>
+              </div>
+              <h1 class="font-bold text-[20px] mb-[30px]">Wordpress</h1>
+              <p class="text-gray-300">
+                The personal protfolio category include websites or physic Your
+                Journey Your Story
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="title">
+
+        </div>
+
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.12"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./assets/js/index.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
