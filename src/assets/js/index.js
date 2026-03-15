@@ -213,3 +213,34 @@ message.addEventListener("click", () =>{
     page.classList.toggle("show");
     page.classList.toggle("hidden");
 });
+
+
+const form = document.getElementById("contactForm")
+const success = document.getElementById("successMsg")
+
+form.addEventListener("submit", async function(e){
+
+e.preventDefault()
+
+let data = new FormData(form)
+
+await fetch(form.action,{
+method:"POST",
+body:data,
+headers:{
+'Accept':'application/json'
+}
+})
+
+success.classList.remove("hidden")
+form.reset()
+
+});
+
+const closeBtn = document.getElementById("closeChat")
+// const page = document.getElementById("page")
+
+closeBtn.onclick = () =>{
+page.classList.add("hidden")
+}
+
