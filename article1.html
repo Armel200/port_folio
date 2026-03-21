@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimiser les performances React | Mon Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+<body class="bg-black text-gray-200 font-sans antialiased selection:bg-[#5037F7] selection:text-white">
+
+  <div class="max-w-[800px] mx-auto px-4 sm:px-6 pt-12 pb-6">
+    <a href="index.html#blog" class="inline-flex items-center gap-2 text-gray-400 hover:text-[#5037F7] transition-colors font-medium">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+      Retour au blog
+    </a>
+  </div>
+
+  <article class="max-w-[800px] mx-auto px-4 sm:px-6 pb-24">
+    
+    <header class="mb-10">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-[#5037F7] text-sm font-semibold rounded-full">Tutoriel</span>
+        <span class="text-gray-500 text-sm">07 Mars 2026 • 5 min de lecture</span>
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        Comment optimiser les performances de son application React ?
+      </h1>
+      
+      <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+        Découvrez les meilleures pratiques et astuces pour réduire le temps de chargement et offrir une expérience fluide à vos utilisateurs grâce au lazy loading et à la mémorisation.
+      </p>
+
+      <div class="rounded-2xl overflow-hidden border border-neutral-800 shadow-[0_0_30px_rgba(80,55,247,0.1)]">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Code React sur un écran" class="w-full h-[400px] object-cover" />
+      </div>
+    </header>
+
+    <div class="prose prose-invert prose-lg max-w-none text-gray-300">
+      <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. Comprendre le problème de rendu</h2>
+      <p class="mb-6 leading-relaxed">
+        Dans React, chaque fois que l'état (state) d'un composant change, ce composant et tous ses enfants sont rendus à nouveau. Si votre application grandit, cela peut entraîner des ralentissements importants, surtout si les composants enfants effectuent des calculs lourds.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. Utiliser React.memo pour éviter les rendus inutiles</h2>
+      <p class="mb-6 leading-relaxed">
+        L'outil le plus simple pour empêcher un composant enfant de se re-rendre si ses <em>props</em> n'ont pas changé est <code>React.memo</code>.
+      </p>
+      
+      <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4 mb-8 overflow-x-auto">
+<pre><code class="text-sm text-gray-300 font-mono">import React from 'react';
+
+const MonComposantLourd = React.memo(({ data }) => {
+  // Ce composant ne sera rendu que si 'data' change
+  return &lt;div&gt;{/* Rendu complexe ici */}&lt;/div&gt;;
+});
+
+export default MonComposantLourd;</code></pre>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. Le Lazy Loading avec React.lazy et Suspense</h2>
+      <p class="mb-6 leading-relaxed">
+        Ne chargez pas tout le code de votre application au démarrage. Utilisez le fractionnement de code (Code Splitting) pour ne charger les composants que lorsqu'ils sont nécessaires.
+      </p>
+
+      <blockquote class="border-l-4 border-[#5037F7] pl-5 py-2 my-8 bg-neutral-900/50 rounded-r-lg italic">
+        "Le code le plus rapide à exécuter est celui que le navigateur n'a pas besoin de télécharger."
+      </blockquote>
+
+      <h2 class="text-2xl font-bold text-white mt-10 mb-4">Conclusion</h2>
+      <p class="mb-6 leading-relaxed">
+        L'optimisation prématurée est la racine de tous les maux. Commencez toujours par construire une application fonctionnelle, puis utilisez des outils comme le Profiler React pour identifier les véritables goulots d'étranglement avant d'appliquer <code>useMemo</code>, <code>useCallback</code> ou <code>React.memo</code>.
+      </p>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-neutral-800 flex flex-wrap gap-3">
+      <span class="px-4 py-2 bg-neutral-900 border border-neutral-800 rounded-lg text-sm text-gray-400">#ReactJS</span>
+      <span class="px-4 py-2 bg-neutral-900 border border-neutral-800 rounded-lg text-sm text-gray-400">#WebPerf</span>
+      <span class="px-4 py-2 bg-neutral-900 border border-neutral-800 rounded-lg text-sm text-gray-400">#Frontend</span>
+    </div>
+
+  </article>
+</body>
+</html>

@@ -244,3 +244,37 @@ closeBtn.onclick = () =>{
 page.classList.add("hidden")
 }
 
+
+//new 
+
+document.getElementById("newsletterForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value;
+
+  try {
+    const response = await fetch("https://api.brevo.com/v3/contacts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "api-key": "TA_CLE_API_BREVO_ICI"  //clé Brevo
+      },
+      body: JSON.stringify({
+        email: email,
+        listIds: [12345]  //id de ta liste d'abonnés
+      })
+    });
+
+    if (response.ok) {
+      alert("Merci ! Vous êtes inscrit à la newsletter.");
+      document.getElementById("newsletterForm").reset();
+    } else {
+      const data = await response.json();
+      console.error(data);
+      alert("Erreur lors de l'inscription, réessayez.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Erreur lors de l'inscription, réessayez.");
+  }
+});

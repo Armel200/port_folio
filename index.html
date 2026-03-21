@@ -9,6 +9,7 @@
       href="./src/assets/images/fav.ico"
       type="image/x-icon"
     />
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Potfolio-Armel Demanou</title>
   </head>
@@ -29,7 +30,7 @@
           <li><a href="#Services" class="link">About</a></li>
           <li><a href="#About" class="link">Services</a></li>
           <li><a href="#projects" class="link">Portfolio</a></li>
-          <li><a href="#" class="link">Resume</a></li>
+          <li><a href="./resume.html" class="link">Resume</a></li>
           <li><a href="#" class="link">Pricing</a></li>
           <li><a href="#blog" class="link">Blog</a></li>
           <li><a href="#" class="link">Contact</a></li>
@@ -75,7 +76,7 @@
         <a href="#" class="block">About</a>
         <a href="#" class="block">Services</a>
         <a href="#" class="block">Portfolio</a>
-        <a href="#" class="block">Resume</a>
+        <a href="./resume.html" class="block">Resume</a>
         <a href="#" class="block">Pricing</a>
         <a href="#" class="block">Blog</a>
         <a href="#" class="block">Contact</a>
@@ -619,356 +620,362 @@
       </section>
 
       <section
-        id="projects"
-        class="bg-black text-white py-[120px] px-[20px] md:px-[40px] lg:px-[80px]"
-      >
-        <!-- TITLE -->
-        <div class="text-center mb-[80px]">
-          <p
-            class="text-[#5037F7] scroll-fade opacity-0 translate-y-10 t ease-out font-semibold uppercase tracking-widest mb-3"
-          >
-            Mes Projects
-          </p>
+  id="projects"
+  class="bg-black text-white py-[120px] px-[20px] md:px-[40px] lg:px-[80px]"
+>
+  <div class="text-center mb-[80px]">
+    <p
+      class="text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3"
+    >
+      Mes Projets
+    </p>
 
-          <h2
-            class="lg:text-[48px] scroll-fade opacity-0 translate-y-10 t ease-out md:text-[38px] text-[30px] font-bold mb-4"
-          >
-            Featured Projects
-          </h2>
+    <h2
+      class="lg:text-[48px] md:text-[38px] text-[30px] scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold mb-4"
+    >
+      Projets en vedette
+    </h2>
 
-          <p
-            class="text-gray-400 scroll-fade opacity-0 translate-y-10 t ease-out max-w-xl mx-auto"
-          >
-            A selection of projects showcasing my expertise in modern web and
-            mobile development using cutting-edge technologies.
-          </p>
-        </div>
+    <p
+      class="text-gray-400 scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out max-w-xl mx-auto"
+    >
+      Une sélection de projets mettant en valeur mon expertise dans le développement web et mobile moderne en utilisant les dernières technologies.
+    </p>
+  </div>
 
-        <!-- GRID -->
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
-          <!-- PROJECT CARD -->
-          <div
-            class="group scroll-fade opacity-0 translate-y-10 t ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] transition duration-500"
-          >
-            <!-- IMAGE -->
-            <img
-              src="./src/assets/images/Thumnail5.jpg"
-              class="w-full h-[250px] object-cover group-hover:scale-110 transition duration-700"
-            />
-
-            <!-- OVERLAY -->
-            <div
-              class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-center p-6"
-            >
-              <h3 class="text-xl font-semibold mb-2">SafeWatch360 Dashboard</h3>
-
-              <p class="text-gray-400 text-sm mb-4">Vue • Laravel • Tailwind</p>
-
-              <div class="flex gap-4">
-                <a
-                  href="https://github.com/yourproject"
-                  target="_blank"
-                  class="px-4 py-2 bg-neutral-800 rounded-lg text-sm hover:bg-[#5037F7] transition"
-                >
-                  Github
-                </a>
-
-                <a
-                  href="https://yourproject.com"
-                  target="_blank"
-                  class="px-4 py-2 bg-[#5037F7] rounded-lg text-sm hover:opacity-80 transition"
-                >
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROJECT CARD -->
-          <div
-            class="group scroll-fade opacity-0 translate-y-10 t ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] transition duration-500"
-          >
-            <img
-              src="./src/assets/images/hq720 (1).jpg"
-              class="w-full h-[250px] object-cover group-hover:scale-110 transition duration-700"
-            />
-
-            <div
-              class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-center p-6"
-            >
-              <h3 class="text-xl font-semibold mb-2">ArmelShop Ecommerce</h3>
-
-              <p class="text-gray-400 text-sm mb-4">Laravel • Vue • API</p>
-
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="px-4 py-2 bg-neutral-800 rounded-lg text-sm hover:bg-[#5037F7]"
-                >
-                  Github
-                </a>
-
-                <a
-                  href="#"
-                  class="px-4 py-2 bg-[#5037F7] rounded-lg text-sm hover:opacity-80"
-                >
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROJECT CARD -->
-          <div
-            class="group scroll-fade opacity-0 translate-y-10 t ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] transition duration-500"
-          >
-            <img
-              src="./src/assets/images/dacmag.png"
-              class="w-full h-[250px] object-cover group-hover:scale-110 transition duration-700"
-            />
-
-            <div
-              class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-center p-6"
-            >
-              <h3 class="text-xl font-semibold mb-2">Flutter Mobile App</h3>
-
-              <p class="text-gray-400 text-sm mb-4">Flutter • REST API</p>
-
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="px-4 py-2 bg-neutral-800 rounded-lg text-sm hover:bg-[#5037F7]"
-                >
-                  Github
-                </a>
-
-                <a
-                  href="#"
-                  class="px-4 py-2 bg-[#5037F7] rounded-lg text-sm hover:opacity-80"
-                >
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- PROJECT CARD -->
-          <div
-            class="group scroll-fade opacity-0 translate-y-10 t ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] transition duration-500"
-          >
-            <img
-              src="./src/assets/images/plage.webp"
-              class="w-full h-[250px] object-cover group-hover:scale-110 transition duration-700"
-            />
-
-            <div
-              class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-center p-6"
-            >
-              <h3 class="text-xl font-semibold mb-2">Flutter Mobile App</h3>
-
-              <p class="text-gray-400 text-sm mb-4">Flutter • REST API</p>
-
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="px-4 py-2 bg-neutral-800 rounded-lg text-sm hover:bg-[#5037F7]"
-                >
-                  Github
-                </a>
-
-                <a
-                  href="#"
-                  class="px-4 py-2 bg-[#5037F7] rounded-lg text-sm hover:opacity-80"
-                >
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- PROJECT CARD -->
-          <div
-            class="group scroll-fade opacity-0 translate-y-10 t ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] transition duration-500"
-          >
-            <img
-              src="./src/assets/images/resto.webp"
-              class="w-full h-[250px] object-cover group-hover:scale-110 transition duration-700"
-            />
-
-            <div
-              class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-center p-6"
-            >
-              <h3 class="text-xl font-semibold mb-2">Flutter Mobile App</h3>
-
-              <p class="text-gray-400 text-sm mb-4">Flutter • REST API</p>
-
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="px-4 py-2 bg-neutral-800 rounded-lg text-sm hover:bg-[#5037F7]"
-                >
-                  Github
-                </a>
-
-                <a
-                  href="#"
-                  class="px-4 py-2 bg-[#5037F7] rounded-lg text-sm hover:opacity-80"
-                >
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-     <section class="bg-black min-h-screen py-12 text-gray-200" id="blog">
-  <div class="max-w-[1400px] rounded-3xl   mx-auto px-4 sm:px-6 lg:px-8 bg-neutral-900 w-full py-4">
+  <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
     
-    <!-- Titre -->
-    <h1 class="text-4xl scroll-fade opacity-0 translate-y-10 t ease-out font-bold text-white mb-10 text-center">
-      Blog
-    </h1>
+    <div
+      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
+    >
+      <img
+        src="./src/assets/images/Thumnail5.jpg"
+        alt="SafeWatch360 Dashboard Interface"
+        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
+      />
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6"
+      >
+        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          <h3 class="text-xl font-semibold mb-1 text-white">SafeWatch360 Dashboard</h3>
+          <p class="text-[#5037F7] font-medium text-sm mb-5">Vue • Laravel • Tailwind</p>
 
-      <!-- Articles -->
-      <div class="lg:col-span-2 space-y-8 scroll-fade opacity-0 translate-y-10 t ease-out">
+          <div class="flex gap-3 justify-center">
+            <a
+              href="https://github.com/yourproject"
+              target="_blank"
+              class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Github
+            </a>
 
-        <!-- Article -->
-        <article class="border border-gray-600 group-hover:border-[#5037F7] rounded-xl overflow-hidden shadow-lg hover:shadow-blue-500/20 transition duration-300">
+            <a
+              href="https://yourproject.com"
+              target="_blank"
+              class="flex items-center gap-2 px-4 py-2 bg-[#5037F7] text-white rounded-lg text-sm shadow-lg shadow-[#5037F7]/30 hover:bg-[#402bd6] transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <img
-            src="https://source.unsplash.com/800x400/?coding"
-            alt="Article Image"
-            class="w-full h-56 object-cover"
-          />
+    <div
+      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
+    >
+      <img
+        src="./src/assets/images/hq720 (1).jpg"
+        alt="ArmelShop Ecommerce App"
+        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
+      />
 
-          <div class="p-6">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
+        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          <h3 class="text-xl font-semibold mb-1 text-white">DacMagSHOP Ecommerce</h3>
+          <p class="text-[#5037F7] font-medium text-sm mb-5">Laravel • Vue • API</p>
 
-            <h2 class="text-2xl font-semibold text-white mb-2">
-              Titre de l'article 1
-            </h2>
+          <div class="flex gap-3 justify-center">
+            <a href="https://github.com/Armel200/DagMagSHOP" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Github
+            </a>
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-[#5037F7] text-white rounded-lg text-sm shadow-lg shadow-[#5037F7]/30 hover:bg-[#402bd6] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div
+      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
+    >
+      <img
+        src="./src/assets/images/resto.webp"
+        alt="ArmelShop Ecommerce App"
+        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
+      />
 
-            <p class="text-gray-400 mb-4">
-              Voici un petit résumé de l'article pour donner envie de
-              cliquer et lire plus...
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
+        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          <h3 class="text-xl font-semibold mb-1 text-white">Librairie Cafe</h3>
+          <p class="text-[#5037F7] font-medium text-sm mb-5">Php  API</p>
+
+          <div class="flex gap-3 justify-center">
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Github
+            </a>
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-[#5037F7] text-white rounded-lg text-sm shadow-lg shadow-[#5037F7]/30 hover:bg-[#402bd6] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div
+      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
+    >
+      <img
+        src="./src/assets/images/plage.webp"
+        alt="ArmelShop Ecommerce App"
+        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
+      />
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
+        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          <h3 class="text-xl font-semibold mb-1 text-white">Lens pro </h3>
+          <p class="text-[#5037F7] font-medium text-sm mb-5">Laravel • Vue • API</p>
+
+          <div class="flex gap-3 justify-center">
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Github
+            </a>
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-[#5037F7] text-white rounded-lg text-sm shadow-lg shadow-[#5037F7]/30 hover:bg-[#402bd6] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div
+      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
+    >
+      <img
+        src="./src/assets/images/love.png"
+        alt="ArmelShop Ecommerce App"
+        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
+      />
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
+        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          <h3 class="text-xl font-semibold mb-1 text-white">Valentime Day </h3>
+          <p class="text-[#5037F7] font-medium text-sm mb-5">Tailwind Css</p>
+
+          <div class="flex gap-3 justify-center">
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
+              <svg xmlns="https://github.com/Armel200/valentine" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Github
+            </a>
+            <a href="https://armel200.github.io/valentine/" class="flex items-center gap-2 px-4 py-2 bg-[#5037F7] text-white rounded-lg text-sm shadow-lg shadow-[#5037F7]/30 hover:bg-[#402bd6] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-500 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
+    >
+      <img
+        src="./src/assets/images/dacmag.png"
+        alt="Flutter Mobile App Project"
+        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
+      />
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
+        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          <h3 class="text-xl font-semibold mb-1 text-white">Flutter Mobile App</h3>
+          <p class="text-[#5037F7] font-medium text-sm mb-5">Flutter • REST API</p>
+
+          <div class="flex gap-3 justify-center">
+            <a href="https://github.com/Armel200/Mini_app" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Github
+            </a>
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-[#5037F7] text-white rounded-lg text-sm shadow-lg shadow-[#5037F7]/30 hover:bg-[#402bd6] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+</section>
+    <section class="bg-black py-[120px] text-gray-200" id="blog">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    
+    <div class="text-center mb-[80px]">
+      <p class="text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3">
+        Mon actualité
+      </p>
+      <h2 class="text-4xl scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold text-white mb-4">
+        Blog & Astuces
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+      <div class="lg:col-span-2 space-y-8">
+
+        <article class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] rounded-2xl overflow-hidden hover:shadow-[0_0_30px_rgba(80,55,247,0.1)]">
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
+              alt="Développement web coding"
+              class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <div class="p-6 md:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="px-3 py-1 bg-neutral-800 text-[#5037F7] text-xs font-semibold rounded-full">Tutoriel</span>
+              <span class="text-gray-500 text-sm">07 Mars 2026</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#5037F7] transition-colors">
+              Comment optimiser les performances de son application React ?
+            </h3>
+
+            <p class="text-gray-400 mb-6 line-clamp-2">
+              Découvrez les meilleures pratiques et astuces pour réduire le temps de chargement et offrir une expérience fluide à vos utilisateurs grâce au lazy loading et à la mémorisation.
             </p>
 
-            <div class="flex justify-between items-center text-gray-500 text-sm">
-
-              <span>07 Mars 2026</span>
-
-              <a href="#" class="text-[#5037F7] hover:text-[#5037F7]font-semibold">
-                Lire l'article →
+            <div class="flex items-center">
+              <a href="./article1.html" class="inline-flex items-center gap-2 text-[#5037F7] font-semibold hover:gap-3 transition-all">
+                Lire l'article 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
               </a>
-
             </div>
           </div>
         </article>
 
-        <!-- Article -->
-        <article class="] border border-gray-600 group-hover:border-[#5037F7] scroll-fade opacity-0 translate-y-10 t ease-out rounded-xl overflow-hidden shadow-lg hover:shadow-blue-500/20 transition duration-300">
+        <article class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] rounded-2xl overflow-hidden hover:shadow-[0_0_30px_rgba(80,55,247,0.1)]">
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
+              alt="Cybersecurité et technologie"
+              class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
 
-          <img
-            src="https://source.unsplash.com/800x400/?technology"
-            alt="Article Image"
-            class="w-full h-56 object-cover"
-          />
+          <div class="p-6 md:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="px-3 py-1 bg-neutral-800 text-[#5037F7] text-xs font-semibold rounded-full">Design</span>
+              <span class="text-gray-500 text-sm">05 Mars 2026</span>
+            </div>
 
-          <div class="p-6">
+            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#5037F7] transition-colors">
+              L'importance de l'UI/UX dans le taux de conversion
+            </h3>
 
-            <h2 class="text-2xl font-semibold text-white mb-2">
-              Titre de l'article 2
-            </h2>
-
-            <p class="text-gray-400 mb-4">
-              Petit résumé de l'article pour attirer le lecteur et montrer
-              ton expertise...
+            <p class="text-gray-400 mb-6 line-clamp-2">
+              Un design attractif ne suffit pas. Analysons comment une interface pensée pour l'utilisateur peut augmenter significativement les ventes d'un e-commerce.
             </p>
 
-            <div class="flex justify-between items-center text-gray-500 text-sm">
-
-              <span>05 Mars 2026</span>
-
-              <a href="#" class="text-[#5037F7] hover:text-[#5037F7] font-semibold">
-                Lire l'article →
+            <div class="flex items-center">
+              <a href="./article2.html" class="inline-flex items-center gap-2 text-[#5037F7] font-semibold hover:gap-3 transition-all">
+                Lire l'article 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
               </a>
-
             </div>
           </div>
         </article>
 
       </div>
 
-      <!-- Sidebar -->
-      <aside class="space-y-8 scroll-fade opacity-0 p-4 rounded-2xl translate-y-10 t ease-out border border-gray-600 group-hover:border-[#5037F7]">
+      <aside class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out">
+        <div class="sticky top-8 space-y-8 p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
+          
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2">
+              Recherche
+            </h3>
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Rechercher..."
+                class="w-full p-3 pl-10 rounded-lg bg-black border border-neutral-700 text-gray-200 focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
+              />
+              <svg class="absolute left-3 top-3.5 w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            </div>
+          </div>
 
-        <!-- Recherche -->
-        <div>
-          <h3 class="text-xl font-semibold mb-4 text-white">
-            Recherche
-          </h3>
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2">
+              Catégories
+            </h3>
+            <ul class="space-y-3 text-gray-400">
+              <li>
+                <a href="#" class="flex items-center justify-between hover:text-[#5037F7] transition-colors">
+                  <span>Développement Web</span>
+                  <span class="text-xs bg-neutral-800 px-2 py-1 rounded-md">12</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center justify-between hover:text-[#5037F7] transition-colors">
+                  <span>Design UI/UX</span>
+                  <span class="text-xs bg-neutral-800 px-2 py-1 rounded-md">8</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center justify-between hover:text-[#5037F7] transition-colors">
+                  <span>Conseils & Astuces</span>
+                  <span class="text-xs bg-neutral-800 px-2 py-1 rounded-md">15</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center justify-between hover:text-[#5037F7] transition-colors">
+                  <span>Projets Open Source</span>
+                  <span class="text-xs bg-neutral-800 px-2 py-1 rounded-md">4</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-          <input
-            type="text"
-            placeholder="Rechercher..."
-            class="w-full p-3 rounded-md bg-[#1e293b] border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2">
+              Newsletter
+            </h3>
+            <p class="text-sm text-gray-400 mb-4">Ne manquez pas mes derniers articles et projets.</p>
+            <form action="#" class="space-y-3">
+              <input
+                type="email"
+                placeholder="Votre adresse email"
+                class="w-full p-3 rounded-lg bg-black border border-neutral-700 text-gray-200 focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
+                required
+              />
+              <button
+                type="submit"
+                class="w-full bg-[#5037F7] text-white font-semibold px-6 py-3 rounded-lg shadow-lg shadow-[#5037F7]/20 hover:bg-[#402bd6] transition-all"
+              >
+                S'abonner
+              </button>
+            </form>
+          </div>
+
         </div>
-
-        <!-- Catégories -->
-        <div>
-          <h3 class="text-xl font-semibold mb-4 text-white">
-            Catégories
-          </h3>
-
-          <ul class="space-y-2 text-gray-400">
-
-            <li>
-              <a href="#" class="hover:text-[#5037F7] transition">
-                Développement Web
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="hover:text-[#5037F7] transition">
-                Design
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="hover:text-[#5037F7] transition">
-                Conseils & Astuces
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="hover:text-[#5037F7] transition">
-                Projets
-              </a>
-            </li>
-
-          </ul>
-        </div>
-
-        <!-- Newsletter -->
-        <div>
-          <h3 class="text-xl font-semibold mb-4 text-white">
-            Newsletter
-          </h3>
-
-          <input
-            type="email"
-            placeholder="Votre email"
-            class="w-full p-3 rounded-md mb-3 bg-[#1e293b] border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-
-          <button
-            class="w-full bg-[#5037F7] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#5037F7] transition"
-          >
-            S'abonner
-          </button>
-        </div>
-
       </aside>
 
     </div>
@@ -976,86 +983,91 @@
 </section>
     </main>
 
-    <footer class="bg-zinc-950 text-gray-200 py-12">
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8"
-      >
-        <!-- À propos / Contact -->
+    <footer class="bg-black text-gray-200 border-t border-neutral-900 pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      
+      <div class="space-y-6">
         <div>
-          <h3 class="text-xl font-bold mb-4">Armel Demanou</h3>
-          <p class="text-gray-400 mb-4">
-            Développeur web & designer freelance, passionné par la création de
-            projets innovants et modernes.
+          <h3 class="text-2xl font-bold text-white tracking-tighter">
+            ARMEL<span class="text-[#5037F7]">.</span>DEMANOU
+          </h3>
+          <p class="mt-4 text-gray-400 leading-relaxed">
+            Développeur Fullstack & Designer spécialisé dans la création d'expériences numériques haute performance.
           </p>
-          <p>
-            Email:
-            <a
-              href="mailto:ulrichdega@gmail.com"
-              class="text-[#5037F7] hover:underline"
-              >ulrichdega@gmail.com</a
-            >
-          </p>
-          <p>Téléphone: <span class="text-gray-400">+237 695 08 93 49</span></p>
         </div>
-
-        <!-- Liens rapides -->
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
-          <ul class="space-y-2">
-            <li><a href="#about" class="hover:text-green-400">À propos</a></li>
-            <li>
-              <a href="#projects" class="hover:text-green-400">Projets</a>
-            </li>
-            <li>
-              <a href="#skills" class="hover:text-green-400">Compétences</a>
-            </li>
-            <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="md:col-span-2">
-          <h4 class="text-lg font-semibold mb-4">
-            Inscrivez-vous à la newsletter
-          </h4>
-          <p class="text-gray-400 mb-4">
-            Recevez les dernières mises à jour et projets directement dans votre
-            boîte mail.
+        
+        <div class="space-y-3 text-sm">
+          <a href="mailto:ulrichdega@gmail.com" class="flex items-center gap-3 text-gray-400 hover:text-[#5037F7] transition-colors group">
+            <div class="p-2 bg-neutral-900 rounded-lg group-hover:bg-[#5037F7]/10 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            ulrichdega@gmail.com
+          </a>
+          <p class="flex items-center gap-3 text-gray-400">
+            <div class="p-2 bg-neutral-900 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            +237 695 08 93 49
           </p>
-          <form class="flex flex-col sm:flex-row gap-2">
-            <input
-              type="email"
-              placeholder="Votre email"
-              class="w-full p-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#5037F7]"
-            />
-            <button
-              type="submit"
-              class="bg-[#5037F7] text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-800 transition"
-            >
-              S'abonner
-            </button>
-          </form>
         </div>
       </div>
 
-      <!-- Réseaux sociaux -->
-      <div class="mt-10 border-t border-gray-700 pt-6 text-center">
-        <div class="flex justify-center gap-6 mb-4">
-          <a href="#" class="hover:text-green-400"
-            ><ion-icon name="logo-linkedin"></ion-icon> LinkedIn</a
-          >
-          <a href="#" class="hover:text-green-400"
-            ><ion-icon name="logo-github"></ion-icon> GitHub</a
-          >
-          <a href="#" class="hover:text-green-400"
-            ><ion-icon name="logo-twitter"></ion-icon> Twitter</a
-          >
-        </div>
-        <p class="text-gray-500 text-sm">
-          &copy; 2026 Armel Demanou. Tous droits réservés.
+      <div>
+        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Navigation</h4>
+        <ul class="space-y-4 text-gray-400">
+          <li><a href="#about" class="hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block">À propos</a></li>
+          <li><a href="#projects" class="hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block">Projets</a></li>
+          <li><a href="#blog" class="hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block">Blog</a></li>
+          <li><a href="#contact" class="hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Restez informé</h4>
+        <p class="text-gray-400 mb-6 max-w-sm">
+          Rejoignez ma newsletter pour recevoir des conseils sur le dev et un aperçu de mes derniers projets.
         </p>
+
+        <form id="newsletterForm" class="relative group">
+          <input
+            type="email"
+            placeholder="Votre adresse email"
+            required
+            class="w-full bg-neutral-900 border border-neutral-800 p-4 rounded-xl text-white focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
+          />
+          <button
+            type="submit"
+            class="absolute right-2 top-2 bottom-2 bg-[#5037F7] text-white px-6 rounded-lg font-semibold hover:bg-[#402bd6] transition-all active:scale-95"
+          >
+            S'abonner
+          </button>
+        </form>
       </div>
-    </footer>
+    </div>
+
+    <div class="pt-8 border-t border-neutral-900 flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <div class="flex items-center gap-5">
+        <a href="https://github.com/Armel200" class="p-3 bg-neutral-900 rounded-full hover:bg-[#5037F7] hover:text-white transition-all duration-300" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="#" class="p-3 bg-neutral-900 rounded-full hover:bg-[#5037F7] hover:text-white transition-all duration-300" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="#" class="p-3 bg-neutral-900 rounded-full hover:bg-[#5037F7] hover:text-white transition-all duration-300" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+        </a>
+      </div>
+
+      <p class="text-gray-500 text-sm font-medium">
+        &copy; 2026 Armel Demanou. Made with <span class="text-red-500">❤️</span> in Cameroon.
+      </p>
+      
+    </div>
+  </div>
+</footer>
 
     <script src="https://unpkg.com/typed.js@2.0.12"></script>
 
