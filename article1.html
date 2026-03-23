@@ -5,46 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Optimiser les performances React | Mon Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+</head>
 <body class="bg-black text-gray-200 font-sans antialiased selection:bg-[#5037F7] selection:text-white">
 
-  <div class="max-w-[800px] mx-auto px-4 sm:px-6 pt-12 pb-6">
+  <div class="max-w-[800px] mx-auto px-4 sm:px-6 pt-12 pb-6 flex justify-between items-center">
+    
     <a href="index.html#blog" class="inline-flex items-center gap-2 text-gray-400 hover:text-[#5037F7] transition-colors font-medium">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
-      Retour au blog
+      <span class="translate" data-fr="Retour au blog" data-en="Back to blog">Retour au blog</span>
     </a>
+
+    <div class="relative inline-block text-left" id="lang-dropdown">
+  <div>
+    <button type="button" onclick="toggleDropdown()" class="inline-flex items-center justify-center w-full rounded-md border border-neutral-800 bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-800 focus:outline-none transition-all" id="menu-button">
+      <span id="current-lang-flag" class="mr-2">🇫🇷</span>
+      <span id="current-lang-text">Français</span>
+      <svg class="-mr-1 ml-2 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="dropdown-menu" class="absolute  z-10 mt-2 w-[135px] origin-top-right rounded-md bg-neutral-900 border border-neutral-800 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200">
+    <div class="py-1">
+      <button onclick="changeLang('fr', '🇫🇷', 'Français')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
+        <span class="mr-3"><img src="./src/assets/images/france.jpg" alt="" srcset="" class="h-[14px] w-[20px]"></span> Français
+      </button>
+      <button onclick="changeLang('en', '🇬🇧', 'English')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
+        <span class="mr-3"><img src="./src/assets/images/anglais.jpg" alt="" srcset="" class="h-[14px] w-[20px]"></span> English
+      </button>
+    </div>
+  </div>
+</div>
   </div>
 
   <article class="max-w-[800px] mx-auto px-4 sm:px-6 pb-24">
     
     <header class="mb-10">
       <div class="flex items-center gap-3 mb-6">
-        <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-[#5037F7] text-sm font-semibold rounded-full">Tutoriel</span>
-        <span class="text-gray-500 text-sm">07 Mars 2026 • 5 min de lecture</span>
+        <span class="translate px-3 py-1 bg-neutral-900 border border-neutral-800 text-[#5037F7] text-sm font-semibold rounded-full" 
+              data-fr="Tutoriel" data-en="Tutorial">Tutoriel</span>
+        <span class="translate text-gray-500 text-sm" 
+              data-fr="07 Mars 2026 • 5 min de lecture" data-en="March 07, 2026 • 5 min read">07 Mars 2026 • 5 min de lecture</span>
       </div>
       
-      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+      <h1 class="translate text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+          data-fr="Comment optimiser les performances de son application React ?"
+          data-en="How to optimize your React application's performance?">
         Comment optimiser les performances de son application React ?
       </h1>
       
-      <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+      <p class="translate text-xl text-gray-400 mb-8 leading-relaxed"
+         data-fr="Découvrez les meilleures pratiques et astuces pour réduire le temps de chargement et offrir une expérience fluide à vos utilisateurs grâce au lazy loading et à la mémorisation."
+         data-en="Discover the best practices and tips to reduce loading times and offer a smooth experience to your users through lazy loading and memoization.">
         Découvrez les meilleures pratiques et astuces pour réduire le temps de chargement et offrir une expérience fluide à vos utilisateurs grâce au lazy loading et à la mémorisation.
       </p>
 
       <div class="rounded-2xl overflow-hidden border border-neutral-800 shadow-[0_0_30px_rgba(80,55,247,0.1)]">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Code React sur un écran" class="w-full h-[400px] object-cover" />
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Code React" class="w-full h-[400px] object-cover" />
       </div>
     </header>
 
     <div class="prose prose-invert prose-lg max-w-none text-gray-300">
-      <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. Comprendre le problème de rendu</h2>
-      <p class="mb-6 leading-relaxed">
+      
+      <h2 class="translate text-2xl font-bold text-white mt-10 mb-4" 
+          data-fr="1. Comprendre le problème de rendu" 
+          data-en="1. Understanding the rendering problem">
+        1. Comprendre le problème de rendu
+      </h2>
+      <p class="translate mb-6 leading-relaxed"
+         data-fr="Dans React, chaque fois que l'état (state) d'un composant change, ce composant et tous ses enfants sont rendus à nouveau. Si votre application grandit, cela peut entraîner des ralentissements importants, surtout si les composants enfants effectuent des calculs lourds."
+         data-en="In React, every time a component's state changes, that component and all its children are re-rendered. As your app grows, this can cause significant slowdowns, especially if child components perform heavy computations.">
         Dans React, chaque fois que l'état (state) d'un composant change, ce composant et tous ses enfants sont rendus à nouveau. Si votre application grandit, cela peut entraîner des ralentissements importants, surtout si les composants enfants effectuent des calculs lourds.
       </p>
 
-      <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. Utiliser React.memo pour éviter les rendus inutiles</h2>
-      <p class="mb-6 leading-relaxed">
-        L'outil le plus simple pour empêcher un composant enfant de se re-rendre si ses <em>props</em> n'ont pas changé est <code>React.memo</code>.
+      <h2 class="translate text-2xl font-bold text-white mt-10 mb-4"
+          data-fr="2. Utiliser React.memo pour éviter les rendus inutiles"
+          data-en="2. Use React.memo to prevent unnecessary renders">
+        2. Utiliser React.memo pour éviter les rendus inutiles
+      </h2>
+      <p class="translate mb-6 leading-relaxed"
+         data-fr="L'outil le plus simple pour empêcher un composant enfant de se re-rendre si ses props n'ont pas changé est React.memo."
+         data-en="The simplest tool to prevent a child component from re-rendering if its props haven't changed is React.memo.">
+        L'outil le plus simple pour empêcher un composant enfant de se re-rendre si ses props n'ont pas changé est React.memo.
       </p>
       
       <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4 mb-8 overflow-x-auto">
@@ -58,18 +101,32 @@ const MonComposantLourd = React.memo(({ data }) => {
 export default MonComposantLourd;</code></pre>
       </div>
 
-      <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. Le Lazy Loading avec React.lazy et Suspense</h2>
-      <p class="mb-6 leading-relaxed">
+      <h2 class="translate text-2xl font-bold text-white mt-10 mb-4"
+          data-fr="3. Le Lazy Loading avec React.lazy et Suspense"
+          data-en="3. Lazy Loading with React.lazy and Suspense">
+        3. Le Lazy Loading avec React.lazy et Suspense
+      </h2>
+      <p class="translate mb-6 leading-relaxed"
+         data-fr="Ne chargez pas tout le code de votre application au démarrage. Utilisez le fractionnement de code (Code Splitting) pour ne charger les composants que lorsqu'ils sont nécessaires."
+         data-en="Do not load all your application code at startup. Use Code Splitting to load components only when they are needed.">
         Ne chargez pas tout le code de votre application au démarrage. Utilisez le fractionnement de code (Code Splitting) pour ne charger les composants que lorsqu'ils sont nécessaires.
       </p>
 
-      <blockquote class="border-l-4 border-[#5037F7] pl-5 py-2 my-8 bg-neutral-900/50 rounded-r-lg italic">
-        "Le code le plus rapide à exécuter est celui que le navigateur n'a pas besoin de télécharger."
+      <blockquote class="translate border-l-4 border-[#5037F7] pl-5 py-2 my-8 bg-neutral-900/50 rounded-r-lg italic"
+                  data-fr="Le code le plus rapide à exécuter est celui que le navigateur n'a pas besoin de télécharger."
+                  data-en="The fastest code to execute is the code the browser never has to download.">
+        Le code le plus rapide à exécuter est celui que le navigateur n'a pas besoin de télécharger.
       </blockquote>
 
-      <h2 class="text-2xl font-bold text-white mt-10 mb-4">Conclusion</h2>
-      <p class="mb-6 leading-relaxed">
-        L'optimisation prématurée est la racine de tous les maux. Commencez toujours par construire une application fonctionnelle, puis utilisez des outils comme le Profiler React pour identifier les véritables goulots d'étranglement avant d'appliquer <code>useMemo</code>, <code>useCallback</code> ou <code>React.memo</code>.
+      <h2 class="translate text-2xl font-bold text-white mt-10 mb-4"
+          data-fr="Conclusion"
+          data-en="Conclusion">
+        Conclusion
+      </h2>
+      <p class="translate mb-6 leading-relaxed"
+         data-fr="L'optimisation prématurée est la racine de tous les maux. Commencez toujours par construire une application fonctionnelle, puis utilisez des outils comme le Profiler React pour identifier les véritables goulots d'étranglement avant d'appliquer useMemo, useCallback ou React.memo."
+         data-en="Premature optimization is the root of all evil. Always start by building a functional application, then use tools like the React Profiler to identify true bottlenecks before applying useMemo, useCallback, or React.memo.">
+        L'optimisation prématurée est la racine de tous les maux. Commencez toujours par construire une application fonctionnelle, puis utilisez des outils comme le Profiler React pour identifier les véritables goulots d'étranglement avant d'appliquer useMemo, useCallback ou React.memo.
       </p>
     </div>
 
@@ -80,5 +137,74 @@ export default MonComposantLourd;</code></pre>
     </div>
 
   </article>
+
+  <script>
+    function setLang(lang) {
+      // 1. Mettre à jour l'attribut de la page
+      document.documentElement.lang = lang;
+
+      // 2. Mettre à jour le texte de tous les éléments ayant la classe "translate"
+      const elements = document.querySelectorAll('.translate');
+      elements.forEach(el => {
+        if (el.dataset[lang]) {
+          el.innerText = el.dataset[lang];
+        }
+      });
+
+      // 3. Gérer l'apparence des boutons (actif/inactif)
+      const btnFr = document.getElementById('btn-fr');
+      const btnEn = document.getElementById('btn-en');
+
+      if (lang === 'fr') {
+        btnFr.className = "px-3 py-1 text-sm font-bold rounded-md transition-all text-white bg-[#5037F7]";
+        btnEn.className = "px-3 py-1 text-sm font-bold rounded-md transition-all text-gray-500 hover:text-white bg-transparent";
+      } else {
+        btnEn.className = "px-3 py-1 text-sm font-bold rounded-md transition-all text-white bg-[#5037F7]";
+        btnFr.className = "px-3 py-1 text-sm font-bold rounded-md transition-all text-gray-500 hover:text-white bg-transparent";
+      }
+    }
+
+    // Fonction pour ouvrir/fermer le menu
+function toggleDropdown() {
+  const menu = document.getElementById('dropdown-menu');
+  const isHidden = menu.classList.contains('pointer-events-none');
+  
+  if (isHidden) {
+    menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+    menu.classList.add('opacity-100', 'scale-100');
+  } else {
+    menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+    menu.classList.remove('opacity-100', 'scale-100');
+  }
+}
+
+// Fonction pour changer la langue et fermer le menu
+function changeLang(lang, flag, text) {
+  // 1. Mettre à jour l'affichage du bouton principal
+  document.getElementById('current-lang-flag').innerText = flag;
+  document.getElementById('current-lang-text').innerText = text;
+  
+  // 2. Appliquer la traduction (réutilisation de ta logique précédente)
+  document.documentElement.lang = lang;
+  const elements = document.querySelectorAll('.translate');
+  elements.forEach(el => {
+    if (el.dataset[lang]) {
+      el.innerText = el.dataset[lang];
+    }
+  });
+
+  // 3. Fermer le menu
+  toggleDropdown();
+}
+
+// Fermer le menu si on clique ailleurs sur la page
+window.onclick = function(event) {
+  if (!event.target.closest('#lang-dropdown')) {
+    const menu = document.getElementById('dropdown-menu');
+    menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+    menu.classList.remove('opacity-100', 'scale-100');
+  }
+}
+  </script>
 </body>
 </html>

@@ -14,166 +14,148 @@
     <title>Potfolio-Armel Demanou</title>
   </head>
   <body class="bg-black">
-    <header
-      id="header"
-      class="bg-black px-6 py-4 text-white fixed top-0 left-0 right-0 z-10 transition-shadow duration-300"
-    >
-      <nav class="flex items-center justify-between">
-        <img
-          src="./src/assets/images/Logo_white.png"
-          alt="logo"
-          class="h-12 w-auto"
-        />
+    <header id="header" class="bg-black px-6 py-4 text-white fixed top-0 left-0 right-0 z-10 transition-shadow duration-300">
+  <nav class="flex items-center justify-between">
+    <img src="./src/assets/images/Logo_white.png" alt="logo" class="h-12 w-auto" />
 
-        <ul class="hidden md:flex space-x-6 font-bold text-sm">
-          <li><a href="#Home" class="link">Home</a></li>
-          <li><a href="#Services" class="link">About</a></li>
-          <li><a href="#About" class="link">Services</a></li>
-          <li><a href="#projects" class="link">Portfolio</a></li>
-          <li><a href="./resume.html" class="link">Resume</a></li>
-          <li><a href="#" class="link">Pricing</a></li>
-          <li><a href="#blog" class="link">Blog</a></li>
-          <li><a href="#" class="link">Contact</a></li>
-        </ul>
+    <ul class="hidden md:flex space-x-6 font-bold text-sm">
+      <li><a href="#Home" class="translate link" data-fr="Accueil" data-en="Home">Accueil</a></li>
+      <li><a href="#About" class="translate link" data-fr="À propos" data-en="About">À propos</a></li>
+      <li><a href="#Services" class="translate link" data-fr="Services" data-en="Services">Services</a></li>
+      <li><a href="#projects" class="translate link" data-fr="Portfolio" data-en="Portfolio">Portfolio</a></li>
+      <li><a href="./resume.html" class="translate link" data-fr="CV" data-en="Resume">CV</a></li>
+      <li><a href="#" class="translate link" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+      <li><a href="#blog" class="translate link" data-fr="Blog" data-en="Blog">Blog</a></li>
+      <li><a href="#" class="translate link" data-fr="Contact" data-en="Contact">Contact</a></li>
+    </ul>
 
-        <ul class="hidden md:flex space-x-4 items-center">
-          <li
-            class="icon h-9 w-9 flex items-center justify-center rounded-full"
-          >
-            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-          </li>
-          <li
-            class="icon h-9 w-9 flex items-center justify-center rounded-full"
-          >
-            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-          </li>
-          <li
-            class="icon h-9 w-9 flex items-center justify-center rounded-full"
-          >
-            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-          </li>
-          <li
-            class="icon h-9 w-9 flex items-center justify-center rounded-full"
-          >
-            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-          </li>
-        </ul>
+    <ul class="hidden md:flex space-x-4 items-center">
+      <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
 
-        <button
-          id="burger"
-          class="md:hidden text-3xl focus:outline-none text-blue-600"
-        >
-          <ion-icon name="menu"></ion-icon>
+      <div class="relative inline-block text-left" id="lang-dropdown">
+        <button type="button" onclick="toggleDropdown()" class="inline-flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900/50 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-800 transition-all">
+          <span id="current-lang-flag" class="mr-2">🇫🇷</span>
+          <span id="current-lang-text">FR</span>
+          <svg class="ml-1 h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
         </button>
-      </nav>
-
-      <!-- Menu Mobile -->
-      <div
-        id="mobileMenu"
-        class="hidden flex-col mt-4 space-y-4 md:hidden bg-neutral-800 right-0 left-0 px-[30px] py-[20px] absolute"
-      >
-        <a href="#" class="block">Home</a>
-        <a href="#" class="block">About</a>
-        <a href="#" class="block">Services</a>
-        <a href="#" class="block">Portfolio</a>
-        <a href="./resume.html" class="block">Resume</a>
-        <a href="#" class="block">Pricing</a>
-        <a href="#" class="block">Blog</a>
-        <a href="#" class="block">Contact</a>
-
-        <!-- icon su tel -->
-        <div class="flex space-x-4 pt-4">
-          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-        </div>
-      </div>
-    </header>
-
-    <main class=" ">
-      <section
-        id="Home"
-        class="bg-black text-white px-[50px] py-[100px] flex flex-col md:flex-row justify-between items-center"
-      >
-        <div class="max-w-xl">
-          <p class="text-[#5037F7] uppercase font-semibold tracking-wide mb-4">
-            Welcome to my world
-          </p>
-          <h1
-            class="lg:text-[60px] md:text-[40px] sm:text-[25px] text-[25px] font-bold leading-tight"
-          >
-            I’m Armel Demanou<br />
-            A <span id="typed" class="text-[#5037F7]"></span>
-          </h1>
-          <p class="text-gray-400 mt-6">
-            A personal portfolio is a collection of your work, achievements, and
-            skills that highlights your abilities and professional growth.
-          </p>
-
-          <p class="mt-6 mb-3 font-medium">Find me on</p>
-          <div class="flex space-x-4">
-            <a
-              href="#"
-              class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
-            >
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a
-              href="#"
-              class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
-            >
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-            <a
-              href="#"
-              class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
-            >
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-            <a
-              href="#"
-              class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
-            >
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
+        <div id="dropdown-menu" class="absolute z-10 right-0 mt-2 w-[135px] origin-top-right rounded-md bg-neutral-900 border border-neutral-800 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200">
+          <div class="py-1">
+            <button onclick="changeLang('fr', '🇫🇷', 'Français')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
+              <span class="mr-3"><img src="./src/assets/images/france.jpg" alt="FR" class="h-[14px] w-[20px]" /></span> Français
+            </button>
+            <button onclick="changeLang('en', '🇬🇧', 'English')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
+              <span class="mr-3"><img src="./src/assets/images/anglais.jpg" alt="EN" class="h-[14px] w-[20px]" /></span> English
+            </button>
           </div>
         </div>
+      </div>
+    </ul>
 
-        <div class="relative mt-10 md:mt-0 
-            /* Mobile: Cercle */
-            w-[280px] h-[280px] rounded-full 
-            /* Desktop (md): Cadre Rectangulaire Professionnel */
-            md:w-[400px] md:h-auto md:rounded-2xl 
-            p-2 bg-neutral-900 overflow-hidden group transition-all duration-500 
-            hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#5037F7]/20 border border-neutral-800">
-  
-  <img 
-    src="./src/assets/images/Armel-D.jpg" 
-    alt="Armel Demanou" 
-    class="w-full h-full object-cover 
-           /* Mobile: Arrondi cercle | Desktop: Arrondi léger */
-           rounded-full md:rounded-xl opacity-90 group-hover:opacity-100 transition-opacity" 
-  />
+    <button id="burger" class="md:hidden text-3xl focus:outline-none text-blue-600">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </nav>
 
-  <div class="absolute 
-              /* Positionnement Desktop */
-              md:right-4 md:top-1/2 md:-translate-y-1/2 
-              /* Transformation Verticale */
-              md:rotate-90 md:origin-right
-              /* Positionnement Mobile (Bas du cercle) */
-              bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0">
+  <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 md:hidden bg-neutral-800 right-0 left-0 px-[30px] py-[20px] absolute">
+    <a href="#Home" class="translate block" data-fr="Accueil" data-en="Home">Accueil</a>
+    <a href="#About" class="translate block" data-fr="À propos" data-en="About">À propos</a>
+    <a href="#Services" class="translate block" data-fr="Services" data-en="Services">Services</a>
+    <a href="#projects" class="translate block" data-fr="Portfolio" data-en="Portfolio">Portfolio</a>
+    <a href="./resume.html" class="translate block" data-fr="CV" data-en="Resume">CV</a>
+    <a href="#" class="translate block" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
+    <a href="#blog" class="translate block" data-fr="Blog" data-en="Blog">Blog</a>
+    <a href="#" class="translate block" data-fr="Contact" data-en="Contact">Contact</a>
     
-    <p class="font-bold text-white tracking-[0.2em] uppercase 
-              /* Taille adaptative */
-              text-xs md:text-lg whitespace-nowrap drop-shadow-lg">
-      Armel <span class="text-[#5037F7]">Demanou</span>
+    <div class="pt-4 border-t border-neutral-700">
+        <button onclick="changeLang('fr', '🇫🇷', 'FR')" class="text-sm mr-4 text-white">FR</button>
+        <button onclick="changeLang('en', '🇬🇧', 'EN')" class="text-sm text-gray-400">EN</button>
+    </div>
+
+    <div class="flex space-x-4 pt-4">
+      <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+    </div>
+  </div>
+</header>
+
+    <main class=" ">
+     <section id="Home" class="bg-black text-white px-[50px] py-[100px] flex flex-col md:flex-row justify-between items-center">
+  <div class="max-w-xl">
+    <p class="translate text-[#5037F7] uppercase font-semibold tracking-wide mb-4" 
+       data-fr="Bienvenue dans mon univers" 
+       data-en="Welcome to my world">
+      Bienvenue dans mon univers
     </p>
+    
+    <h1 class="lg:text-[60px] md:text-[40px] sm:text-[25px] text-[25px] font-bold leading-tight">
+      <span class="translate" data-fr="Je suis Armel Demanou" data-en="I’m Armel Demanou">Je suis Armel Demanou</span><br />
+      <span class="translate" data-fr="Un" data-en="A">Un</span> <span id="typed" class="text-[#5037F7]"></span>
+    </h1>
+    
+    <p class="translate text-gray-400 mt-6"
+       data-fr="Un portfolio personnel est une collection de votre travail, de vos réalisations et de vos compétences qui met en valeur vos capacités et votre croissance professionnelle."
+       data-en="A personal portfolio is a collection of your work, achievements, and skills that highlights your abilities and professional growth.">
+      Un portfolio personnel est une collection de votre travail, de vos réalisations et de vos compétences qui met en valeur vos capacités et votre croissance professionnelle.
+    </p>
+
+    <p class="translate mt-6 mb-3 font-medium" 
+       data-fr="Retrouvez-moi sur" 
+       data-en="Find me on">
+      Retrouvez-moi sur
+    </p>
+    
+    <div class="flex space-x-4">
+      <a href="#" class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+      <a href="#" class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <a href="#" class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+      <a href="#" class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </div>
   </div>
 
-  <div class="absolute inset-0 bg-gradient-to-tr from-[#5037F7]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-</div>
-      </section>
+  <div class="relative mt-10 md:mt-0 
+              /* Mobile: Cercle */
+              w-[280px] h-[280px] rounded-full 
+              /* Desktop (md): Cadre Rectangulaire Professionnel */
+              md:w-[400px] md:h-auto md:rounded-2xl 
+              p-2 bg-neutral-900 overflow-hidden group transition-all duration-500 
+              hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#5037F7]/20 border border-neutral-800">
+    <img src="./src/assets/images/Armel-D.jpg" alt="Armel Demanou" 
+         class="w-full h-full object-cover 
+                /* Mobile: Arrondi cercle | Desktop: Arrondi léger */
+                rounded-full md:rounded-xl opacity-90 group-hover:opacity-100 transition-opacity" />
+
+    <div class="absolute 
+                /* Positionnement Desktop */
+                md:right-4 md:top-1/2 md:-translate-y-1/2 
+                /* Transformation Verticale */
+                md:rotate-90 md:origin-right
+                /* Positionnement Mobile (Bas du cercle) */
+                bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0">
+      <p class="font-bold text-white tracking-[0.2em] uppercase 
+                /* Taille adaptative */
+                text-xs md:text-lg whitespace-nowrap drop-shadow-lg">
+        Armel <span class="text-[#5037F7]">Demanou</span>
+      </p>
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-tr from-[#5037F7]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+  </div>
+</section>
 
       <!-- barre de progres  -->
       <div id="progressContainer" class="fixed bottom-6 right-6 z-50">
@@ -225,480 +207,393 @@
         ></ion-icon>
       </div>
       <div
-        id="page"
-        class="w-[350px] fixed right-7 bottom-[160px] z-50 hidden bg-neutral-900/90 backdrop-blur-xl border border-neutral-800 shadow-2xl shadow-black/50 rounded-2xl px-[20px] py-[20px] animate-fadeIn"
-      >
-        <!-- Header -->
-        <div
-          class="flex items-center justify-between bg-[#5037F7] px-4 py-3 rounded-xl mb-5"
-        >
-          <p class="text-white font-semibold text-sm">Let's Chat</p>
-
-          <div class="flex items-center gap-3">
-            <span class="flex items-center gap-1 text-xs text-white">
-              <span
-                class="h-2 w-2 bg-green-400 rounded-full animate-pulse"
-              ></span>
-              Online
-            </span>
-
-            <!-- close button -->
-            <button id="closeChat" class="text-white text-lg hover:opacity-70">
-              ✕
-            </button>
-          </div>
-        </div>
-
-        <!-- Description -->
-        <p class="text-center text-gray-400 text-sm mb-6">
-          Fill the form below and I will reply as soon as possible.
-        </p>
-
-        <!-- success message -->
-        <p
-          id="successMsg"
-          class="hidden text-green-400 text-center text-sm mb-4"
-        >
-          ✅ Message sent successfully!
-        </p>
-
-        <!-- Form -->
-        <form
-          id="contactForm"
-          action="https://formspree.io/f/mojkvqnv"
-          method="POST"
-          class="space-y-3"
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-            class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7]"
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7]"
-          />
-
-          <textarea
-            name="message"
-            rows="3"
-            placeholder="Your Message"
-            required
-            class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-lg px-3 py-2 text-sm resize-none focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7]"
-          ></textarea>
-
-          <button
-            type="submit"
-            class="w-full bg-[#5037F7] hover:bg-[#6b55ff] text-white font-semibold py-2.5 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#5037F7]/40"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-      <section class="bg-black text-white py-16 px-4" id="Services">
-        <div class="text-center mb-10">
-          <p class="text-[#5037F7] tracking-widest text-sm font-bold">
-            WHAT I DO
-          </p>
-          <h2
-            class="lg:text-[45px] md:text-[35px] sm:text-2xl text-2xl font-bold"
-          >
-            What I Provide For You
-          </h2>
-        </div>
-
-        <div class="grid gap-6 sm:grid-cols-2">
-          <div
-            class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
-              >
-                <ion-icon
-                  name="code-slash-outline"
-                  class="text-2xl font-bold"
-                ></ion-icon>
-              </div>
-              <h3 class="ml-4 text-lg font-bold">Ui/Ux Design</h3>
-            </div>
-            <p class="text-gray-400">
-              Each one showcases my approach and dedication to detail,
-              creativity Each one showcases my approach and dedication to
-              detail, creativity
-            </p>
-          </div>
-
-          <div
-            class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
-              >
-                <ion-icon name="globe-outline" class="text-2xl"></ion-icon>
-              </div>
-              <h3 class="ml-4 text-lg font-bold">Web Development</h3>
-            </div>
-            <p class="text-gray-400">
-              Business consulting consul us to a provide expert advice
-              businesses Each one showcases my approach and dedication to
-              detail, creativity
-            </p>
-          </div>
-
-          <div
-            class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
-              >
-                <ion-icon name="briefcase-outline" class="text-2xl"></ion-icon>
-              </div>
-              <h3 class="ml-4 text-lg font-bold">Business Solutions</h3>
-            </div>
-            <p class="text-gray-400">
-              Each one showcases my approach and dedication to detail,
-              creativity Each one showcases my approach and dedication to
-              detail, creativity
-            </p>
-          </div>
-
-          <div
-            class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
-              >
-                <ion-icon name="people-outline" class="text-2xl"></ion-icon>
-              </div>
-              <h3 class="ml-4 text-lg font-bold">Profit Partners</h3>
-            </div>
-            <p class="text-gray-400">
-              Business consulting consul us to a provide expert advice
-              businesses Each one showcases my approach and dedication to
-              detail, creativity
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-black text-white py-16 px-[50px]" id="About">
-        <div class="grid lg:grid-cols-2 gap-10 items-center mb-[60px]">
-          <div
-            class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out"
-          >
-            <div
-              class="lg:h-[350px] lg:w-[350px] md:w-[300px] md:h-[300px] sm:w-[200px] sm:h-[200px] h-[200px] w-[200px] rounded-full bg-blue-700 relative"
-            ></div>
-
-            <div
-              class="bg-transparent/30 backdrop-blur-md lg:p-20 p-10 rounded-2xl absolute z-10 lg:-mt-[450px] -mt-[300px] lg:ml-[100px] shadow-lg"
-            >
-              <h2 class="text-6xl font-bold">
-                <span id="experience-count">0</span>+
-              </h2>
-              <p class="text-2xl font-semibold mt-2">Years Of Experience</p>
-            </div>
-
-            <div
-              class="bg-transparent/30 backdrop-blur-md lg:p-10 p-3 rounded-2xl absolute z-10 lg:-mt-[160px] -mt-[100px] lg:ml-[100px] flex items-center w-[300px]"
-            >
-              <div
-                class="h-12 w-12 rounded-full bg-transparent border flex items-center justify-center"
-              >
-                <ion-icon name="bag-outline"></ion-icon>
-              </div>
-              <div>
-                <p class="text-2xl font-semibold mt-2 ml-4">UX/UI Design</p>
-                <h3>6 projects</h3>
-              </div>
-            </div>
-
-            <!-- <div></div> -->
-          </div>
-
-          <div class="space-y-6">
-            <h3
-              class="text-sm font-bold tracking-widest text-[#5037F7] scroll-fade opacity-0 translate-y-10"
-            >
-              ABOUT ME
-            </h3>
-            <h2
-              class="lg:text-[45px] md:text-[35px] sm:text-3xl text-3xl font-bold scroll-fade opacity-0 translate-y-10"
-            >
-              Boost Business Strategic Solutions with Us
-            </h2>
-            <p class="text-gray-400 scroll-fade opacity-0 translate-y-10">
-              Business consulting consultants provide expert advice and guide
-              businesses to help them improve their performance, efficiency, and
-              organization.
-            </p>
-
-            <div class="grid sm:grid-cols-2 gap-6">
-              <div
-                class="bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40"
-              >
-                <div class="flex items-center mb-4">
-                  <div
-                    class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
-                  >
-                    <ion-icon
-                      name="pricetags-outline"
-                      class="text-2xl"
-                    ></ion-icon>
-                  </div>
-                  <h4 class="font-bold text-lg text-[#5037F7] ml-4">
-                    Business Solutions
-                  </h4>
-                </div>
-                <p class="text-gray-400 mt-2">
-                  Each one showcases my approach and dedication to detail,
-                  creativity.
-                </p>
-              </div>
-              <div
-                class="bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40"
-              >
-                <div class="flex items-center mb-4">
-                  <div
-                    class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center"
-                  >
-                    <ion-icon
-                      name="notifications-outline"
-                      class="text-2xl"
-                    ></ion-icon>
-                  </div>
-                  <h4 class="font-bold text-lg text-[#5037F7] ml-4">
-                    Profit Partners
-                  </h4>
-                </div>
-                <p class="text-gray-400 mt-2">
-                  Business consulting provide expert advice businesses.
-                </p>
-              </div>
-            </div>
-
-            <button
-              class="bg-[#5037F7] font-bold text-white px-[30px] py-[20px] rounded-[50px]"
-            >
-              Read More About Me
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </div>
-        <div
-          class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out"
-        >
-          <div
-            class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 lg:gap-[50px] md:gap-[30px] gap-[30px]"
-          >
-            <div
-              class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
-            >
-              <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
-                <span id="experience-counts">0</span>K
-              </h2>
-              <p class="text-gray-300">Notre projet termine</p>
-            </div>
-            <div
-              class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
-            >
-              <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
-                <span id="experience-countss">0</span>K
-              </h2>
-              <p class="text-gray-300">Our Natural Products</p>
-            </div>
-            <div
-              class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
-            >
-              <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
-                <span id="experience-countsss">0</span>+
-              </h2>
-              <p class="text-gray-300">Clients Reviews</p>
-            </div>
-            <div
-              class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2"
-            >
-              <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
-                <span id="experience-countse">0</span>K+
-              </h2>
-              <p class="text-gray-300">our Satisfied Clients</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="lg:px-[50px] md:px-[30px] px-[20px]" id="skills">
-        <div
-          class="py-[60px] lg:px-[50px] md:px-[30px] px-[20px] rounded-xl bg-neutral-900 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40"
-        >
-          <!-- title -->
-          <h3
-            class="font-bold text-[#5037F7] mb-[20px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
-          >
-            MY SKILLS
-          </h3>
-
-          <h1
-            class="lg:text-[45px] md:text-[35px] text-[28px] font-bold text-white mb-[25px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
-          >
-            My Expert Areas Where I <br class="hidden lg:block" />
-            Gained Skills
-          </h1>
-
-          <p
-            class="text-gray-400 max-w-[700px] mb-[40px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
-          >
-            I specialize in modern web design and development tools. These
-            technologies help me create responsive, high-performance, and
-            visually appealing digital experiences.
-          </p>
-
-          <!-- skills grid -->
-          <div
-            class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-[25px] text-white"
-          >
-            <!-- skill -->
-            <div
-              class="p-[25px] scroll-fade opacity-0 translate-y-10 t ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group"
-            >
-              <div
-                class="h-[50px] w-[50px] rounded-full border border-gray-600 flex justify-center items-center mb-[20px] group-hover:border-[#5037F7]"
-              >
-                <ion-icon name="logo-foursquare" class="text-2xl"></ion-icon>
-              </div>
-
-              <h2 class="font-semibold text-[20px] mb-[10px]">Framer</h2>
-
-              <p class="text-gray-400 text-sm">
-                Creating interactive and modern UI prototypes with smooth
-                animations and professional layouts.
-              </p>
-            </div>
-
-            <!-- skill -->
-            <div
-              class="p-[25px] scroll-fade opacity-0 translate-y-10 t ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group"
-            >
-              <div
-                class="h-[50px] w-[50px] rounded-full border border-gray-600 flex justify-center items-center mb-[20px] group-hover:border-[#5037F7]"
-              >
-                <ion-icon name="logo-web-component" class="text-2xl"></ion-icon>
-              </div>
-
-              <h2 class="font-semibold text-[20px] mb-[10px]">Webflow</h2>
-
-              <p class="text-gray-400 text-sm">
-                Building responsive websites visually while maintaining clean
-                design structures and smooth animations.
-              </p>
-            </div>
-
-            <!-- skill -->
-            <div
-              class="p-[25px] scroll-fade opacity-0 translate-y-10 t ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group"
-            >
-              <div
-                class="h-[50px] w-[50px] rounded-full border border-gray-600 group-hover:border-[#5037F7] flex justify-center items-center mb-[20px] "
-              >
-                <ion-icon name="logo-figma" class="text-2xl"></ion-icon>
-              </div>
-
-              <h2 class="font-semibold text-[20px] mb-[10px]">Figma</h2>
-
-              <p class="text-gray-400 text-sm">
-                Designing modern UI/UX interfaces, wireframes, and prototypes
-                for web and mobile applications.
-              </p>
-            </div>
-
-            <!-- skill -->
-            <div
-              class="p-[25px] scroll-fade opacity-0 translate-y-10 t ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group"
-            >
-              <div
-                class="h-[50px] w-[50px] rounded-full border border-gray-600 flex justify-center items-center mb-[20px] group-hover:border-[#5037F7]"
-              >
-                <ion-icon name="logo-wordpress" class="text-2xl"></ion-icon>
-              </div>
-
-              <h2 class="font-semibold text-[20px] mb-[10px]">WordPress</h2>
-
-              <p class="text-gray-400 text-sm">
-                Developing and customizing WordPress websites with themes,
-                plugins, and optimized performance.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-  id="projects"
-  class="bg-black text-white py-[120px] px-[20px] md:px-[40px] lg:px-[80px]"
+  id="page"
+  class="w-[350px] fixed right-7 bottom-[160px] z-50 hidden bg-neutral-900/90 backdrop-blur-xl border border-neutral-800 shadow-2xl shadow-black/50 rounded-2xl px-[20px] py-[20px] animate-fadeIn"
 >
-  <div class="text-center mb-[80px]">
-    <p
-      class="text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3"
-    >
-      Mes Projets
+  <div class="flex items-center justify-between bg-[#5037F7] px-4 py-3 rounded-xl mb-5">
+    <p class="translate text-white font-semibold text-sm" 
+       data-fr="Discutons ensemble" 
+       data-en="Let's Chat">
+      Discutons ensemble
     </p>
 
-    <h2
-      class="lg:text-[48px] md:text-[38px] text-[30px] scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold mb-4"
+    <div class="flex items-center gap-3">
+      <span class="translate flex items-center gap-1 text-xs text-white" 
+            data-fr="En ligne" 
+            data-en="Online">
+        <span class="h-2 w-2 bg-green-400 rounded-full animate-pulse"></span>
+        En ligne
+      </span>
+
+      <button id="closeChat" class="text-white text-lg hover:opacity-70">
+        ✕
+      </button>
+    </div>
+  </div>
+
+  <p class="translate text-center text-gray-400 text-sm mb-6"
+     data-fr="Remplissez le formulaire ci-dessous et je vous répondrai dès que possible."
+     data-en="Fill the form below and I will reply as soon as possible.">
+    Remplissez le formulaire ci-dessous et je vous répondrai dès que possible.
+  </p>
+
+  <p id="successMsg" class="translate hidden text-green-400 text-center text-sm mb-4"
+     data-fr="✅ Message envoyé avec succès !"
+     data-en="✅ Message sent successfully!">
+    ✅ Message envoyé avec succès !
+  </p>
+
+  <form
+    id="contactForm"
+    action="https://formspree.io/f/mojkvqnv"
+    method="POST"
+    class="space-y-3"
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder="Votre Nom"
+      required
+      class="translate w-full bg-neutral-800 border border-neutral-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7]"
+      data-fr-placeholder="Votre Nom"
+      data-en-placeholder="Your Name"
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      required
+      class="translate w-full bg-neutral-800 border border-neutral-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7]"
+      data-fr-placeholder="Email"
+      data-en-placeholder="Email"
+    />
+
+    <textarea
+      name="message"
+      rows="3"
+      placeholder="Votre Message"
+      required
+      class="translate w-full bg-neutral-800 border border-neutral-700 text-white rounded-lg px-3 py-2 text-sm resize-none focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7]"
+      data-fr-placeholder="Votre Message"
+      data-en-placeholder="Your Message"
+    ></textarea>
+
+    <button
+      type="submit"
+      class="translate w-full bg-[#5037F7] hover:bg-[#6b55ff] text-white font-semibold py-2.5 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#5037F7]/40"
+      data-fr="Envoyer le message"
+      data-en="Send Message"
     >
+      Envoyer le message
+    </button>
+  </form>
+</div>
+     <section class="bg-black text-white py-16 px-4" id="Services">
+  <div class="text-center mb-10">
+    <p class="translate text-[#5037F7] mb-3 tracking-widest text-sm font-bold"
+       data-fr="CE QUE JE FAIS"
+       data-en="WHAT I DO">
+      CE QUE JE FAIS
+    </p>
+    <h2 class="translate lg:text-[45px] mb-4 md:text-[35px] sm:text-2xl text-2xl font-bold"
+        data-fr="Mes Services Pour Vous"
+        data-en="What I Provide For You">
+      Mes Services Pour Vous
+    </h2>
+  </div>
+
+  <div class="grid gap-6 sm:grid-cols-2">
+    <div class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
+      <div class="flex items-center mb-4">
+        <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
+          <ion-icon name="code-slash-outline" class="text-2xl font-bold"></ion-icon>
+        </div>
+        <h3 class="translate ml-4 text-lg font-bold" data-fr="Design UI/UX" data-en="UI/UX Design">Design UI/UX</h3>
+      </div>
+      <p class="translate text-gray-400"
+         data-fr="Conception d'interfaces intuitives et esthétiques centrées sur l'utilisateur pour garantir une expérience numérique fluide et engageante."
+         data-en="Creating intuitive and aesthetic user-centered interfaces to ensure a smooth and engaging digital experience.">
+        Conception d'interfaces intuitives et esthétiques centrées sur l'utilisateur pour garantir une expérience numérique fluide et engageante.
+      </p>
+    </div>
+
+    <div class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
+      <div class="flex items-center mb-4">
+        <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
+          <ion-icon name="globe-outline" class="text-2xl"></ion-icon>
+        </div>
+        <h3 class="translate ml-4 text-lg font-bold" data-fr="Développement Web" data-en="Web Development">Développement Web</h3>
+      </div>
+      <p class="translate text-gray-400"
+         data-fr="Développement de sites web performants, réactifs et sécurisés utilisant les dernières technologies pour répondre à vos besoins spécifiques."
+         data-en="Developing high-performance, responsive, and secure websites using the latest technologies to meet your specific needs.">
+        Développement de sites web performants, réactifs et sécurisés utilisant les dernières technologies pour répondre à vos besoins spécifiques.
+      </p>
+    </div>
+
+    <div class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
+      <div class="flex items-center mb-4">
+        <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
+          <ion-icon name="briefcase-outline" class="text-2xl"></ion-icon>
+        </div>
+        <h3 class="translate ml-4 text-lg font-bold" data-fr="Solutions Business" data-en="Business Solutions">Solutions Business</h3>
+      </div>
+      <p class="translate text-gray-400"
+         data-fr="Analyse et automatisation de vos processus métier pour accroître votre productivité et optimiser vos résultats opérationnels."
+         data-en="Analysis and automation of your business processes to increase productivity and optimize your operational results.">
+        Analyse et automatisation de vos processus métier pour accroître votre productivité et optimiser vos résultats opérationnels.
+      </p>
+    </div>
+
+    <div class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
+      <div class="flex items-center mb-4">
+        <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
+          <ion-icon name="people-outline" class="text-2xl"></ion-icon>
+        </div>
+        <h3 class="translate ml-4 text-lg font-bold" data-fr="Conseil & Stratégie" data-en="Consulting & Strategy">Conseil & Stratégie</h3>
+      </div>
+      <p class="translate text-gray-400"
+         data-fr="Accompagnement stratégique pour vos projets digitaux, de la phase d'idéation jusqu'au déploiement final sur le marché."
+         data-en="Strategic support for your digital projects, from the ideation phase to the final market deployment.">
+        Accompagnement stratégique pour vos projets digitaux, de la phase d'idéation jusqu'au déploiement final sur le marché.
+      </p>
+    </div>
+  </div>
+</section>
+
+      <section class="bg-black text-white py-16 px-[50px]" id="About">
+  <div class="grid lg:grid-cols-2 gap-10 items-center mb-[60px]">
+    <div class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out">
+      <div class="lg:h-[350px] lg:w-[350px] md:w-[300px] md:h-[300px] sm:w-[200px] sm:h-[200px] h-[200px] w-[200px] rounded-full bg-blue-700 relative"></div>
+
+      <div class="bg-transparent/30 backdrop-blur-md lg:p-20 p-10 rounded-2xl absolute z-10 lg:-mt-[450px] -mt-[300px] lg:ml-[100px] shadow-lg">
+        <h2 class="text-6xl font-bold">
+          <span id="experience-count">0</span>+
+        </h2>
+        <p class="translate text-2xl font-semibold mt-2" 
+           data-fr="Années d'expérience" 
+           data-en="Years Of Experience">
+          Années d'expérience
+        </p>
+      </div>
+
+      <div class="bg-transparent/30 backdrop-blur-md lg:p-10 p-3 rounded-2xl absolute z-10 lg:-mt-[160px] -mt-[100px] lg:ml-[100px] flex items-center w-[300px]">
+        <div class="h-12 w-12 rounded-full bg-transparent border flex items-center justify-center">
+          <ion-icon name="bag-outline"></ion-icon>
+        </div>
+        <div>
+          <p class="text-2xl font-semibold mt-2 ml-4">UX/UI Design</p>
+          <h3 class="translate ml-4" 
+              data-fr="6 projets" 
+              data-en="6 projects">
+            6 projets
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <h3 class="translate text-sm font-bold tracking-widest text-[#5037F7] scroll-fade opacity-0 translate-y-10"
+          data-fr="À PROPOS DE MOI" 
+          data-en="ABOUT ME">
+        À PROPOS DE MOI
+      </h3>
+      <h2 class="translate lg:text-[45px] md:text-[35px] sm:text-3xl text-3xl font-bold scroll-fade opacity-0 translate-y-10"
+          data-fr="Boostez vos solutions stratégiques avec nous" 
+          data-en="Boost Business Strategic Solutions with Us">
+        Boostez vos solutions stratégiques avec nous
+      </h2>
+      <p class="translate text-gray-400 scroll-fade opacity-0 translate-y-10"
+         data-fr="En tant que consultant, j'apporte des conseils d'expert pour aider les entreprises à améliorer leurs performances, leur efficacité et leur organisation digitale."
+         data-en="As a consultant, I provide expert advice and guide businesses to help them improve their performance, efficiency, and digital organization.">
+        En tant que consultant, j'apporte des conseils d'expert pour aider les entreprises à améliorer leurs performances, leur efficacité et leur organisation digitale.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40">
+          <div class="flex items-center mb-4">
+            <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
+              <ion-icon name="pricetags-outline" class="text-2xl"></ion-icon>
+            </div>
+            <h4 class="translate font-bold text-lg text-[#5037F7] ml-4" 
+                data-fr="Solutions Business" 
+                data-en="Business Solutions">
+              Solutions Business
+            </h4>
+          </div>
+          <p class="translate text-gray-400 mt-2"
+             data-fr="Chaque projet démontre mon approche et mon dévouement aux détails."
+             data-en="Each one showcases my approach and dedication to detail, creativity.">
+            Chaque projet démontre mon approche et mon dévouement aux détails.
+          </p>
+        </div>
+        <div class="bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40">
+          <div class="flex items-center mb-4">
+            <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
+              <ion-icon name="notifications-outline" class="text-2xl"></ion-icon>
+            </div>
+            <h4 class="translate font-bold text-lg text-[#5037F7] ml-4" 
+                data-fr="Partenaires Croissance" 
+                data-en="Profit Partners">
+              Partenaires Croissance
+            </h4>
+          </div>
+          <p class="translate text-gray-400 mt-2"
+             data-fr="Un accompagnement expert pour la réussite de vos projets."
+             data-en="Business consulting provide expert advice businesses.">
+            Un accompagnement expert pour la réussite de vos projets.
+          </p>
+        </div>
+      </div>
+
+      <button class="bg-[#5037F7] font-bold text-white px-[30px] py-[20px] rounded-[50px] flex items-center gap-2">
+        <span class="translate" data-fr="En savoir plus sur moi" data-en="Read More About Me">En savoir plus sur moi</span>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out">
+    <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 lg:gap-[50px] md:gap-[30px] gap-[30px]">
+      <div class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
+        <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
+          <span id="experience-counts">0</span>K
+        </h2>
+        <p class="translate text-gray-300" data-fr="Projets terminés" data-en="Completed Projects">Projets terminés</p>
+      </div>
+      <div class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
+        <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
+          <span id="experience-countss">0</span>K
+        </h2>
+        <p class="translate text-gray-300" data-fr="Produits lancés" data-en="Products Launched">Produits lancés</p>
+      </div>
+      <div class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
+        <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
+          <span id="experience-countsss">0</span>+
+        </h2>
+        <p class="translate text-gray-300" data-fr="Avis clients" data-en="Clients Reviews">Avis clients</p>
+      </div>
+      <div class="px-[30px] py-[25px] bg-neutral-900 rounded-[12px] text-center gap-[20px] flex flex-col transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
+        <h2 class="lg:text-[40px] md:text-[30px] text-3xl font-bold">
+          <span id="experience-countse">0</span>K+
+        </h2>
+        <p class="translate text-gray-300" data-fr="Clients satisfaits" data-en="Satisfied Clients">Clients satisfaits</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="lg:px-[50px] md:px-[30px] px-[20px]" id="skills">
+  <div class="py-[60px] lg:px-[50px] md:px-[30px] px-[20px] rounded-xl bg-neutral-900 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40">
+    
+    <h3 class="translate font-bold text-[#5037F7] mb-[20px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
+        data-fr="MES COMPÉTENCES" 
+        data-en="MY SKILLS">
+      MES COMPÉTENCES
+    </h3>
+
+    <h1 class="translate lg:text-[45px] md:text-[35px] text-[28px] font-bold text-white mb-[25px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
+        data-fr="Mes domaines d'expertise et <br class='hidden lg:block' /> compétences acquises" 
+        data-en="My Expert Areas Where I <br class='hidden lg:block' /> Gained Skills">
+      Mes domaines d'expertise et <br class="hidden lg:block" /> compétences acquises
+    </h1>
+
+    <p class="translate text-gray-400 max-w-[700px] mb-[40px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
+       data-fr="Je me spécialise dans les outils modernes de conception et de développement web. Ces technologies me permettent de créer des expériences numériques réactives, performantes et esthétiques." 
+       data-en="I specialize in modern web design and development tools. These technologies help me create responsive, high-performance, and visually appealing digital experiences.">
+      Je me spécialise dans les outils modernes de conception et de développement web. Ces technologies me permettent de créer des expériences numériques réactives, performantes et esthétiques.
+    </p>
+
+    <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-[25px] text-white">
+      
+      <div class="p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
+        <div class="h-[50px] w-[50px] rounded-full border border-gray-600 flex justify-center items-center mb-[20px] group-hover:border-[#5037F7]">
+          <ion-icon name="logo-foursquare" class="text-2xl"></ion-icon>
+        </div>
+        <h2 class="font-semibold text-[20px] mb-[10px]">Framer</h2>
+        <p class="translate text-gray-400 text-sm"
+           data-fr="Création de prototypes UI interactifs et modernes avec des animations fluides et des mises en page professionnelles."
+           data-en="Creating interactive and modern UI prototypes with smooth animations and professional layouts.">
+          Création de prototypes UI interactifs et modernes avec des animations fluides et des mises en page professionnelles.
+        </p>
+      </div>
+
+      <div class="p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
+        <div class="h-[50px] w-[50px] rounded-full border border-gray-600 flex justify-center items-center mb-[20px] group-hover:border-[#5037F7]">
+          <ion-icon name="logo-web-component" class="text-2xl"></ion-icon>
+        </div>
+        <h2 class="font-semibold text-[20px] mb-[10px]">Webflow</h2>
+        <p class="translate text-gray-400 text-sm"
+           data-fr="Construction de sites web réactifs visuellement tout en maintenant des structures de design propres et des animations fluides."
+           data-en="Building responsive websites visually while maintaining clean design structures and smooth animations.">
+          Construction de sites web réactifs visuellement tout en maintenant des structures de design propres et des animations fluides.
+        </p>
+      </div>
+
+      <div class="p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
+        <div class="h-[50px] w-[50px] rounded-full border border-gray-600 group-hover:border-[#5037F7] flex justify-center items-center mb-[20px]">
+          <ion-icon name="logo-figma" class="text-2xl"></ion-icon>
+        </div>
+        <h2 class="font-semibold text-[20px] mb-[10px]">Figma</h2>
+        <p class="translate text-gray-400 text-sm"
+           data-fr="Conception d'interfaces UI/UX modernes, de wireframes et de prototypes pour applications web et mobiles."
+           data-en="Designing modern UI/UX interfaces, wireframes, and prototypes for web and mobile applications.">
+          Conception d'interfaces UI/UX modernes, de wireframes et de prototypes pour applications web et mobiles.
+        </p>
+      </div>
+
+      <div class="p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
+        <div class="h-[50px] w-[50px] rounded-full border border-gray-600 flex justify-center items-center mb-[20px] group-hover:border-[#5037F7]">
+          <ion-icon name="logo-wordpress" class="text-2xl"></ion-icon>
+        </div>
+        <h2 class="font-semibold text-[20px] mb-[10px]">WordPress</h2>
+        <p class="translate text-gray-400 text-sm"
+           data-fr="Développement et personnalisation de sites WordPress avec thèmes, extensions et performances optimisées."
+           data-en="Developing and customizing WordPress websites with themes, plugins, and optimized performance.">
+          Développement et personnalisation de sites WordPress avec thèmes, extensions et performances optimisées.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      <section id="projects" class="bg-black text-white py-[120px] px-[20px] md:px-[40px] lg:px-[80px]">
+  <div class="text-center mb-[80px]">
+    <p class="translate text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3"
+       data-fr="MES PROJETS"
+       data-en="MY PROJECTS">
+      MES PROJETS
+    </p>
+
+    <h2 class="translate lg:text-[48px] md:text-[38px] text-[30px] scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold mb-4"
+        data-fr="Projets en vedette"
+        data-en="Featured Projects">
       Projets en vedette
     </h2>
 
-    <p
-      class="text-gray-400 scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out max-w-xl mx-auto"
-    >
+    <p class="translate text-gray-400 scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out max-w-xl mx-auto"
+       data-fr="Une sélection de projets mettant en valeur mon expertise dans le développement web et mobile moderne en utilisant les dernières technologies."
+       data-en="A selection of projects highlighting my expertise in modern web and mobile development using the latest technologies.">
       Une sélection de projets mettant en valeur mon expertise dans le développement web et mobile moderne en utilisant les dernières technologies.
     </p>
   </div>
 
   <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
     
-    <div
-      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
-    >
-      <img
-        src="./src/assets/images/Thumnail5.jpg"
-        alt="SafeWatch360 Dashboard Interface"
-        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
-      />
-
-      <div
-        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6"
-      >
+    <div class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
+      <img src="./src/assets/images/Thumnail5.jpg" alt="SafeWatch360 Dashboard Interface" class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
           <h3 class="text-xl font-semibold mb-1 text-white">SafeWatch360 Dashboard</h3>
           <p class="text-[#5037F7] font-medium text-sm mb-5">Vue • Laravel • Tailwind</p>
-
           <div class="flex gap-3 justify-center">
-            <a
-              href="https://github.com/yourproject"
-              target="_blank"
-              class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all"
-            >
+            <a href="https://github.com/yourproject" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               Github
             </a>
-
-            <a
-              href="https://yourproject.com"
-              target="_blank"
-              class="flex items-center gap-2 px-4 py-2 bg-[#5037F7] text-white rounded-lg text-sm shadow-lg shadow-[#5037F7]/30 hover:bg-[#402bd6] transition-all"
-            >
+            <a href="https://yourproject.com" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-[#5037F7] text-white rounded-lg text-sm shadow-lg shadow-[#5037F7]/30 hover:bg-[#402bd6] transition-all">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
               Demo
             </a>
@@ -707,20 +602,12 @@
       </div>
     </div>
 
-    <div
-      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
-    >
-      <img
-        src="./src/assets/images/hq720 (1).jpg"
-        alt="ArmelShop Ecommerce App"
-        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
-      />
-
+    <div class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
+      <img src="./src/assets/images/hq720 (1).jpg" alt="ArmelShop Ecommerce App" class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
           <h3 class="text-xl font-semibold mb-1 text-white">DacMagSHOP Ecommerce</h3>
           <p class="text-[#5037F7] font-medium text-sm mb-5">Laravel • Vue • API</p>
-
           <div class="flex gap-3 justify-center">
             <a href="https://github.com/Armel200/DagMagSHOP" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -734,20 +621,13 @@
         </div>
       </div>
     </div>
-     <div
-      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
-    >
-      <img
-        src="./src/assets/images/resto.webp"
-        alt="ArmelShop Ecommerce App"
-        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
-      />
 
+    <div class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
+      <img src="./src/assets/images/resto.webp" alt="Librairie Cafe" class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
           <h3 class="text-xl font-semibold mb-1 text-white">Librairie Cafe</h3>
-          <p class="text-[#5037F7] font-medium text-sm mb-5">Php  API</p>
-
+          <p class="text-[#5037F7] font-medium text-sm mb-5">Php • API</p>
           <div class="flex gap-3 justify-center">
             <a href="#" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -761,20 +641,13 @@
         </div>
       </div>
     </div>
-     <div
-      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
-    >
-      <img
-        src="./src/assets/images/plage.webp"
-        alt="ArmelShop Ecommerce App"
-        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
-      />
 
+    <div class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
+      <img src="./src/assets/images/plage.webp" alt="Lens pro" class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-          <h3 class="text-xl font-semibold mb-1 text-white">Lens pro </h3>
+          <h3 class="text-xl font-semibold mb-1 text-white">Lens pro</h3>
           <p class="text-[#5037F7] font-medium text-sm mb-5">Laravel • Vue • API</p>
-
           <div class="flex gap-3 justify-center">
             <a href="#" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -788,23 +661,16 @@
         </div>
       </div>
     </div>
-     <div
-      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
-    >
-      <img
-        src="./src/assets/images/love.png"
-        alt="ArmelShop Ecommerce App"
-        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
-      />
 
+    <div class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
+      <img src="./src/assets/images/love.png" alt="Valentime Day" class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-          <h3 class="text-xl font-semibold mb-1 text-white">Valentime Day </h3>
+          <h3 class="text-xl font-semibold mb-1 text-white">Valentime Day</h3>
           <p class="text-[#5037F7] font-medium text-sm mb-5">Tailwind Css</p>
-
           <div class="flex gap-3 justify-center">
-            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
-              <svg xmlns="https://github.com/Armel200/valentine" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/Armel200/valentine" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               Github
             </a>
             <a href="https://armel200.github.io/valentine/" class="flex items-center gap-2 px-4 py-2 bg-[#5037F7] text-white rounded-lg text-sm shadow-lg shadow-[#5037F7]/30 hover:bg-[#402bd6] transition-all">
@@ -816,20 +682,12 @@
       </div>
     </div>
 
-    <div
-      class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-500 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]"
-    >
-      <img
-        src="./src/assets/images/dacmag.png"
-        alt="Flutter Mobile App Project"
-        class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700"
-      />
-
+    <div class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-500 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
+      <img src="./src/assets/images/dacmag.png" alt="Flutter Mobile App Project" class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
           <h3 class="text-xl font-semibold mb-1 text-white">Flutter Mobile App</h3>
           <p class="text-[#5037F7] font-medium text-sm mb-5">Flutter • REST API</p>
-
           <div class="flex gap-3 justify-center">
             <a href="https://github.com/Armel200/Mini_app" class="flex items-center gap-2 px-4 py-2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-lg text-sm hover:bg-[#5037F7] hover:border-[#5037F7] transition-all">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -844,16 +702,20 @@
       </div>
     </div>
 
-    </div>
+  </div>
 </section>
     <section class="bg-black py-[120px] text-gray-200" id="blog">
   <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
     
     <div class="text-center mb-[80px]">
-      <p class="text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3">
+      <p class="translate text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3"
+         data-fr="Mon actualité"
+         data-en="My Latest News">
         Mon actualité
       </p>
-      <h2 class="text-4xl scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold text-white mb-4">
+      <h2 class="translate text-4xl scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold text-white mb-4"
+          data-fr="Blog & Astuces"
+          data-en="Blog & Tips">
         Blog & Astuces
       </h2>
     </div>
@@ -864,65 +726,63 @@
 
         <article class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] rounded-2xl overflow-hidden hover:shadow-[0_0_30px_rgba(80,55,247,0.1)]">
           <div class="overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
-              alt="Développement web coding"
-              class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
-            />
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="Coding" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
 
           <div class="p-6 md:p-8">
             <div class="flex items-center gap-3 mb-4">
-              <span class="px-3 py-1 bg-neutral-800 text-[#5037F7] text-xs font-semibold rounded-full">Tutoriel</span>
-              <span class="text-gray-500 text-sm">07 Mars 2026</span>
+              <span class="translate px-3 py-1 bg-neutral-800 text-[#5037F7] text-xs font-semibold rounded-full" data-fr="Tutoriel" data-en="Tutorial">Tutoriel</span>
+              <span class="translate text-gray-500 text-sm" data-fr="07 Mars 2026" data-en="March 07, 2026">07 Mars 2026</span>
             </div>
 
-            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#5037F7] transition-colors">
+            <h3 class="translate text-2xl font-bold text-white mb-3 group-hover:text-[#5037F7] transition-colors"
+                data-fr="Comment optimiser les performances de son application React ?"
+                data-en="How to optimize the performance of your React application?">
               Comment optimiser les performances de son application React ?
             </h3>
 
-            <p class="text-gray-400 mb-6 line-clamp-2">
-              Découvrez les meilleures pratiques et astuces pour réduire le temps de chargement et offrir une expérience fluide à vos utilisateurs grâce au lazy loading et à la mémorisation.
+            <p class="translate text-gray-400 mb-6 line-clamp-2"
+               data-fr="Découvrez les meilleures pratiques et astuces pour réduire le temps de chargement et offrir une expérience fluide à vos utilisateurs."
+               data-en="Discover best practices and tips to reduce loading time and provide a smooth experience for your users.">
+              Découvrez les meilleures pratiques et astuces pour réduire le temps de chargement et offrir une expérience fluide à vos utilisateurs.
             </p>
 
-            <div class="flex items-center">
-              <a href="./article1.html" class="inline-flex items-center gap-2 text-[#5037F7] font-semibold hover:gap-3 transition-all">
-                Lire l'article 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
-              </a>
-            </div>
+            <a href="./article1.html" class="translate inline-flex items-center gap-2 text-[#5037F7] font-semibold hover:gap-3 transition-all"
+               data-fr="Lire l'article" data-en="Read more">
+              Lire l'article 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+            </a>
           </div>
         </article>
 
         <article class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] rounded-2xl overflow-hidden hover:shadow-[0_0_30px_rgba(80,55,247,0.1)]">
           <div class="overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
-              alt="Cybersecurité et technologie"
-              class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
-            />
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" alt="Design" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
 
           <div class="p-6 md:p-8">
             <div class="flex items-center gap-3 mb-4">
-              <span class="px-3 py-1 bg-neutral-800 text-[#5037F7] text-xs font-semibold rounded-full">Design</span>
-              <span class="text-gray-500 text-sm">05 Mars 2026</span>
+              <span class="translate px-3 py-1 bg-neutral-800 text-[#5037F7] text-xs font-semibold rounded-full" data-fr="Design" data-en="Design">Design</span>
+              <span class="translate text-gray-500 text-sm" data-fr="05 Mars 2026" data-en="March 05, 2026">05 Mars 2026</span>
             </div>
 
-            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#5037F7] transition-colors">
+            <h3 class="translate text-2xl font-bold text-white mb-3 group-hover:text-[#5037F7] transition-colors"
+                data-fr="L'importance de l'UI/UX dans le taux de conversion"
+                data-en="The importance of UI/UX in conversion rates">
               L'importance de l'UI/UX dans le taux de conversion
             </h3>
 
-            <p class="text-gray-400 mb-6 line-clamp-2">
-              Un design attractif ne suffit pas. Analysons comment une interface pensée pour l'utilisateur peut augmenter significativement les ventes d'un e-commerce.
+            <p class="translate text-gray-400 mb-6 line-clamp-2"
+               data-fr="Un design attractif ne suffit pas. Analysons comment une interface pensée pour l'utilisateur peut augmenter vos ventes."
+               data-en="An attractive design is not enough. Let's analyze how a user-centric interface can increase your sales.">
+              Un design attractif ne suffit pas. Analysons comment une interface pensée pour l'utilisateur peut augmenter vos ventes.
             </p>
 
-            <div class="flex items-center">
-              <a href="./article2.html" class="inline-flex items-center gap-2 text-[#5037F7] font-semibold hover:gap-3 transition-all">
-                Lire l'article 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
-              </a>
-            </div>
+            <a href="./article2.html" class="translate inline-flex items-center gap-2 text-[#5037F7] font-semibold hover:gap-3 transition-all"
+               data-fr="Lire l'article" data-en="Read more">
+              Lire l'article 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+            </a>
           </div>
         </article>
 
@@ -932,67 +792,46 @@
         <div class="sticky top-8 space-y-8 p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
           
           <div>
-            <h3 class="text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2">
-              Recherche
-            </h3>
+            <h3 class="translate text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2" data-fr="Recherche" data-en="Search">Recherche</h3>
             <div class="relative">
-              <input
-                type="text"
-                placeholder="Rechercher..."
-                class="w-full p-3 pl-10 rounded-lg bg-black border border-neutral-700 text-gray-200 focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
-              />
+              <input type="text" placeholder="Rechercher..." class="translate w-full p-3 pl-10 rounded-lg bg-black border border-neutral-700 text-gray-200 focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all" 
+                     data-fr-placeholder="Rechercher..." data-en-placeholder="Search..."/>
               <svg class="absolute left-3 top-3.5 w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
             </div>
           </div>
 
           <div>
-            <h3 class="text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2">
-              Catégories
-            </h3>
+            <h3 class="translate text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2" data-fr="Catégories" data-en="Categories">Catégories</h3>
             <ul class="space-y-3 text-gray-400">
               <li>
                 <a href="#" class="flex items-center justify-between hover:text-[#5037F7] transition-colors">
-                  <span>Développement Web</span>
+                  <span class="translate" data-fr="Développement Web" data-en="Web Development">Développement Web</span>
                   <span class="text-xs bg-neutral-800 px-2 py-1 rounded-md">12</span>
                 </a>
               </li>
               <li>
                 <a href="#" class="flex items-center justify-between hover:text-[#5037F7] transition-colors">
-                  <span>Design UI/UX</span>
+                  <span class="translate" data-fr="Design UI/UX" data-en="UI/UX Design">Design UI/UX</span>
                   <span class="text-xs bg-neutral-800 px-2 py-1 rounded-md">8</span>
                 </a>
               </li>
               <li>
                 <a href="#" class="flex items-center justify-between hover:text-[#5037F7] transition-colors">
-                  <span>Conseils & Astuces</span>
+                  <span class="translate" data-fr="Conseils & Astuces" data-en="Tips & Tricks">Conseils & Astuces</span>
                   <span class="text-xs bg-neutral-800 px-2 py-1 rounded-md">15</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center justify-between hover:text-[#5037F7] transition-colors">
-                  <span>Projets Open Source</span>
-                  <span class="text-xs bg-neutral-800 px-2 py-1 rounded-md">4</span>
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 class="text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2">
-              Newsletter
-            </h3>
-            <p class="text-sm text-gray-400 mb-4">Ne manquez pas mes derniers articles et projets.</p>
+            <h3 class="translate text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2" data-fr="Newsletter" data-en="Newsletter">Newsletter</h3>
+            <p class="translate text-sm text-gray-400 mb-4" data-fr="Ne manquez pas mes derniers articles." data-en="Don't miss my latest articles.">Ne manquez pas mes derniers articles.</p>
             <form action="#" class="space-y-3">
-              <input
-                type="email"
-                placeholder="Votre adresse email"
-                class="w-full p-3 rounded-lg bg-black border border-neutral-700 text-gray-200 focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
-                required
-              />
-              <button
-                type="submit"
-                class="w-full bg-[#5037F7] text-white font-semibold px-6 py-3 rounded-lg shadow-lg shadow-[#5037F7]/20 hover:bg-[#402bd6] transition-all"
-              >
+              <input type="email" placeholder="Votre email" class="translate w-full p-3 rounded-lg bg-black border border-neutral-700 text-gray-200 focus:outline-none transition-all" 
+                     data-fr-placeholder="Votre adresse email" data-en-placeholder="Your email address" required />
+              <button type="submit" class="translate w-full bg-[#5037F7] text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-[#402bd6] transition-all"
+                      data-fr="S'abonner" data-en="Subscribe">
                 S'abonner
               </button>
             </form>
@@ -1004,9 +843,149 @@
     </div>
   </div>
 </section>
+<section class="bg-black py-[120px] text-gray-200" id="contact">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+    <div class="text-center mb-[80px]">
+      <p class="translate text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3"
+         data-fr="Restons en Contact"
+         data-en="Let's Connect">
+        Restons en Contact
+      </p>
+      <h2 class="translate text-4xl scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold text-white mb-4"
+          data-fr="Contactez-moi"
+          data-en="Get in Touch">
+        Contactez-moi
+      </h2>
+      <p class="translate text-gray-400 max-w-2xl mx-auto scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out"
+         data-fr="Que vous ayez un projet en tête, une question ou simplement envie de discuter, n'hésitez pas à me contacter. Je suis toujours ouvert aux nouvelles opportunités."
+         data-en="Whether you have a project in mind, a question, or just want to chat, feel free to reach out. I'm always open to new opportunities.">
+        Que vous ayez un projet en tête, une question ou simplement envie de discuter, n'hésitez pas à me contacter. Je suis toujours ouvert aux nouvelles opportunités.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div class="space-y-8 scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
+        <h3 class="translate text-2xl font-bold text-white mb-6"
+            data-fr="Informations de contact"
+            data-en="Contact Information">
+          Informations de contact
+        </h3>
+        
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-neutral-800 rounded-lg text-[#5037F7]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="translate text-sm text-gray-400" data-fr="Email" data-en="Email">Email</p>
+              <a href="mailto:ulrichdega@gmail.com" class="text-white hover:text-[#5037F7] transition-colors">ulrichdega@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-neutral-800 rounded-lg text-[#5037F7]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="translate text-sm text-gray-400" data-fr="Téléphone" data-en="Phone">Téléphone</p>
+              <p class="text-white">+237 695 08 93 49</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-neutral-800 rounded-lg text-[#5037F7]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="3"/></svg>
+            </div>
+            <div>
+              <p class="translate text-sm text-gray-400" data-fr="Adresse" data-en="Address">Adresse</p>
+              <p class="text-white">Douala, Cameroun</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 border-t border-neutral-800 pt-6">
+          <h4 class="translate text-lg font-semibold text-white mb-4"
+              data-fr="Suivez-moi"
+              data-en="Follow Me">
+            Suivez-moi
+          </h4>
+          <div class="flex space-x-4">
+            <a href="https://github.com/Armel200" class="p-3 bg-neutral-800 rounded-full hover:bg-[#5037F7] hover:text-white transition-all duration-300" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="p-3 bg-neutral-800 rounded-full hover:bg-[#5037F7] hover:text-white transition-all duration-300" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" class="p-3 bg-neutral-800 rounded-full hover:bg-[#5037F7] hover:text-white transition-all duration-300" title="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
+        <h3 class="translate text-2xl font-bold text-white mb-6"
+            data-fr="Envoyez-moi un message"
+            data-en="Send Me a Message">
+          Envoyez-moi un message
+        </h3>
+        <form action="https://formspree.io/f/mojkvqnv" method="POST" class="space-y-5">
+          <div>
+            <label for="name" class="translate block text-sm font-medium text-gray-300 mb-2" data-fr="Votre Nom" data-en="Your Name">Votre Nom</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              class="translate w-full bg-neutral-800 border border-neutral-700 text-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
+              data-fr-placeholder="Ex: Armel Demanou"
+              data-en-placeholder="Ex: Armel Demanou"
+              placeholder="Ex: Armel Demanou"
+            />
+          </div>
+          <div>
+            <label for="email" class="translate block text-sm font-medium text-gray-300 mb-2" data-fr="Votre Email" data-en="Your Email">Votre Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              class="translate w-full bg-neutral-800 border border-neutral-700 text-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
+              data-fr-placeholder="Ex: votre.email@example.com"
+              data-en-placeholder="Ex: your.email@example.com"
+              placeholder="Ex: votre.email@example.com"
+            />
+          </div>
+          <div>
+            <label for="message" class="translate block text-sm font-medium text-gray-300 mb-2" data-fr="Votre Message" data-en="Your Message">Votre Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="6"
+              required
+              class="translate w-full bg-neutral-800 border border-neutral-700 text-white rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
+              data-fr-placeholder="Écrivez votre message ici..."
+              data-en-placeholder="Write your message here..."
+              placeholder="Écrivez votre message ici..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="translate w-full bg-[#5037F7] hover:bg-[#402bd6] text-white font-semibold px-6 py-3 rounded-lg shadow-lg shadow-[#5037F7]/20 hover:shadow-[#5037F7]/30 transition-all duration-300"
+            data-fr="Envoyer le message"
+            data-en="Send Message"
+          >
+            Envoyer le message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
 
-    <footer class="bg-black text-gray-200 border-t border-neutral-900 pt-20 pb-10">
+   <footer class="bg-black text-gray-200 border-t border-neutral-900 pt-20 pb-10">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -1016,7 +995,9 @@
           <h3 class="text-2xl font-bold text-white tracking-tighter">
             ARMEL<span class="text-[#5037F7]">.</span>DEMANOU
           </h3>
-          <p class="mt-4 text-gray-400 leading-relaxed">
+          <p class="translate mt-4 text-gray-400 leading-relaxed"
+             data-fr="Développeur Fullstack & Designer spécialisé dans la création d'expériences numériques haute performance."
+             data-en="Fullstack Developer & Designer specializing in creating high-performance digital experiences.">
             Développeur Fullstack & Designer spécialisé dans la création d'expériences numériques haute performance.
           </p>
         </div>
@@ -1028,28 +1009,30 @@
             </div>
             ulrichdega@gmail.com
           </a>
-          <p class="flex items-center gap-3 text-gray-400">
+          <div class="flex items-center gap-3 text-gray-400">
             <div class="p-2 bg-neutral-900 rounded-lg">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             +237 695 08 93 49
-          </p>
+          </div>
         </div>
       </div>
 
       <div>
-        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Navigation</h4>
+        <h4 class="translate text-white font-bold mb-6 uppercase tracking-widest text-sm" data-fr="Navigation" data-en="Sitemap">Navigation</h4>
         <ul class="space-y-4 text-gray-400">
-          <li><a href="#about" class="hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block">À propos</a></li>
-          <li><a href="#projects" class="hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block">Projets</a></li>
-          <li><a href="#blog" class="hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block">Blog</a></li>
-          <li><a href="#contact" class="hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block">Contact</a></li>
+          <li><a href="#about" class="translate hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block" data-fr="À propos" data-en="About">À propos</a></li>
+          <li><a href="#projects" class="translate hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block" data-fr="Projets" data-en="Projects">Projets</a></li>
+          <li><a href="#blog" class="translate hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block" data-fr="Blog" data-en="Blog">Blog</a></li>
+          <li><a href="#contact" class="translate hover:text-[#5037F7] hover:translate-x-2 transition-all inline-block" data-fr="Contact" data-en="Contact">Contact</a></li>
         </ul>
       </div>
 
       <div class="md:col-span-2">
-        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Restez informé</h4>
-        <p class="text-gray-400 mb-6 max-w-sm">
+        <h4 class="translate text-white font-bold mb-6 uppercase tracking-widest text-sm" data-fr="Restez informé" data-en="Stay Updated">Restez informé</h4>
+        <p class="translate text-gray-400 mb-6 max-w-sm"
+           data-fr="Rejoignez ma newsletter pour recevoir des conseils sur le dev et un aperçu de mes derniers projets."
+           data-en="Join my newsletter to receive development tips and a preview of my latest projects.">
           Rejoignez ma newsletter pour recevoir des conseils sur le dev et un aperçu de mes derniers projets.
         </p>
 
@@ -1058,11 +1041,15 @@
             type="email"
             placeholder="Votre adresse email"
             required
-            class="w-full bg-neutral-900 border border-neutral-800 p-4 rounded-xl text-white focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
+            class="translate w-full bg-neutral-900 border border-neutral-800 p-4 rounded-xl text-white focus:outline-none focus:border-[#5037F7] focus:ring-1 focus:ring-[#5037F7] transition-all"
+            data-fr-placeholder="Votre adresse email"
+            data-en-placeholder="Your email address"
           />
           <button
             type="submit"
-            class="absolute right-2 top-2 bottom-2 bg-[#5037F7] text-white px-6 rounded-lg font-semibold hover:bg-[#402bd6] transition-all active:scale-95"
+            class="translate absolute right-2 top-2 bottom-2 bg-[#5037F7] text-white px-6 rounded-lg font-semibold hover:bg-[#402bd6] transition-all active:scale-95"
+            data-fr="S'abonner"
+            data-en="Subscribe"
           >
             S'abonner
           </button>
@@ -1079,18 +1066,53 @@
         <a href="#" class="p-3 bg-neutral-900 rounded-full hover:bg-[#5037F7] hover:text-white transition-all duration-300" title="LinkedIn">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         </a>
-        <a href="#" class="p-3 bg-neutral-900 rounded-full hover:bg-[#5037F7] hover:text-white transition-all duration-300" title="Twitter">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-        </a>
       </div>
 
-      <p class="text-gray-500 text-sm font-medium">
-        &copy; 2026 Armel Demanou. Made with <span class="text-red-500">🌍</span> in Cameroon.
+      <p class="translate text-gray-500 text-sm font-medium"
+         data-fr="&copy; 2026 Armel Demanou. Fait avec ❤️ au Cameroun."
+         data-en="&copy; 2026 Armel Demanou. Made with ❤️ in Cameroon.">
+        &copy; 2026 Armel Demanou. Fait avec ❤️ au Cameroun.
       </p>
       
     </div>
   </div>
 </footer>
+ <script>
+    function toggleDropdown() {
+      const menu = document.getElementById('dropdown-menu');
+      menu.classList.toggle('opacity-0');
+      menu.classList.toggle('scale-95');
+      menu.classList.toggle('pointer-events-none');
+    }
+
+    function changeLang(lang, flag, text) {
+      document.getElementById('current-lang-flag').innerText = flag;
+      document.getElementById('current-lang-text').innerText = text;
+      document.documentElement.lang = lang;
+      
+      document.querySelectorAll('.translate').forEach(el => {
+        if (el.dataset[lang]) {
+          el.innerHTML = el.dataset[lang];
+        }
+      });
+      toggleDropdown();
+    }
+
+    window.onclick = e => {
+      if (!e.target.closest('#lang-dropdown')) {
+        const menu = document.getElementById('dropdown-menu');
+        menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      }
+    }
+
+    // Exemple à ajouter dans ta fonction changeLang
+const inputs = document.querySelectorAll('.translate');
+inputs.forEach(input => {
+    if (input.hasAttribute(`data-${lang}-placeholder`)) {
+        input.setAttribute('placeholder', input.getAttribute(`data-${lang}-placeholder`));
+    }
+});
+  </script>
 
     <script src="https://unpkg.com/typed.js@2.0.12"></script>
 

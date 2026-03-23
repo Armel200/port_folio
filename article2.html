@@ -8,68 +8,116 @@
 </head>
 <body class="bg-black text-gray-200 font-sans antialiased selection:bg-[#5037F7] selection:text-white">
 
-  <div class="max-w-[800px] mx-auto px-4 sm:px-6 pt-12 pb-6">
+  <div class="max-w-[800px] mx-auto px-4 sm:px-6 pt-12 pb-6 flex justify-between items-center">
     <a href="index.html#blog" class="inline-flex items-center gap-2 text-gray-400 hover:text-[#5037F7] transition-colors font-medium">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
-      Retour au blog
+      <span class="translate" data-fr="Retour au blog" data-en="Back to blog">Retour au blog</span>
     </a>
+
+    <div class="relative inline-block text-left" id="lang-dropdown">
+      <button type="button" onclick="toggleDropdown()" class="inline-flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-800 focus:outline-none transition-all">
+        <span id="current-lang-flag" class="mr-2">🇫🇷</span>
+        <span id="current-lang-text">Français</span>
+        <svg class="ml-2 h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+      </button>
+
+       <div id="dropdown-menu" class="absolute  z-10 mt-2 w-[135px] origin-top-right rounded-md bg-neutral-900 border border-neutral-800 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200">
+    <div class="py-1">
+      <button onclick="changeLang('fr', '🇫🇷', 'Français')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
+        <span class="mr-3"><img src="./src/assets/images/france.jpg" alt="" srcset="" class="h-[14px] w-[20px]"></span> Français
+      </button>
+      <button onclick="changeLang('en', '🇬🇧', 'English')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
+        <span class="mr-3"><img src="./src/assets/images/anglais.jpg" alt="" srcset="" class="h-[14px] w-[20px]"></span> English
+      </button>
+    </div>
+  </div>
+    </div>
   </div>
 
   <article class="max-w-[800px] mx-auto px-4 sm:px-6 pb-24">
-    
     <header class="mb-10">
       <div class="flex items-center gap-3 mb-6">
-        <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 text-[#5037F7] text-sm font-semibold rounded-full">Design</span>
-        <span class="text-gray-500 text-sm">05 Mars 2026 • 4 min de lecture</span>
+        <span class="translate px-3 py-1 bg-neutral-900 border border-neutral-800 text-[#5037F7] text-sm font-semibold rounded-full" data-fr="Design" data-en="Design">Design</span>
+        <span class="translate text-gray-500 text-sm" data-fr="05 Mars 2026 • 4 min de lecture" data-en="March 05, 2026 • 4 min read">05 Mars 2026 • 4 min de lecture</span>
       </div>
       
-      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+      <h1 class="translate text-4xl md:text-5xl font-bold text-white mb-6 leading-tight" 
+          data-fr="L'importance de l'UI/UX dans le taux de conversion" 
+          data-en="The importance of UI/UX in conversion rates">
         L'importance de l'UI/UX dans le taux de conversion
       </h1>
       
-      <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+      <p class="translate text-xl text-gray-400 mb-8 leading-relaxed"
+         data-fr="Un design attractif ne suffit pas. Analysons comment une interface pensée pour l'utilisateur peut augmenter significativement les ventes d'un e-commerce."
+         data-en="An attractive design is not enough. Let's analyze how a user-centered interface can significantly increase e-commerce sales.">
         Un design attractif ne suffit pas. Analysons comment une interface pensée pour l'utilisateur peut augmenter significativement les ventes d'un e-commerce.
       </p>
 
       <div class="rounded-2xl overflow-hidden border border-neutral-800 shadow-[0_0_30px_rgba(80,55,247,0.1)]">
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop" alt="Bureau avec des outils de design UI/UX" class="w-full h-[400px] object-cover" />
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop" alt="UI/UX tools" class="w-full h-[400px] object-cover" />
       </div>
     </header>
 
     <div class="prose prose-invert prose-lg max-w-none text-gray-300">
-      
-      <h2 class="text-2xl font-bold text-white mt-10 mb-4">L'esthétique attire, l'ergonomie convertit</h2>
-      <p class="mb-6 leading-relaxed">
-        L'Interface Utilisateur (UI) est la vitrine de votre produit. Elle génère la première impression. Cependant, c'est l'Expérience Utilisateur (UX) qui dictera si l'utilisateur ira jusqu'au bout de son parcours (achat, inscription, prise de contact).
+      <h2 class="translate text-2xl font-bold text-white mt-10 mb-4" data-fr="L'esthétique attire, l'ergonomie convertit" data-en="Aesthetics attract, ergonomics convert">L'esthétique attire, l'ergonomie convertit</h2>
+      <p class="translate mb-6 leading-relaxed"
+         data-fr="L'Interface Utilisateur (UI) est la vitrine de votre produit. Cependant, c'est l'Expérience Utilisateur (UX) qui dictera si l'utilisateur ira jusqu'au bout de son parcours."
+         data-en="The User Interface (UI) is the storefront of your product. However, it's the User Experience (UX) that dictates whether the user will complete their journey.">
+        L'Interface Utilisateur (UI) est la vitrine de votre produit. Cependant, c'est l'Expérience Utilisateur (UX) qui dictera si l'utilisateur ira jusqu'au bout de son parcours.
       </p>
 
-      <h2 class="text-2xl font-bold text-white mt-10 mb-4">Réduire la friction cognitive</h2>
-      <p class="mb-6 leading-relaxed">
-        Chaque clic supplémentaire, chaque formulaire trop long ou chaque bouton caché est une barrière entre votre utilisateur et votre objectif. Voici quelques règles d'or :
+      <h2 class="translate text-2xl font-bold text-white mt-10 mb-4" data-fr="Réduire la friction cognitive" data-en="Reducing cognitive friction">Réduire la friction cognitive</h2>
+      <p class="translate mb-6 leading-relaxed" data-fr="Chaque clic supplémentaire est une barrière. Voici quelques règles d'or :" data-en="Every extra click is a barrier. Here are some golden rules:">
+        Chaque clic supplémentaire est une barrière. Voici quelques règles d'or :
       </p>
 
       <ul class="list-disc list-inside space-y-3 mb-8 text-gray-400 marker:text-[#5037F7]">
-        <li><strong>Hiérarchie visuelle claire :</strong> Les éléments les plus importants (comme le bouton "Ajouter au panier") doivent se démarquer immédiatement.</li>
-        <li><strong>Formulaires simplifiés :</strong> Ne demandez que les informations strictement nécessaires. Utilisez l'auto-complétion.</li>
-        <li><strong>Temps de chargement :</strong> Une page qui met plus de 3 secondes à charger fait fuir jusqu'à 40% des visiteurs.</li>
+        <li class="translate" data-fr="Hiérarchie visuelle claire : Les éléments importants doivent se démarquer." data-en="Clear visual hierarchy: Important elements must stand out.">Hiérarchie visuelle claire : Les éléments importants doivent se démarquer.</li>
+        <li class="translate" data-fr="Formulaires simplifiés : Ne demandez que le nécessaire." data-en="Simplified forms: Only ask for what is necessary.">Formulaires simplifiés : Ne demandez que le nécessaire.</li>
+        <li class="translate" data-fr="Temps de chargement : Visez moins de 3 secondes." data-en="Loading times: Aim for less than 3 seconds.">Temps de chargement : Visez moins de 3 secondes.</li>
       </ul>
 
-      <blockquote class="border-l-4 border-[#5037F7] pl-5 py-2 my-8 bg-neutral-900/50 rounded-r-lg italic">
-        "Un bon design, c'est comme un bon réfrigérateur : quand ça marche, personne ne le remarque. Quand ça casse, ça pue." – Irene Au
+      <blockquote class="translate border-l-4 border-[#5037F7] pl-5 py-2 my-8 bg-neutral-900/50 rounded-r-lg italic"
+                  data-fr="&quot;Un bon design, c'est comme un bon réfrigérateur : quand ça marche, personne ne le remarque.&quot; – Irene Au"
+                  data-en="&quot;Good design is like a good refrigerator: when it works, no one notices it.&quot; – Irene Au">
+        "Un bon design, c'est comme un bon réfrigérateur : quand ça marche, personne ne le remarque." – Irene Au
       </blockquote>
 
-      <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le pouvoir de la micro-copie</h2>
-      <p class="mb-6 leading-relaxed">
-        Les petits textes (labels de boutons, messages d'erreur, placeholders) ont un impact immense. Remplacer un bouton "Envoyer" par "Obtenir mon devis gratuit" peut drastiquement augmenter le nombre de clics.
+      <h2 class="translate text-2xl font-bold text-white mt-10 mb-4" data-fr="Le pouvoir de la micro-copie" data-en="The power of micro-copy">Le pouvoir de la micro-copie</h2>
+      <p class="translate mb-6 leading-relaxed"
+         data-fr="Les petits textes ont un impact immense sur les clics."
+         data-en="Small bits of text have a huge impact on click rates.">
+        Les petits textes ont un impact immense sur les clics.
       </p>
     </div>
-
-    <div class="mt-12 pt-8 border-t border-neutral-800 flex flex-wrap gap-3">
-      <span class="px-4 py-2 bg-neutral-900 border border-neutral-800 rounded-lg text-sm text-gray-400">#UIUX</span>
-      <span class="px-4 py-2 bg-neutral-900 border border-neutral-800 rounded-lg text-sm text-gray-400">#Design</span>
-      <span class="px-4 py-2 bg-neutral-900 border border-neutral-800 rounded-lg text-sm text-gray-400">#Conversion</span>
-    </div>
-
   </article>
+
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById('dropdown-menu');
+      menu.classList.toggle('opacity-0');
+      menu.classList.toggle('scale-95');
+      menu.classList.toggle('pointer-events-none');
+    }
+
+    function changeLang(lang, flag, text) {
+      document.getElementById('current-lang-flag').innerText = flag;
+      document.getElementById('current-lang-text').innerText = text;
+      document.documentElement.lang = lang;
+      
+      document.querySelectorAll('.translate').forEach(el => {
+        if (el.dataset[lang]) el.innerText = el.dataset[lang];
+      });
+      toggleDropdown();
+    }
+
+    // Fermeture si clic extérieur
+    window.onclick = e => {
+      if (!e.target.closest('#lang-dropdown')) {
+        const menu = document.getElementById('dropdown-menu');
+        menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      }
+    }
+  </script>
 </body>
 </html>

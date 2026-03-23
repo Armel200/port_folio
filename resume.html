@@ -1,112 +1,342 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Parcours | Armel Demanou</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-black text-gray-200 font-sans antialiased selection:bg-[#5037F7] selection:text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Parcours | Armel Demanou</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-black text-gray-200 font-sans antialiased selection:bg-[#5037F7] selection:text-white"
+  >
+    <nav
+      class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-neutral-900"
+    >
+      <div
+        class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-white font-bold tracking-tighter text-xl"
+        >
+          ARMEL<span class="text-[#5037F7]">.</span>
+        </a>
 
-  <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-neutral-900">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-white font-bold tracking-tighter text-xl">
-        ARMEL<span class="text-[#5037F7]">.</span>
-      </a>
-      <a href="index.html" class="text-sm text-gray-400 hover:text-[#5037F7] transition-colors flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Retour au Portfolio
-      </a>
-    </div>
-  </nav>
+        <div class="flex items-center gap-6">
+          <a
+            href="index.html"
+            class="text-sm text-gray-400 hover:text-[#5037F7] transition-colors flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span
+              class="translate"
+              data-fr="Retour au Portfolio"
+              data-en="Back to Portfolio"
+              >Retour au Portfolio</span
+            >
+          </a>
 
-  <section class="pt-32 pb-20 px-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-        Plus qu'un développeur, une <span class="text-[#5037F7]">histoire</span>.
-      </h1>
-      <p class="text-xl text-gray-400 leading-relaxed">
-        Découvrez le chemin qui m'a mené de Yaoundé aux technologies de pointe, porté par la passion et soutenu par mes racines.
-      </p>
-    </div>
-  </section>
-
-  <section class="py-20 bg-neutral-900/30">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-4">
-        <span class="text-[#5037F7] text-4xl">01.</span> Éducation & Détermination
-      </h2>
-      
-      <div class="space-y-12 border-l-2 border-neutral-800 ml-4 pl-8 relative">
-        <div class="relative">
-          <div class="absolute -left-[41px] top-0 w-4 h-4 bg-[#5037F7] rounded-full border-4 border-black"></div>
-          <span class="text-[#5037F7] font-mono text-sm uppercase tracking-widest">2024 - Présent</span>
-          <h3 class="text-2xl font-bold text-white mt-2">Spécialisation Internationale • GetSmarter</h3>
-          <p class="text-gray-400 mt-3 leading-relaxed">
-            Étudiant depuis deux ans, j'y approfondis mes compétences techniques avec une vision globale du marché technologique. C'est ici que je peaufine mon expertise actuelle.
-          </p>
-        </div>
-
-        <div class="relative">
-          <div class="absolute -left-[41px] top-0 w-4 h-4 bg-white/20 rounded-full border-4 border-black group-hover:bg-[#5037F7]"></div>
-          <span class="text-gray-500 font-mono text-sm uppercase tracking-widest">Diplômé</span>
-          <h3 class="text-2xl font-bold text-white mt-2">BTS en Informatique • IAI (Institut Africain d'Informatique)</h3>
-          <p class="text-gray-400 mt-3 leading-relaxed">
-            Un passage marquant où j'ai obtenu mon diplôme avec brio. L'IAI m'a donné la rigueur technique et les bases solides nécessaires pour exceller dans le développement.
-          </p>
-        </div>
-
-        <div class="relative">
-          <div class="absolute -left-[41px] top-0 w-4 h-4 bg-white/10 rounded-full border-4 border-black"></div>
-          <span class="text-gray-500 font-mono text-sm uppercase tracking-widest">Les Débuts</span>
-          <h3 class="text-2xl font-bold text-white mt-2">Université de Yaoundé 1</h3>
-          <p class="text-gray-400 mt-3 leading-relaxed">
-            Après une année validée avec succès, j'ai choisi de réorienter mon parcours. Guidé par le conseil de mes parents qui aspiraient au meilleur pour mon avenir, j'ai pris le tournant décisif vers l'informatique spécialisée.
-          </p>
+          <div class="relative inline-block text-left" id="lang-dropdown">
+            <button
+              type="button"
+              onclick="toggleDropdown()"
+              class="inline-flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900/50 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-800 transition-all"
+            >
+              <span id="current-lang-flag" class="mr-2">🇫🇷</span>
+              <span id="current-lang-text">FR</span>
+              <svg
+                class="ml-1 h-4 w-4 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              id="dropdown-menu"
+              class="absolute z-10 mt-2 w-[135px] origin-top-right rounded-md bg-neutral-900 border border-neutral-800 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200"
+            >
+              <div class="py-1">
+                <button
+                  onclick="changeLang('fr', '🇫🇷', 'Français')"
+                  class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors"
+                >
+                  <span class="mr-3"
+                    ><img
+                      src="./src/assets/images/france.jpg"
+                      alt=""
+                      srcset=""
+                      class="h-[14px] w-[20px]"
+                  /></span>
+                  Français
+                </button>
+                <button
+                  onclick="changeLang('en', '🇬🇧', 'English')"
+                  class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors"
+                >
+                  <span class="mr-3"
+                    ><img
+                      src="./src/assets/images/anglais.jpg"
+                      alt=""
+                      srcset=""
+                      class="h-[14px] w-[20px]"
+                  /></span>
+                  English
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <section class="py-24 px-6">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-      <div>
-        <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
-          <span class="text-[#5037F7] text-4xl">02.</span> Racines & Valeurs
-        </h2>
-        <p class="text-lg text-gray-400 leading-relaxed mb-6">
-          Je suis issu d'une famille de <span class="text-white font-semibold">six enfants</span>, où j'occupe la place de troisième. Cette position m'a appris l'équilibre entre l'écoute des aînés et le rôle de modèle pour les plus jeunes.
+    <section class="pt-40 pb-20 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1
+          class="translate text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
+          data-fr="Plus qu'un développeur, une histoire."
+          data-en="More than a developer, a story."
+        >
+          Plus qu'un développeur, une
+          <span class="text-[#5037F7]">histoire</span>.
+        </h1>
+        <p
+          class="translate text-xl text-gray-400 leading-relaxed"
+          data-fr="Découvrez le chemin qui m'a mené de Yaoundé aux technologies de pointe, porté par la passion et soutenu par mes racines."
+          data-en="Discover the path that led me from Yaounde to cutting-edge technologies, driven by passion and supported by my roots."
+        >
+          Découvrez le chemin qui m'a mené de Yaoundé aux technologies de
+          pointe, porté par la passion et soutenu par mes racines.
         </p>
-        <div class="p-6 bg-neutral-900 border border-neutral-800 rounded-2xl italic text-gray-300">
-          "Ma famille est ma plus grande motivation. Leur soutien inconditionnel et leur volonté de me voir réussir sont le moteur de chaque ligne de code que j'écris."
-        </div>
       </div>
-      
-      <div class="grid grid-cols-2 gap-4">
-        <div class="h-64 bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 flex items-center justify-center text-[#5037F7]">
-           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 14v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="h-64 bg-[#5037F7]/10 rounded-2xl border border-[#5037F7]/20 flex items-center justify-center text-white font-bold text-xl p-6 text-center">
-          La force du collectif
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-20 bg-neutral-900/30">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-white mb-6 italic">"Seul on va vite, ensemble on va loin."</h2>
-      <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-        Au-delà du code, ma vie sociale est nourrie par l'échange et l'apprentissage mutuel. Que ce soit au sein de ma promotion ou dans mes cercles amicaux, je privilégie l'authenticité et l'entraide.
+    <section class="py-20 bg-neutral-900/30">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2
+          class="translate text-3xl font-bold text-white mb-12 flex items-center gap-4"
+          data-fr="01. Éducation & Détermination"
+          data-en="01. Education & Determination"
+        >
+          <span class="text-[#5037F7] text-4xl">01.</span> Éducation &
+          Détermination
+        </h2>
+
+        <div
+          class="space-y-12 border-l-2 border-neutral-800 ml-4 pl-8 relative"
+        >
+          <div class="relative">
+            <div
+              class="absolute -left-[41px] top-0 w-4 h-4 bg-[#5037F7] rounded-full border-4 border-black"
+            ></div>
+            <span
+              class="translate text-[#5037F7] font-mono text-sm uppercase tracking-widest"
+              data-fr="2024 - Présent"
+              data-en="2024 - Present"
+              >2024 - Présent</span
+            >
+            <h3
+              class="translate text-2xl font-bold text-white mt-2"
+              data-fr="Spécialisation Internationale • GetSmarter"
+              data-en="International Specialization • GetSmarter"
+            >
+              Spécialisation Internationale • GetSmarter
+            </h3>
+            <p
+              class="translate text-gray-400 mt-3 leading-relaxed"
+              data-fr="Étudiant depuis deux ans, j'y approfondis mes compétences techniques avec une vision globale du marché technologique."
+              data-en="Student for two years, deepening my technical skills with a global vision of the technology market."
+            >
+              Étudiant depuis deux ans, j'y approfondis mes compétences
+              techniques avec une vision globale du marché technologique.
+            </p>
+          </div>
+
+          <div class="relative">
+            <div
+              class="absolute -left-[41px] top-0 w-4 h-4 bg-white/20 rounded-full border-4 border-black"
+            ></div>
+            <span
+              class="translate text-gray-500 font-mono text-sm uppercase tracking-widest"
+              data-fr="Diplômé"
+              data-en="Graduated"
+              >Diplômé</span
+            >
+            <h3
+              class="translate text-2xl font-bold text-white mt-2"
+              data-fr="BTS en Informatique • IAI"
+              data-en="Associate Degree in IT • IAI"
+            >
+              BTS en Informatique • IAI
+            </h3>
+            <p
+              class="translate text-gray-400 mt-3 leading-relaxed"
+              data-fr="L'IAI m'a donné la rigueur technique et les bases solides nécessaires pour exceller dans le développement."
+              data-en="IAI provided me with the technical rigor and solid foundations needed to excel in development."
+            >
+              L'IAI m'a donné la rigueur technique et les bases solides
+              nécessaires pour exceller dans le développement.
+            </p>
+          </div>
+
+          <div class="relative">
+            <div
+              class="absolute -left-[41px] top-0 w-4 h-4 bg-white/10 rounded-full border-4 border-black"
+            ></div>
+            <span
+              class="translate text-gray-500 font-mono text-sm uppercase tracking-widest"
+              data-fr="Les Débuts"
+              data-en="The Beginnings"
+              >Les Débuts</span
+            >
+            <h3
+              class="translate text-2xl font-bold text-white mt-2"
+              data-fr="Université de Yaoundé 1"
+              data-en="University of Yaounde 1"
+            >
+              Université de Yaoundé 1
+            </h3>
+            <p
+              class="translate text-gray-400 mt-3 leading-relaxed"
+              data-fr="Guidé par le conseil de mes parents, j'ai pris le tournant décisif vers l'informatique spécialisée."
+              data-en="Guided by my parents' advice, I made the decisive turn toward specialized computer science."
+            >
+              Guidé par le conseil de mes parents, j'ai pris le tournant décisif
+              vers l'informatique spécialisée.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-6">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2
+            class="translate text-3xl font-bold text-white mb-6 flex items-center gap-4"
+            data-fr="02. Racines & Valeurs"
+            data-en="02. Roots & Values"
+          >
+            <span class="text-[#5037F7] text-4xl">02.</span> Racines & Valeurs
+          </h2>
+          <p
+            class="translate text-lg text-gray-400 leading-relaxed mb-6"
+            data-fr="Je suis issu d'une famille de six enfants. Cette position m'a appris l'équilibre entre l'écoute des aînés et le rôle de modèle."
+            data-en="I come from a family of six children. This position taught me the balance between listening to elders and being a role model."
+          >
+            Je suis issu d'une famille de six enfants. Cette position m'a appris
+            l'équilibre entre l'écoute des aînés et le rôle de modèle.
+          </p>
+          <div
+            class="translate p-6 bg-neutral-900 border border-neutral-800 rounded-2xl italic text-gray-300"
+            data-fr='"Ma famille est ma plus grande motivation. Leur soutien est le moteur de chaque ligne de code que j&apos;écris."'
+            data-en='"My family is my greatest motivation. Their support is the engine behind every line of code I write."'
+          >
+            "Ma famille est ma plus grande motivation. Leur soutien est le
+            moteur de chaque ligne de code que j'écris."
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div
+            class="h-64 bg-neutral-900 rounded-2xl border border-neutral-800 flex items-center justify-center text-[#5037F7]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 14v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+              />
+            </svg>
+          </div>
+          <div
+            class="translate h-64 bg-[#5037F7]/10 rounded-2xl border border-[#5037F7]/20 flex items-center justify-center text-white font-bold text-xl p-6 text-center"
+            data-fr="La force du collectif"
+            data-en="Strength in unity"
+          >
+            La force du collectif
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-neutral-900/30">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2
+          class="translate text-3xl font-bold text-white mb-6 italic"
+          data-fr='"Seul on va vite, ensemble on va loin."'
+          data-en='"Alone we go fast, together we go far."'
+        >
+          "Seul on va vite, ensemble on va loin."
+        </h2>
+        <p
+          class="translate text-gray-400 max-w-2xl mx-auto leading-relaxed"
+          data-fr="Au-delà du code, ma vie sociale est nourrie par l'échange. Je privilégie l'authenticité et l'entraide."
+          data-en="Beyond coding, my social life is fueled by exchange. I prioritize authenticity and mutual aid."
+        >
+          Au-delà du code, ma vie sociale est nourrie par l'échange. Je
+          privilégie l'authenticité et l'entraide.
+        </p>
+      </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-neutral-900">
+      <p
+        class="translate text-gray-600 text-sm"
+        data-fr="Design & Histoire par Armel Demanou • 2026"
+        data-en="Design & Story by Armel Demanou • 2026"
+      >
+        Design & Histoire par Armel Demanou • 2026
       </p>
-    </div>
-  </section>
+    </footer>
 
-  <footer class="py-12 text-center border-t border-neutral-900">
-    <p class="text-gray-600 text-sm">
-      Design & Histoire par Armel Demanou • 2026
-    </p>
-  </footer>
+    <script>
+      function toggleDropdown() {
+        const menu = document.getElementById("dropdown-menu");
+        menu.classList.toggle("opacity-0");
+        menu.classList.toggle("scale-95");
+        menu.classList.toggle("pointer-events-none");
+      }
 
-</body>
+      function changeLang(lang, flag, text) {
+        document.getElementById("current-lang-flag").innerText = flag;
+        document.getElementById("current-lang-text").innerText = text;
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll(".translate").forEach((el) => {
+          if (el.dataset[lang]) {
+            el.innerHTML = el.dataset[lang];
+          }
+        });
+        toggleDropdown();
+      }
+
+      window.onclick = (e) => {
+        if (!e.target.closest("#lang-dropdown")) {
+          const menu = document.getElementById("dropdown-menu");
+          menu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+        }
+      };
+    </script>
+  </body>
 </html>
