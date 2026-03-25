@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting && !hasCounted) {
         hasCounted = true;
         let start = 0;
-        const end = 25;
+        const end = 3;
         const duration = 1000; // 1.5s
         const stepTime = Math.abs(Math.floor(duration / end));
 
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting && !hasCounteds) {
         hasCounteds = true;
         let start = 0;
-        const end = 20;
+        const end = 9;
         const duration = 1000; // 1.5s
         const stepTime = Math.abs(Math.floor(duration / end));
 
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting && !hasCountedss) {
         hasCountedss = true;
         let start = 0;
-        const end = 10;
+        const end = 6;
         const duration = 1000; // 1.5s
         const stepTime = Math.abs(Math.floor(duration / end));
 
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting && !hasCountedsss) {
         hasCountedsss = true;
         let start = 0;
-        const end = 200;
+        const end = 50;
         const duration = 1000; // 1.5s
         const stepTime = Math.abs(Math.floor(duration / end));
 
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting && !hasCountedse) {
         hasCountedse = true;
         let start = 0;
-        const end = 15;
+        const end = 8;
         const duration = 1000; // 1.5s
         const stepTime = Math.abs(Math.floor(duration / end));
 
