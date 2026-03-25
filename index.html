@@ -15,7 +15,7 @@
    
   </head>
   <body class="bg-black">
-    <header id="header" class="bg-black px-6 py-4 text-white fixed top-0 left-0 right-0 z-10 transition-shadow duration-300">
+    <header id="header" class="bg-black px-6 py-4 text-white fixed top-0 left-0 right-0 z-50 transition-shadow duration-300">
   <nav class="flex items-center justify-between">
     <img src="./src/assets/images/Logo_white.png" alt="logo" class="h-12 w-auto" />
 
@@ -30,11 +30,14 @@
       <li><a href="#" class="translate link" data-fr="Contact" data-en="Contact">Contact</a></li>
     </ul>
 
-    <ul class="hidden md:flex space-x-4 items-center">
-      <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-      <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-      <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-      <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+    <div class="flex items-center space-x-4">
+      
+      <ul class="hidden md:flex space-x-4 items-center">
+        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      </ul>
 
       <div class="relative inline-block text-left" id="lang-dropdown">
         <button type="button" onclick="toggleDropdown()" class="inline-flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900/50 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-800 transition-all">
@@ -44,7 +47,7 @@
             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
           </svg>
         </button>
-        <div id="dropdown-menu" class="absolute z-10 right-0 mt-2 w-[135px] origin-top-right rounded-md bg-neutral-900 border border-neutral-800 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200">
+        <div id="dropdown-menu" class="absolute z-50 right-0 mt-2 w-[135px] origin-top-right rounded-md bg-neutral-900 border border-neutral-800 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200">
           <div class="py-1">
             <button onclick="changeLang('fr', '🇫🇷', 'Français')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
               <span class="mr-3"><img src="./src/assets/images/france.jpg" alt="FR" class="h-[14px] w-[20px]" /></span> Français
@@ -55,11 +58,11 @@
           </div>
         </div>
       </div>
-    </ul>
 
-    <button id="burger" class="md:hidden text-3xl focus:outline-none text-blue-600">
-      <ion-icon name="menu"></ion-icon>
-    </button>
+      <button id="burger" class="md:hidden text-3xl focus:outline-none text-blue-600 flex items-center">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </div>
   </nav>
 
   <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 md:hidden bg-neutral-800 right-0 left-0 px-[30px] py-[20px] absolute">
@@ -71,13 +74,8 @@
     <a href="#" class="translate block" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
     <a href="#blog" class="translate block" data-fr="Blog" data-en="Blog">Blog</a>
     <a href="#" class="translate block" data-fr="Contact" data-en="Contact">Contact</a>
-    
-    <div class="pt-4 border-t border-neutral-700">
-        <button onclick="changeLang('fr', '🇫🇷', 'FR')" class="text-sm mr-4 text-white">FR</button>
-        <button onclick="changeLang('en', '🇬🇧', 'EN')" class="text-sm text-gray-400">EN</button>
-    </div>
 
-    <div class="flex space-x-4 pt-4">
+    <div class="flex space-x-4 pt-4 border-t border-neutral-700">
       <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
       <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
       <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
