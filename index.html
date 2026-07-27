@@ -25,9 +25,9 @@
       <li><a href="#Services" class="translate link" data-fr="Services" data-en="Services">Services</a></li>
       <li><a href="#projects" class="translate link" data-fr="Portfolio" data-en="Portfolio">Portfolio</a></li>
       <li><a href="./resume.html" class="translate link" data-fr="CV" data-en="Resume">CV</a></li>
-      <li><a href="#" class="translate link" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+      <li><a href="#Pricing" class="translate link" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
       <li><a href="#blog" class="translate link" data-fr="Blog" data-en="Blog">Blog</a></li>
-      <li><a href="#" class="translate link" data-fr="Contact" data-en="Contact">Contact</a></li>
+      <li><a href="#Contact" class="translate link" data-fr="Contact" data-en="Contact">Contact</a></li>
     </ul>
 
     <div class="flex items-center space-x-4">
@@ -71,7 +71,7 @@
     <a href="#Services" class="translate block" data-fr="Services" data-en="Services">Services</a>
     <a href="#projects" class="translate block" data-fr="Portfolio" data-en="Portfolio">Portfolio</a>
     <a href="./resume.html" class="translate block" data-fr="CV" data-en="Resume">CV</a>
-    <a href="#" class="translate block" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
+    <a href="#Pricing" class="translate block" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
     <a href="#blog" class="translate block" data-fr="Blog" data-en="Blog">Blog</a>
     <a href="#" class="translate block" data-fr="Contact" data-en="Contact">Contact</a>
 
@@ -126,34 +126,58 @@
     </div>
   </div>
 
-  <div class="relative mt-10 md:mt-0 
-              /* Mobile: Cercle */
-              w-[280px] h-[280px] rounded-full 
-              /* Desktop (md): Cadre Rectangulaire Professionnel */
-              md:w-[400px] md:h-auto md:rounded-2xl 
-              p-2 bg-neutral-900 overflow-hidden group transition-all duration-500 
-              hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#5037F7]/20 border border-neutral-800">
-    <img src="./src/assets/images/Armel-D.jpg" alt="Armel Demanou" 
-         class="w-full h-full object-cover 
-                /* Mobile: Arrondi cercle | Desktop: Arrondi léger */
-                rounded-full md:rounded-xl opacity-90 group-hover:opacity-100 transition-opacity" />
+  <div class="relative mt-10 md:mt-0
+            /* Mobile: Cercle */
+            w-[280px] h-[280px] rounded-full
+            /* Desktop (md): Cadre Rectangulaire Professionnel */
+            md:w-[400px] md:h-[480px] md:rounded-2xl
+            p-2 bg-neutral-900 overflow-hidden group
+            transition-all duration-500 ease-out
+            hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#5037F7]/25
+            ring-1 ring-neutral-800 hover:ring-[#5037F7]/40">
 
-    <div class="absolute 
-                /* Positionnement Desktop */
-                md:right-4 md:top-1/2 md:-translate-y-1/2 
-                /* Transformation Verticale */
-                md:rotate-90 md:origin-right
-                /* Positionnement Mobile (Bas du cercle) */
-                bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0">
-      <p class="font-bold text-white tracking-[0.2em] uppercase 
-                /* Taille adaptative */
-                text-xs md:text-lg whitespace-nowrap drop-shadow-lg">
-        Armel <span class="text-[#5037F7]">Demanou</span>
-      </p>
-    </div>
+  <!-- Image -->
+  <img src="./src/assets/images/AMEL.jpg" alt="Armel Demanou"
+       class="w-full h-full object-cover
+              rounded-full md:rounded-xl
+              grayscale-[15%] group-hover:grayscale-0
+              opacity-95 group-hover:opacity-100
+              scale-100 group-hover:scale-[1.03]
+              transition-all duration-700 ease-out" />
 
-    <div class="absolute inset-0 bg-gradient-to-tr from-[#5037F7]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+  <!-- Overlay dégradé pour lisibilité du texte (desktop) -->
+  <div class="absolute inset-0 rounded-full md:rounded-xl
+              bg-gradient-to-t from-black/70 via-black/0 to-black/0
+              md:from-black/80 md:via-black/10 md:to-transparent
+              pointer-events-none"></div>
+
+  <!-- Bloc texte -->
+  <div class="absolute z-10
+              /* Desktop: en bas, horizontal, plus élégant qu'à la verticale */
+              md:left-6 md:bottom-6 md:right-6 md:translate-y-0
+              /* Mobile: bas du cercle, centré */
+              bottom-6 left-1/2 -translate-x-1/2 md:left-6 md:translate-x-0
+              flex flex-col items-center md:items-start gap-1">
+    <p class="font-bold text-white tracking-[0.15em] uppercase
+              text-xs md:text-xl whitespace-nowrap drop-shadow-lg leading-tight">
+      Armel <span class="text-[#5037F7]">Demanou</span>
+    </p>
+    <span class="hidden md:block text-[11px] tracking-[0.25em] uppercase text-neutral-300/80 font-medium">
+      Développeur Full-Stack
+    </span>
   </div>
+
+  <!-- Halo au survol -->
+  <div class="absolute inset-0 rounded-full md:rounded-xl
+              bg-gradient-to-tr from-[#5037F7]/15 via-transparent to-transparent
+              opacity-0 group-hover:opacity-100 transition-opacity duration-500
+              pointer-events-none"></div>
+
+  <!-- Bordure lumineuse subtile au survol -->
+  <div class="absolute inset-0 rounded-full md:rounded-xl
+              ring-1 ring-inset ring-white/0 group-hover:ring-white/10
+              transition-all duration-500 pointer-events-none"></div>
+</div>
 </section>
 
       <!-- barre de progres  -->
@@ -1054,9 +1078,9 @@
       </div>
 
       <p class="translate text-gray-500 text-sm font-medium"
-         data-fr="&copy; 2026 Armel Demanou. Fait avec ❤️ au Cameroun."
-         data-en="&copy; 2026 Armel Demanou. Made with ❤️ in Cameroon.">
-        &copy; 2026 Armel Demanou. Fait avec ❤️ au Cameroun.
+         data-fr="&copy; 2026 Armel Demanou. Fait au Cameroun."
+         data-en="&copy; 2026 Armel Demanou. Made in Cameroon.">
+        &copy; 2026 Armel Demanou. Fait au Cameroun.
       </p>
       
     </div>
