@@ -10,39 +10,47 @@
     />
   <title>Optimiser les performances React | Mon Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./src/assets/css/site-theme.css" />
 </head>
-<body class="bg-black text-gray-200 font-sans antialiased selection:bg-[#5037F7] selection:text-white">
+<body class="min-h-screen bg-black text-gray-200 font-sans antialiased selection:bg-[#5037F7] selection:text-white">
 
-  <div class="max-w-[800px] mx-auto px-4 sm:px-6 pt-12 pb-6 flex justify-between items-center">
-    
-    <a href="index.html#blog" class="inline-flex items-center gap-2 text-gray-400 hover:text-[#5037F7] transition-colors font-medium">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
-      <span class="translate" data-fr="Retour au blog" data-en="Back to blog">Retour au blog</span>
-    </a>
+  <header class="site-header">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="./src/assets/images/Logo_white.png" alt="logo" class="h-10 w-auto" />
+        <span class="hidden text-sm font-semibold uppercase tracking-[0.3em] text-white/90 sm:inline">Portfolio</span>
+      </a>
 
-    <div class="relative inline-block text-left" id="lang-dropdown">
-  <div>
-    <button type="button" onclick="toggleDropdown()" class="inline-flex items-center justify-center w-full rounded-md border border-neutral-800 bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-800 focus:outline-none transition-all" id="menu-button">
-      <span id="current-lang-flag" class="mr-2">🇫🇷</span>
-      <span id="current-lang-text">Français</span>
-      <svg class="-mr-1 ml-2 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-      </svg>
-    </button>
-  </div>
+      <nav class="hidden items-center gap-6 md:flex">
+        <a href="index.html#Home" class="site-nav-link translate" data-fr="Accueil" data-en="Home">Accueil</a>
+        <a href="index.html#About" class="site-nav-link translate" data-fr="À propos" data-en="About">À propos</a>
+        <a href="index.html#Services" class="site-nav-link translate" data-fr="Services" data-en="Services">Services</a>
+        <a href="index.html#projects" class="site-nav-link translate" data-fr="Projets" data-en="Projects">Projets</a>
+        <a href="resume.html" class="site-nav-link translate" data-fr="CV" data-en="Resume">CV</a>
+      </nav>
 
-  <div id="dropdown-menu" class="absolute  z-10 mt-2 w-[135px] origin-top-right rounded-md bg-neutral-900 border border-neutral-800 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200">
-    <div class="py-1">
-      <button onclick="changeLang('fr', '🇫🇷', 'Français')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
-        <span class="mr-3"><img src="./src/assets/images/france.jpg" alt="" srcset="" class="h-[14px] w-[20px]"></span> Français
-      </button>
-      <button onclick="changeLang('en', '🇬🇧', 'English')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
-        <span class="mr-3"><img src="./src/assets/images/anglais.jpg" alt="" srcset="" class="h-[14px] w-[20px]"></span> English
-      </button>
+      <div class="flex items-center gap-3">
+        <div class="relative hidden sm:block" id="lang-dropdown">
+          <button type="button" onclick="toggleDropdown()" class="inline-flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900/50 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-800 transition-all" id="menu-button">
+            <span id="current-lang-flag" class="mr-2">🇫🇷</span>
+            <span id="current-lang-text">FR</span>
+            <svg class="ml-1 h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+          </button>
+          <div id="dropdown-menu" class="absolute z-50 mt-2 w-[135px] origin-top-right rounded-md bg-neutral-900 border border-neutral-800 shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-200">
+            <div class="py-1">
+              <button onclick="changeLang('fr', '🇫🇷', 'Français')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
+                <span class="mr-3"><img src="./src/assets/images/france.jpg" alt="FR" class="h-[14px] w-[20px]"></span> Français
+              </button>
+              <button onclick="changeLang('en', '🇬🇧', 'English')" class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-[#5037F7] hover:text-white transition-colors">
+                <span class="mr-3"><img src="./src/assets/images/anglais.jpg" alt="EN" class="h-[14px] w-[20px]"></span> English
+              </button>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#contact" class="site-btn hidden sm:inline-flex">Contact</a>
+      </div>
     </div>
-  </div>
-</div>
-  </div>
+  </header>
 
   <article class="max-w-[800px] mx-auto px-4 sm:px-6 pb-24">
     
@@ -142,6 +150,23 @@ export default MonComposantLourd;</code></pre>
     </div>
 
   </article>
+
+  <footer class="site-footer">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#5037F7]">Armel Demanou</p>
+        <p class="translate mt-2 max-w-md text-sm text-gray-400" data-fr="Design, développement et stratégie digitale — avec une approche humaine sur chaque projet." data-en="Design, development and digital strategy — with a human-centered approach on every project.">
+          Design, développement et stratégie digitale — avec une approche humaine sur chaque projet.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <a href="https://www.instagram.com/demanou_armel" class="site-footer-link">Instagram</a>
+        <a href="https://www.linkedin.com/in/armel-demanou" class="site-footer-link">LinkedIn</a>
+        <a href="https://wa.me/+237695089349" class="site-footer-link">WhatsApp</a>
+        <a href="https://www.facebook.com/armel.demanou" class="site-footer-link">Facebook</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
     function setLang(lang) {

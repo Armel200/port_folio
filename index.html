@@ -12,6 +12,177 @@
      <title>Potfolio-Armel Demanou</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { font-family: 'Space Grotesk', sans-serif; background:#000; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+ 
+  /* ---- Fond en grille subtile + halo ---- */
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+            mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  }
+  .glow-blob {
+    background: radial-gradient(closest-side, rgba(80,55,247,0.35), transparent);
+    filter: blur(60px);
+  }
+ 
+  /* ---- Curseur clignotant style terminal ---- */
+  .caret::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 0.9em;
+    margin-left: 4px;
+    background: #5037F7;
+    vertical-align: -0.15em;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+ 
+  /* ---- Pastille "disponible" ---- */
+  .pulse-dot { position: relative; }
+  .pulse-dot::before {
+    content: '';
+    position: absolute; inset: 0;
+    border-radius: 9999px;
+    background: #22c55e;
+    animation: pulse-ring 1.8s cubic-bezier(0.4,0,0.6,1) infinite;
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(2.6); opacity: 0; }
+  }
+ 
+  /* ---- Coins "balises" </> sur le cadre photo ---- */
+  .bracket-corner {
+    position: absolute;
+    width: 26px; height: 26px;
+    border-color: #5037F7;
+    opacity: 0.9;
+    transition: all .5s ease;
+  }
+  .group:hover .bracket-corner { width: 34px; height: 34px; opacity: 1; }
+  .corner-tl { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; border-radius: 8px 0 0 0; }
+  .corner-tr { top: -1px; right: -1px; border-top: 2px solid; border-right: 2px solid; border-radius: 0 8px 0 0; }
+  .corner-bl { bottom: -1px; left: -1px; border-bottom: 2px solid; border-left: 2px solid; border-radius: 0 0 0 8px; }
+  .corner-br { bottom: -1px; right: -1px; border-bottom: 2px solid; border-right: 2px solid; border-radius: 0 0 8px 0; }
+ 
+  /* ---- Fade-up au chargement ---- */
+  .fade-up { animation: fadeUp .8s ease both; }
+  @keyframes fadeUp { from { opacity:0; transform: translateY(14px);} to { opacity:1; transform: translateY(0);} }
+  .delay-1 { animation-delay: .08s; } .delay-2 { animation-delay: .16s; }
+  .delay-3 { animation-delay: .24s; } .delay-4 { animation-delay: .32s; }
+  .delay-5 { animation-delay: .40s; } .delay-6 { animation-delay: .48s; }
+
+  :root {
+    --accent: #5037F7;
+    --accent-soft: rgba(80,55,247,0.12);
+    --surface: rgba(10,10,10,0.86);
+    --border: rgba(255,255,255,0.08);
+  }
+
+  .section-shell {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #040404 0%, #090909 100%);
+  }
+  .section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 100%);
+    opacity: 0.8;
+  }
+  .section-glow {
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(80,55,247,0.24), transparent 70%);
+    filter: blur(70px);
+    pointer-events: none;
+  }
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.9rem, 3vw, 2.9rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .section-subtitle {
+    color: #9ca3af;
+    line-height: 1.8;
+    max-width: 700px;
+  }
+  .section-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    background: linear-gradient(145deg, rgba(14,14,14,0.95), rgba(9,9,9,0.95));
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: all 0.4s ease;
+  }
+  .section-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(80,55,247,0.5);
+    box-shadow: 0 0 30px rgba(80,55,247,0.16);
+  }
+  .section-surface {
+    border: 1px solid var(--border);
+    background: rgba(10,10,10,0.78);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  }
+  .section-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.04);
+    color: #f3f4f6;
+    backdrop-filter: blur(12px);
+  }
+  .section-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    border-radius: 9999px;
+    padding: 0.95rem 1.35rem;
+    background: linear-gradient(135deg, var(--accent) 0%, #6d5fff 100%);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 12px 30px rgba(80,55,247,0.22);
+    transition: all 0.3s ease;
+  }
+  .section-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 38px rgba(80,55,247,0.34);
+  }
+ 
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up, .pulse-dot::before, .caret::after { animation: none !important; }
+  }
+    </style>
    
   </head>
   <body class="bg-black">
@@ -33,10 +204,10 @@
     <div class="flex items-center space-x-4">
       
       <ul class="hidden md:flex space-x-4 items-center">
-        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="https://www.instagram.com/demanou_armel"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="https://www.linkedin.com/in/armel-demanou"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="https://wa.me/+237695089349"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+        <li class="icon h-9 w-9 flex items-center justify-center rounded-full"><a href="https://www.facebook.com/armel.demanou"><ion-icon name="logo-facebook"></ion-icon></a></li>
       </ul>
 
       <div class="relative inline-block text-left" id="lang-dropdown">
@@ -77,107 +248,160 @@
 
     <div class="flex space-x-4 pt-4 border-t border-neutral-700">
       <a href="https://www.instagram.com/demanou_armel"><ion-icon name="logo-instagram"></ion-icon></a>
-      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-      <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/armel-demanou"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="https://wa.me/+237695089349"><ion-icon name="logo-whatsapp"></ion-icon></a>
+      <a href="https://www.facebook.com/armel.demanou"><ion-icon name="logo-facebook"></ion-icon></a>
     </div>
   </div>
 </header>
 
     <main class=" ">
-     <section id="Home" class="bg-black text-white px-[50px] py-[100px] flex flex-col md:flex-row justify-between items-center">
-  <div class="max-w-xl">
-    <p class="translate text-[#5037F7] uppercase font-semibold tracking-wide mb-4" 
-       data-fr="Bienvenue dans mon univers" 
-       data-en="Welcome to my world">
-      Bienvenue dans mon univers
-    </p>
-    
-    <h1 class="lg:text-[60px] md:text-[40px] sm:text-[25px] text-[25px] font-bold leading-tight">
-      <span class="translate" data-fr="Je suis Armel Demanou" data-en="I’m Armel Demanou">Je suis Armel Demanou</span><br />
-      <span class="translate" data-fr="Un" data-en="A">Un</span> <span id="typed" class="text-[#5037F7]"></span>
-    </h1>
-    
-    <p class="translate text-gray-400 mt-6"
-       data-fr="Un portfolio personnel est une collection de votre travail, de vos réalisations et de vos compétences qui met en valeur vos capacités et votre croissance professionnelle."
-       data-en="A personal portfolio is a collection of your work, achievements, and skills that highlights your abilities and professional growth.">
-      Un portfolio personnel est une collection de votre travail, de vos réalisations et de vos compétences qui met en valeur vos capacités et votre croissance professionnelle.
-    </p>
-
-    <p class="translate mt-6 mb-3 font-medium" 
-       data-fr="Retrouvez-moi sur" 
-       data-en="Find me on">
-      Retrouvez-moi sur
-    </p>
-    
-    <div class="flex space-x-4">
-      <a href="https://www.instagram.com/demanou_armel" class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
-        <ion-icon name="logo-instagram"></ion-icon>
-      </a>
-      <a href="https://www.linkedin.com/in/armel-demanou" class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </a>
-      <a href="https://twitter.com/demanou_armel" class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
-        <ion-icon name="logo-twitter"></ion-icon>
-      </a>
-      <a href="https://www.facebook.com/armel.demanou" class="bg-neutral-900 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
-        <ion-icon name="logo-facebook"></ion-icon>
-      </a>
+     <section id="Home" class="relative bg-black text-white px-[24px] md:px-[50px] py-[80px] md:py-[110px] overflow-hidden">
+ 
+  <!-- Fond décoratif -->
+  <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+  <div class="glow-blob absolute -top-24 left-1/3 w-[480px] h-[480px] rounded-full pointer-events-none"></div>
+ 
+  <div class="relative max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-14">
+ 
+    <!-- ================= TEXTE ================= -->
+    <div class="max-w-xl">
+ 
+      <!-- Badge disponibilité -->
+      <div class="fade-up inline-flex items-center gap-2 mb-6 pl-1 pr-4 py-1 rounded-full border border-neutral-800 bg-neutral-900/70 backdrop-blur">
+        <span class="relative flex h-2.5 w-2.5 ml-1">
+          <span class="pulse-dot absolute inline-flex h-full w-full rounded-full"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+        </span>
+        <span class="translate font-mono text-xs uppercase tracking-wider text-neutral-300"
+              data-fr="Disponible pour de nouveaux projets"
+              data-en="Available for new projects">
+          Disponible pour de nouveaux projets
+        </span>
+      </div>
+ 
+      <!-- Eyebrow style terminal -->
+      <p class="fade-up delay-1 font-mono text-[#5037F7] text-sm tracking-wide mb-4">
+        <span class="translate"
+              data-fr="&gt; Bienvenue dans mon univers"
+              data-en="&gt; Welcome to my world">&gt; Bienvenue dans mon univers</span>
+      </p>
+ 
+      <h1 class="fade-up delay-2 font-display lg:text-[58px] md:text-[42px] text-[32px] font-bold leading-[1.1] tracking-tight">
+        <span class="translate" data-fr="Je suis Armel Demanou" data-en="I’m Armel Demanou">Je suis Armel Demanou</span><br />
+        <span class="text-neutral-500 font-normal translate" data-fr="Un" data-en="A">Un</span>
+        <span id="typed" class="text-[#5037F7] font-mono caret"></span>
+      </h1>
+ 
+      <p class="fade-up delay-3 translate text-neutral-400 text-base md:text-lg mt-6 leading-relaxed"
+         data-fr="Je conçois et développe des applications web rapides, robustes et pensées pour l'utilisateur — du prototype jusqu'à la mise en production."
+         data-en="I design and build fast, robust web applications engineered for the user — from prototype to production.">
+        Je conçois et développe des applications web rapides, robustes et pensées pour l'utilisateur — du prototype jusqu'à la mise en production.
+      </p>
+ 
+      <!-- CTA -->
+      <div class="fade-up delay-4 flex flex-wrap items-center gap-4 mt-9">
+        <a href="#Portfolio"
+           class="group inline-flex items-center gap-2 bg-[#5037F7] hover:bg-[#7C6FFF] text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-lg shadow-[#5037F7]/20 hover:shadow-[#5037F7]/40 hover:-translate-y-0.5">
+          <span class="translate" data-fr="Voir mes projets" data-en="View my work">Voir mes projets</span>
+          <ion-icon name="arrow-forward-outline" class="text-lg group-hover:translate-x-1 transition-transform"></ion-icon>
+        </a>
+        <a href="#Contact"
+           class="inline-flex items-center gap-2 border border-neutral-700 hover:border-[#5037F7] text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:bg-[#5037F7]/10">
+          <span class="translate" data-fr="Me contacter" data-en="Contact me">Me contacter</span>
+        </a>
+      </div>
+ 
+      <!-- Réseaux -->
+      <div class="fade-up delay-5 mt-11">
+        <p class="translate mb-3 font-mono text-xs uppercase tracking-widest text-neutral-500"
+           data-fr="Retrouvez-moi sur" data-en="Find me on">
+          Retrouvez-moi sur
+        </p>
+        <div class="flex space-x-3">
+          <a href="https://www.instagram.com/demanou_armel" aria-label="Instagram"
+             class="h-10 w-10 rounded-full flex items-center justify-center bg-neutral-900 border border-neutral-800 hover:border-[#5037F7] hover:bg-[#5037F7]/10 hover:text-[#7C6FFF] transition-all duration-300">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a href="https://www.linkedin.com/in/armel-demanou" aria-label="LinkedIn"
+             class="h-10 w-10 rounded-full flex items-center justify-center bg-neutral-900 border border-neutral-800 hover:border-[#5037F7] hover:bg-[#5037F7]/10 hover:text-[#7C6FFF] transition-all duration-300">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a href="https://wa.me/+237695089349" aria-label="WhatsApp"
+             class="h-10 w-10 rounded-full flex items-center justify-center bg-neutral-900 border border-neutral-800 hover:border-[#5037F7] hover:bg-[#5037F7]/10 hover:text-[#7C6FFF] transition-all duration-300">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </a>
+          <a href="https://www.facebook.com/armel.demanou" aria-label="Facebook"
+             class="h-10 w-10 rounded-full flex items-center justify-center bg-neutral-900 border border-neutral-800 hover:border-[#5037F7] hover:bg-[#5037F7]/10 hover:text-[#7C6FFF] transition-all duration-300">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- ================= PHOTO ================= -->
+    <div class="fade-up delay-6 relative mt-4 md:mt-0
+                w-[260px] h-[260px] rounded-full
+                md:w-[400px] md:h-[480px] md:rounded-2xl
+                p-2 bg-neutral-900 overflow-hidden group shrink-0
+                transition-all duration-500 ease-out
+                hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#5037F7]/25
+                ring-1 ring-neutral-800 hover:ring-[#5037F7]/40">
+ 
+      <!-- Image -->
+      <img src="./src/assets/images/AMEL.jpg" alt="Armel Demanou"
+           class="w-full h-full object-cover
+                  rounded-full md:rounded-xl
+                  grayscale-[15%] group-hover:grayscale-0
+                  opacity-95 group-hover:opacity-100
+                  scale-100 group-hover:scale-[1.03]
+                  transition-all duration-700 ease-out" />
+ 
+      <!-- Overlay dégradé -->
+      <div class="absolute inset-0 rounded-full md:rounded-xl
+                  bg-gradient-to-t from-black/70 via-black/0 to-black/0
+                  md:from-black/85 md:via-black/10 md:to-transparent
+                  pointer-events-none"></div>
+ 
+      <!-- Coins signature "balises" (desktop uniquement, cadre rectangulaire) -->
+      <div class="hidden md:block bracket-corner corner-tl pointer-events-none"></div>
+      <div class="hidden md:block bracket-corner corner-tr pointer-events-none"></div>
+      <div class="hidden md:block bracket-corner corner-bl pointer-events-none"></div>
+      <div class="hidden md:block bracket-corner corner-br pointer-events-none"></div>
+ 
+      <!-- Badge flottant -->
+      <div class="hidden md:flex absolute top-5 right-5 items-center gap-1.5 bg-black/60 backdrop-blur border border-white/10 rounded-full px-3 py-1.5">
+        <ion-icon name="code-slash-outline" class="text-[#7C6FFF] text-sm"></ion-icon>
+        <span class="font-mono text-[10px] tracking-wider text-neutral-200">FULL-STACK</span>
+      </div>
+ 
+      <!-- Bloc texte -->
+      <div class="absolute z-10
+                  md:left-6 md:bottom-6 md:right-6 md:translate-y-0
+                  bottom-6 left-1/2 -translate-x-1/2 md:left-6 md:translate-x-0
+                  flex flex-col items-center md:items-start gap-1">
+        <p class="font-bold text-white tracking-[0.15em] uppercase
+                  text-xs md:text-xl whitespace-nowrap drop-shadow-lg leading-tight">
+          Armel <span class="text-[#5037F7]">Demanou</span>
+        </p>
+        <span class="hidden md:block font-mono text-[11px] tracking-[0.2em] uppercase text-neutral-300/80 font-medium">
+          Développeur Full-Stack
+        </span>
+      </div>
+ 
+      <!-- Halo au survol -->
+      <div class="absolute inset-0 rounded-full md:rounded-xl
+                  bg-gradient-to-tr from-[#5037F7]/15 via-transparent to-transparent
+                  opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                  pointer-events-none"></div>
     </div>
   </div>
-
-  <div class="relative mt-10 md:mt-0
-            /* Mobile: Cercle */
-            w-[280px] h-[280px] rounded-full
-            /* Desktop (md): Cadre Rectangulaire Professionnel */
-            md:w-[400px] md:h-[480px] md:rounded-2xl
-            p-2 bg-neutral-900 overflow-hidden group
-            transition-all duration-500 ease-out
-            hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#5037F7]/25
-            ring-1 ring-neutral-800 hover:ring-[#5037F7]/40">
-
-  <!-- Image -->
-  <img src="./src/assets/images/AMEL.jpg" alt="Armel Demanou"
-       class="w-full h-full object-cover
-              rounded-full md:rounded-xl
-              grayscale-[15%] group-hover:grayscale-0
-              opacity-95 group-hover:opacity-100
-              scale-100 group-hover:scale-[1.03]
-              transition-all duration-700 ease-out" />
-
-  <!-- Overlay dégradé pour lisibilité du texte (desktop) -->
-  <div class="absolute inset-0 rounded-full md:rounded-xl
-              bg-gradient-to-t from-black/70 via-black/0 to-black/0
-              md:from-black/80 md:via-black/10 md:to-transparent
-              pointer-events-none"></div>
-
-  <!-- Bloc texte -->
-  <div class="absolute z-10
-              /* Desktop: en bas, horizontal, plus élégant qu'à la verticale */
-              md:left-6 md:bottom-6 md:right-6 md:translate-y-0
-              /* Mobile: bas du cercle, centré */
-              bottom-6 left-1/2 -translate-x-1/2 md:left-6 md:translate-x-0
-              flex flex-col items-center md:items-start gap-1">
-    <p class="font-bold text-white tracking-[0.15em] uppercase
-              text-xs md:text-xl whitespace-nowrap drop-shadow-lg leading-tight">
-      Armel <span class="text-[#5037F7]">Demanou</span>
-    </p>
-    <span class="hidden md:block text-[11px] tracking-[0.25em] uppercase text-neutral-300/80 font-medium">
-      Développeur Full-Stack
-    </span>
+ 
+  <!-- Indicateur de scroll -->
+  <div class="fade-up delay-6 hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-neutral-500">
+    <span class="font-mono text-[10px] tracking-widest uppercase">Scroll</span>
+    <ion-icon name="chevron-down-outline" class="animate-bounce"></ion-icon>
   </div>
-
-  <!-- Halo au survol -->
-  <div class="absolute inset-0 rounded-full md:rounded-xl
-              bg-gradient-to-tr from-[#5037F7]/15 via-transparent to-transparent
-              opacity-0 group-hover:opacity-100 transition-opacity duration-500
-              pointer-events-none"></div>
-
-  <!-- Bordure lumineuse subtile au survol -->
-  <div class="absolute inset-0 rounded-full md:rounded-xl
-              ring-1 ring-inset ring-white/0 group-hover:ring-white/10
-              transition-all duration-500 pointer-events-none"></div>
-</div>
 </section>
 
       <!-- barre de progres  -->
@@ -312,80 +536,118 @@
     </button>
   </form>
 </div>
-     <section class="bg-black text-white py-16 px-4" id="Services">
-  <div class="text-center mb-10">
-    <p class="translate text-[#5037F7] mb-3 tracking-widest text-sm font-bold"
-       data-fr="CE QUE JE FAIS"
-       data-en="WHAT I DO">
-      CE QUE JE FAIS
-    </p>
-    <h2 class="translate lg:text-[45px] mb-4 md:text-[35px] sm:text-2xl text-2xl font-bold"
-        data-fr="Mes Services Pour Vous"
-        data-en="What I Provide For You">
-      Mes Services Pour Vous
-    </h2>
-  </div>
-
-  <div class="grid gap-6 sm:grid-cols-2">
-    <div class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
-      <div class="flex items-center mb-4">
-        <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
-          <ion-icon name="code-slash-outline" class="text-2xl font-bold"></ion-icon>
-        </div>
-        <h3 class="translate ml-4 text-lg font-bold" data-fr="Design UI/UX" data-en="UI/UX Design">Design UI/UX</h3>
-      </div>
-      <p class="translate text-gray-400"
-         data-fr="Conception d'interfaces intuitives et esthétiques centrées sur l'utilisateur pour garantir une expérience numérique fluide et engageante."
-         data-en="Creating intuitive and aesthetic user-centered interfaces to ensure a smooth and engaging digital experience.">
-        Conception d'interfaces intuitives et esthétiques centrées sur l'utilisateur pour garantir une expérience numérique fluide et engageante.
+  <section class="relative bg-black text-white py-20 md:py-24 px-4 overflow-hidden" id="Services">
+ 
+  <!-- Fond décoratif, cohérent avec le Hero -->
+  <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+  <div class="glow-blob absolute top-0 left-1/2 -translate-x-1/2 w-[520px] h-[300px] rounded-full pointer-events-none"></div>
+ 
+  <div class="relative max-w-[1100px] mx-auto">
+ 
+    <!-- ================= EN-TÊTE ================= -->
+    <div class="text-center mb-14">
+      <p class="translate fade-up font-mono text-[#5037F7] mb-3 tracking-widest text-sm font-semibold"
+         data-fr="// CE QUE JE FAIS" data-en="// WHAT I DO">
+        // CE QUE JE FAIS
       </p>
+      <h2 class="translate fade-up font-display lg:text-[45px] mb-5 md:text-[35px] sm:text-2xl text-2xl font-bold tracking-tight"
+          data-fr="Mes Services Pour Vous" data-en="What I Provide For You">
+        Mes Services Pour Vous
+      </h2>
+      <div class="fade-up mx-auto h-[3px] w-16 rounded-full bg-gradient-to-r from-transparent via-[#5037F7] to-transparent"></div>
     </div>
-
-    <div class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
-      <div class="flex items-center mb-4">
-        <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
-          <ion-icon name="globe-outline" class="text-2xl"></ion-icon>
+ 
+    <!-- ================= GRILLE DE SERVICES ================= -->
+    <div class="grid gap-6 sm:grid-cols-2">
+ 
+      <!-- Carte 1 -->
+      <div class="service-card card-reveal opacity-0 translate-y-10 relative bg-neutral-900 border border-neutral-800 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2 hover:border-[#5037F7]/50 overflow-hidden">
+        <span class="ghost-index font-mono">01</span>
+        <div class="bracket-corner corner-tl"></div>
+        <div class="bracket-corner corner-br"></div>
+ 
+        <div class="relative flex items-center mb-4">
+          <div class="h-12 w-12 shrink-0 rounded-lg bg-[#5037F7] flex items-center justify-center">
+            <ion-icon name="color-palette-outline" class="text-2xl text-white"></ion-icon>
+          </div>
+          <h3 class="translate ml-4 text-lg font-bold" data-fr="Design UI/UX" data-en="UI/UX Design">Design UI/UX</h3>
         </div>
-        <h3 class="translate ml-4 text-lg font-bold" data-fr="Développement Web" data-en="Web Development">Développement Web</h3>
+        <p class="translate relative text-gray-400 leading-relaxed"
+           data-fr="Conception d'interfaces intuitives et esthétiques centrées sur l'utilisateur pour garantir une expérience numérique fluide et engageante."
+           data-en="Creating intuitive and aesthetic user-centered interfaces to ensure a smooth and engaging digital experience.">
+          Conception d'interfaces intuitives et esthétiques centrées sur l'utilisateur pour garantir une expérience numérique fluide et engageante.
+        </p>
+        <span class="relative mt-4 inline-block font-mono text-[10px] tracking-widest uppercase text-neutral-600">design.ui</span>
       </div>
-      <p class="translate text-gray-400"
-         data-fr="Développement de sites web performants, réactifs et sécurisés utilisant les dernières technologies pour répondre à vos besoins spécifiques."
-         data-en="Developing high-performance, responsive, and secure websites using the latest technologies to meet your specific needs.">
-        Développement de sites web performants, réactifs et sécurisés utilisant les dernières technologies pour répondre à vos besoins spécifiques.
-      </p>
-    </div>
-
-    <div class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
-      <div class="flex items-center mb-4">
-        <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
-          <ion-icon name="briefcase-outline" class="text-2xl"></ion-icon>
+ 
+      <!-- Carte 2 -->
+      <div class="service-card card-reveal opacity-0 translate-y-10 relative bg-neutral-900 border border-neutral-800 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2 hover:border-[#5037F7]/50 overflow-hidden">
+        <span class="ghost-index font-mono">02</span>
+        <div class="bracket-corner corner-tl"></div>
+        <div class="bracket-corner corner-br"></div>
+ 
+        <div class="relative flex items-center mb-4">
+          <div class="h-12 w-12 shrink-0 rounded-lg bg-[#5037F7] flex items-center justify-center">
+            <ion-icon name="globe-outline" class="text-2xl text-white"></ion-icon>
+          </div>
+          <h3 class="translate ml-4 text-lg font-bold" data-fr="Développement Web" data-en="Web Development">Développement Web</h3>
         </div>
-        <h3 class="translate ml-4 text-lg font-bold" data-fr="Solutions Business" data-en="Business Solutions">Solutions Business</h3>
+        <p class="translate relative text-gray-400 leading-relaxed"
+           data-fr="Développement de sites web performants, réactifs et sécurisés utilisant les dernières technologies pour répondre à vos besoins spécifiques."
+           data-en="Developing high-performance, responsive, and secure websites using the latest technologies to meet your specific needs.">
+          Développement de sites web performants, réactifs et sécurisés utilisant les dernières technologies pour répondre à vos besoins spécifiques.
+        </p>
+        <span class="relative mt-4 inline-block font-mono text-[10px] tracking-widest uppercase text-neutral-600">dev.web</span>
       </div>
-      <p class="translate text-gray-400"
-         data-fr="Analyse et automatisation de vos processus métier pour accroître votre productivité et optimiser vos résultats opérationnels."
-         data-en="Analysis and automation of your business processes to increase productivity and optimize your operational results.">
-        Analyse et automatisation de vos processus métier pour accroître votre productivité et optimiser vos résultats opérationnels.
-      </p>
-    </div>
-
-    <div class="card-reveal opacity-0 translate-y-10 bg-neutral-900 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2">
-      <div class="flex items-center mb-4">
-        <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
-          <ion-icon name="people-outline" class="text-2xl"></ion-icon>
+ 
+      <!-- Carte 3 -->
+      <div class="service-card card-reveal opacity-0 translate-y-10 relative bg-neutral-900 border border-neutral-800 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2 hover:border-[#5037F7]/50 overflow-hidden">
+        <span class="ghost-index font-mono">03</span>
+        <div class="bracket-corner corner-tl"></div>
+        <div class="bracket-corner corner-br"></div>
+ 
+        <div class="relative flex items-center mb-4">
+          <div class="h-12 w-12 shrink-0 rounded-lg bg-[#5037F7] flex items-center justify-center">
+            <ion-icon name="briefcase-outline" class="text-2xl text-white"></ion-icon>
+          </div>
+          <h3 class="translate ml-4 text-lg font-bold" data-fr="Solutions Business" data-en="Business Solutions">Solutions Business</h3>
         </div>
-        <h3 class="translate ml-4 text-lg font-bold" data-fr="Conseil & Stratégie" data-en="Consulting & Strategy">Conseil & Stratégie</h3>
+        <p class="translate relative text-gray-400 leading-relaxed"
+           data-fr="Analyse et automatisation de vos processus métier pour accroître votre productivité et optimiser vos résultats opérationnels."
+           data-en="Analysis and automation of your business processes to increase productivity and optimize your operational results.">
+          Analyse et automatisation de vos processus métier pour accroître votre productivité et optimiser vos résultats opérationnels.
+        </p>
+        <span class="relative mt-4 inline-block font-mono text-[10px] tracking-widest uppercase text-neutral-600">biz.auto</span>
       </div>
-      <p class="translate text-gray-400"
-         data-fr="Accompagnement stratégique pour vos projets digitaux, de la phase d'idéation jusqu'au déploiement final sur le marché."
-         data-en="Strategic support for your digital projects, from the ideation phase to the final market deployment.">
-        Accompagnement stratégique pour vos projets digitaux, de la phase d'idéation jusqu'au déploiement final sur le marché.
-      </p>
+ 
+      <!-- Carte 4 -->
+      <div class="service-card card-reveal opacity-0 translate-y-10 relative bg-neutral-900 border border-neutral-800 p-6 rounded-xl transition-all duration-700 ease-out hover:shadow-lg hover:shadow-[#5037F7]/40 hover:-translate-y-2 hover:border-[#5037F7]/50 overflow-hidden">
+        <span class="ghost-index font-mono">04</span>
+        <div class="bracket-corner corner-tl"></div>
+        <div class="bracket-corner corner-br"></div>
+ 
+        <div class="relative flex items-center mb-4">
+          <div class="h-12 w-12 shrink-0 rounded-lg bg-[#5037F7] flex items-center justify-center">
+            <ion-icon name="people-outline" class="text-2xl text-white"></ion-icon>
+          </div>
+          <h3 class="translate ml-4 text-lg font-bold" data-fr="Conseil & Stratégie" data-en="Consulting & Strategy">Conseil & Stratégie</h3>
+        </div>
+        <p class="translate relative text-gray-400 leading-relaxed"
+           data-fr="Accompagnement stratégique pour vos projets digitaux, de la phase d'idéation jusqu'au déploiement final sur le marché."
+           data-en="Strategic support for your digital projects, from the ideation phase to the final market deployment.">
+          Accompagnement stratégique pour vos projets digitaux, de la phase d'idéation jusqu'au déploiement final sur le marché.
+        </p>
+        <span class="relative mt-4 inline-block font-mono text-[10px] tracking-widest uppercase text-neutral-600">strategy.consult</span>
+      </div>
+ 
     </div>
   </div>
 </section>
 
-      <section class="bg-black text-white py-16 px-[50px]" id="About">
+      <section class="section-shell relative bg-black text-white py-20 md:py-24 px-4 md:px-[50px] lg:px-[80px] overflow-hidden" id="About">
+  <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+  <div class="section-glow top-0 left-1/2 -translate-x-1/2 w-[500px] h-[280px]"></div>
+  <div class="relative max-w-[1200px] mx-auto">
   <div class="grid lg:grid-cols-2 gap-10 items-center mb-[60px]">
     <div class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out">
       <div class="lg:h-[350px] lg:w-[350px] md:w-[300px] md:h-[300px] sm:w-[200px] sm:h-[200px] h-[200px] w-[200px] rounded-full bg-blue-700 relative"></div>
@@ -417,24 +679,24 @@
     </div>
 
     <div class="space-y-6">
-      <h3 class="translate text-sm font-bold tracking-widest text-[#5037F7] scroll-fade opacity-0 translate-y-10"
+      <h3 class="translate section-eyebrow scroll-fade opacity-0 translate-y-10"
           data-fr="À PROPOS DE MOI" 
           data-en="ABOUT ME">
         À PROPOS DE MOI
       </h3>
-      <h2 class="translate lg:text-[45px] md:text-[35px] sm:text-3xl text-3xl font-bold scroll-fade opacity-0 translate-y-10"
+      <h2 class="translate section-title scroll-fade opacity-0 translate-y-10"
           data-fr="Boostez vos solutions stratégiques avec nous" 
           data-en="Boost Business Strategic Solutions with Us">
         Boostez vos solutions stratégiques avec nous
       </h2>
-      <p class="translate text-gray-400 scroll-fade opacity-0 translate-y-10"
+      <p class="translate section-subtitle scroll-fade opacity-0 translate-y-10"
          data-fr="En tant que consultant, j'apporte des conseils d'expert pour aider les entreprises à améliorer leurs performances, leur efficacité et leur organisation digitale."
          data-en="As a consultant, I provide expert advice and guide businesses to help them improve their performance, efficiency, and digital organization.">
         En tant que consultant, j'apporte des conseils d'expert pour aider les entreprises à améliorer leurs performances, leur efficacité et leur organisation digitale.
       </p>
 
       <div class="grid sm:grid-cols-2 gap-6">
-        <div class="bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40">
+        <div class="section-card bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40">
           <div class="flex items-center mb-4">
             <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
               <ion-icon name="pricetags-outline" class="text-2xl"></ion-icon>
@@ -451,7 +713,7 @@
             Chaque projet démontre mon approche et mon dévouement aux détails.
           </p>
         </div>
-        <div class="bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40">
+        <div class="section-card bg-neutral-900 p-6 rounded-xl scroll-fade opacity-0 translate-y-10 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40">
           <div class="flex items-center mb-4">
             <div class="h-12 w-12 rounded-full bg-[#5037F7] flex items-center justify-center">
               <ion-icon name="notifications-outline" class="text-2xl"></ion-icon>
@@ -524,22 +786,24 @@
   </div>
 </section>
 
-      <section class="lg:px-[50px] md:px-[30px] px-[20px]" id="skills">
-  <div class="py-[60px] lg:px-[50px] md:px-[30px] px-[20px] rounded-xl bg-neutral-900 transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40">
+      <section class="section-shell relative bg-black text-white py-20 md:py-24 px-4 md:px-[30px] lg:px-[50px] overflow-hidden" id="skills">
+  <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+  <div class="section-glow top-0 right-0 w-[420px] h-[260px]"></div>
+  <div class="relative max-w-[1200px] mx-auto py-[60px] lg:px-[50px] md:px-[30px] px-[20px] rounded-[28px] border border-neutral-800 bg-neutral-900/70 backdrop-blur-xl transition-all duration-500 hover:shadow-lg hover:shadow-[#5037F7]/40">
     
-    <h3 class="translate font-bold text-[#5037F7] mb-[20px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
+    <h3 class="translate section-eyebrow mb-[20px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
         data-fr="MES COMPÉTENCES" 
         data-en="MY SKILLS">
       MES COMPÉTENCES
     </h3>
 
-    <h1 class="translate lg:text-[45px] md:text-[35px] text-[28px] font-bold text-white mb-[25px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
+    <h1 class="translate section-title mb-[25px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
         data-fr="Mes domaines d'expertise et <br class='hidden lg:block' /> compétences acquises" 
         data-en="My Expert Areas Where I <br class='hidden lg:block' /> Gained Skills">
       Mes domaines d'expertise et <br class="hidden lg:block" /> compétences acquises
     </h1>
 
-    <p class="translate text-gray-400 max-w-[700px] mb-[40px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
+    <p class="translate section-subtitle max-w-[700px] mb-[40px] scroll-fade opacity-0 translate-y-10 transition-all duration-700"
        data-fr="Je me spécialise dans les outils modernes de conception et de développement web. Ces technologies me permettent de créer des expériences numériques réactives, performantes et esthétiques." 
        data-en="I specialize in modern web design and development tools. These technologies help me create responsive, high-performance, and visually appealing digital experiences.">
       Je me spécialise dans les outils modernes de conception et de développement web. Ces technologies me permettent de créer des expériences numériques réactives, performantes et esthétiques.
@@ -547,7 +811,7 @@
 
     <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-[25px] text-white">
       
-      <div class="p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
+      <div class="section-card p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
         <div class="h-[50px] w-[50px] rounded-full border border-gray-600 flex justify-center items-center mb-[20px] group-hover:border-[#5037F7]">
           <ion-icon name="logo-foursquare" class="text-2xl"></ion-icon>
         </div>
@@ -559,7 +823,7 @@
         </p>
       </div>
 
-      <div class="p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
+      <div class="section-card p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
         <div class="h-[50px] w-[50px] rounded-full border border-gray-600 flex justify-center items-center mb-[20px] group-hover:border-[#5037F7]">
           <ion-icon name="logo-web-component" class="text-2xl"></ion-icon>
         </div>
@@ -571,7 +835,7 @@
         </p>
       </div>
 
-      <div class="p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
+      <div class="section-card p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
         <div class="h-[50px] w-[50px] rounded-full border border-gray-600 group-hover:border-[#5037F7] flex justify-center items-center mb-[20px]">
           <ion-icon name="logo-figma" class="text-2xl"></ion-icon>
         </div>
@@ -583,7 +847,7 @@
         </p>
       </div>
 
-      <div class="p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
+      <div class="section-card p-[25px] scroll-fade opacity-0 translate-y-10 ease-out rounded-xl border border-gray-700 hover:border-[#5037F7] transition-all duration-500 hover:scale-[1.03] group">
         <div class="h-[50px] w-[50px] rounded-full border border-gray-600 flex justify-center items-center mb-[20px] group-hover:border-[#5037F7]">
           <ion-icon name="logo-wordpress" class="text-2xl"></ion-icon>
         </div>
@@ -599,21 +863,24 @@
   </div>
 </section>
 
-      <section id="projects" class="bg-black text-white py-[120px] px-[20px] md:px-[40px] lg:px-[80px]">
+      <section id="projects" class="section-shell relative bg-black text-white py-[120px] px-[20px] md:px-[40px] lg:px-[80px] overflow-hidden">
+  <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+  <div class="section-glow top-0 left-1/2 -translate-x-1/2 w-[480px] h-[260px]"></div>
+  <div class="relative max-w-[1200px] mx-auto">
   <div class="text-center mb-[80px]">
-    <p class="translate text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3"
+    <p class="translate section-eyebrow scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out mb-3"
        data-fr="MES PROJETS"
        data-en="MY PROJECTS">
       MES PROJETS
     </p>
 
-    <h2 class="translate lg:text-[48px] md:text-[38px] text-[30px] scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold mb-4"
+    <h2 class="translate section-title scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out mb-4"
         data-fr="Projets en vedette"
         data-en="Featured Projects">
       Projets en vedette
     </h2>
 
-    <p class="translate text-gray-400 scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out max-w-xl mx-auto"
+    <p class="translate section-subtitle scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out max-w-xl mx-auto"
        data-fr="Une sélection de projets mettant en valeur mon expertise dans le développement web et mobile moderne en utilisant les dernières technologies."
        data-en="A selection of projects highlighting my expertise in modern web and mobile development using the latest technologies.">
       Une sélection de projets mettant en valeur mon expertise dans le développement web et mobile moderne en utilisant les dernières technologies.
@@ -622,7 +889,7 @@
 
   <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
     
-    <div class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
+    <div class="section-card group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
       <img src="./src/assets/images/escape.png" alt="SafeWatch360 Dashboard Interface" class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -642,7 +909,7 @@
       </div>
     </div>
 
-     <div class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
+     <div class="section-card group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
       <img src="./src/assets/images/sco.png" alt="Scoolix ERP" class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -662,7 +929,7 @@
       </div>
     </div>
 
-    <div class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-500 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
+    <div class="section-card group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-500 ease-out relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] hover:shadow-[0_0_30px_rgba(80,55,247,0.15)]">
       <img src="./src/assets/images/cisco.png" alt="Flutter Mobile App Project" class="w-full h-[250px] object-cover group-hover:scale-110 transition-transform duration-700" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end items-center text-center p-6">
         <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
@@ -691,7 +958,7 @@
  <div class="mt-16 text-center">
   <a 
     href="./allProject.html" 
-    class="translate inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-[#5037F7] text-white font-semibold rounded-xl hover:bg-[#5037F7] hover:shadow-[0_0_20px_rgba(80,55,247,0.3)] transition-all duration-300 group"
+    class="translate section-cta inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-[#5037F7] text-white font-semibold rounded-xl hover:bg-[#5037F7] hover:shadow-[0_0_20px_rgba(80,55,247,0.3)] transition-all duration-300 group"
     data-fr="Voir tous les projets"
     data-en="View all projects"
   >
@@ -712,17 +979,21 @@
     </svg>
   </a>
 </div>
+</div>
 </section>
-    <section class="bg-black py-[120px] text-gray-200" id="blog">
+    <section class="section-shell relative bg-black py-[120px] text-gray-200 overflow-hidden" id="blog">
+  <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+  <div class="section-glow bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[260px]"></div>
+  <div class="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
   <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
     
     <div class="text-center mb-[80px]">
-      <p class="translate text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3"
+      <p class="translate section-eyebrow scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out mb-3"
          data-fr="Mon actualité"
          data-en="My Latest News">
         Mon actualité
       </p>
-      <h2 class="translate text-4xl scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold text-white mb-4"
+      <h2 class="translate section-title scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out mb-4"
           data-fr="Blog & Astuces"
           data-en="Blog & Tips">
         Blog & Astuces
@@ -733,7 +1004,7 @@
 
       <div class="lg:col-span-2 space-y-8">
 
-        <article class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] rounded-2xl overflow-hidden hover:shadow-[0_0_30px_rgba(80,55,247,0.1)]">
+        <article class="section-card group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] rounded-2xl overflow-hidden hover:shadow-[0_0_30px_rgba(80,55,247,0.1)]">
           <div class="overflow-hidden">
             <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="Coding" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
@@ -764,7 +1035,7 @@
           </div>
         </article>
 
-        <article class="group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] rounded-2xl overflow-hidden hover:shadow-[0_0_30px_rgba(80,55,247,0.1)]">
+        <article class="section-card group scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out border border-neutral-800 bg-neutral-900 hover:border-[#5037F7] rounded-2xl overflow-hidden hover:shadow-[0_0_30px_rgba(80,55,247,0.1)]">
           <div class="overflow-hidden">
             <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" alt="Design" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
@@ -798,7 +1069,7 @@
       </div>
 
       <aside class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out">
-        <div class="sticky top-8 space-y-8 p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
+        <div class="section-card sticky top-8 space-y-8 p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
           
           <div>
             <h3 class="translate text-lg font-bold mb-4 text-white border-b border-neutral-800 pb-2" data-fr="Recherche" data-en="Search">Recherche</h3>
@@ -851,22 +1122,26 @@
 
     </div>
   </div>
+</div>
 </section>
-<section class="bg-black py-[120px] text-gray-200" id="contact">
+<section class="section-shell relative bg-black py-[120px] text-gray-200 overflow-hidden" id="contact">
+  <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+  <div class="section-glow top-0 left-1/2 -translate-x-1/2 w-[480px] h-[260px]"></div>
+  <div class="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
   <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
     <div class="text-center mb-[80px]">
-      <p class="translate text-[#5037F7] scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out font-semibold uppercase tracking-widest mb-3"
+      <p class="translate section-eyebrow scroll-fade opacity-0 translate-y-10 transition-all duration-700 ease-out mb-3"
          data-fr="Restons en Contact"
          data-en="Let's Connect">
         Restons en Contact
       </p>
-      <h2 class="translate text-4xl scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out font-bold text-white mb-4"
+      <h2 class="translate section-title scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-100 ease-out mb-4"
           data-fr="Contactez-moi"
           data-en="Get in Touch">
         Contactez-moi
       </h2>
-      <p class="translate text-gray-400 max-w-2xl mx-auto scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out"
+      <p class="translate section-subtitle max-w-2xl mx-auto scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-200 ease-out"
          data-fr="Que vous ayez un projet en tête, une question ou simplement envie de discuter, n'hésitez pas à me contacter. Je suis toujours ouvert aux nouvelles opportunités."
          data-en="Whether you have a project in mind, a question, or just want to chat, feel free to reach out. I'm always open to new opportunities.">
         Que vous ayez un projet en tête, une question ou simplement envie de discuter, n'hésitez pas à me contacter. Je suis toujours ouvert aux nouvelles opportunités.
@@ -874,7 +1149,7 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-      <div class="space-y-8 scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
+      <div class="section-card space-y-8 scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-300 ease-out p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
         <h3 class="translate text-2xl font-bold text-white mb-6"
             data-fr="Informations de contact"
             data-en="Contact Information">
@@ -933,7 +1208,7 @@
         </div>
       </div>
 
-      <div class="scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
+      <div class="section-card scroll-fade opacity-0 translate-y-10 transition-all duration-700 delay-400 ease-out p-6 md:p-8 rounded-2xl border border-neutral-800 bg-neutral-900">
         <h3 class="translate text-2xl font-bold text-white mb-6"
             data-fr="Envoyez-moi un message"
             data-en="Send Me a Message">
@@ -1121,6 +1396,45 @@ inputs.forEach(input => {
         input.setAttribute('placeholder', input.getAttribute(`data-${lang}-placeholder`));
     }
 });
+
+const roles = {
+    fr: ["Développeur Full-Stack", "Créateur d'expériences web", "Développeur JavaScript"],
+    en: ["Full-Stack Developer", "Web Experience Builder", "JavaScript Developer"]
+  };
+ 
+  function currentLang() {
+    return (document.documentElement.lang || 'fr').startsWith('en') ? 'en' : 'fr';
+  }
+ 
+  const typedEl = document.getElementById('typed');
+  let roleIndex = 0, charIndex = 0, deleting = false;
+ 
+  function tick() {
+    const list = roles[currentLang()];
+    const word = list[roleIndex % list.length];
+ 
+    if (!deleting) {
+      charIndex++;
+      typedEl.textContent = word.slice(0, charIndex);
+      if (charIndex === word.length) {
+        deleting = true;
+        setTimeout(tick, 1400);
+        return;
+      }
+    } else {
+      charIndex--;
+      typedEl.textContent = word.slice(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex++;
+      }
+    }
+    setTimeout(tick, deleting ? 40 : 80);
+  }
+  tick();
+ 
+  // Si ton site a déjà un switcher de langue qui change document.documentElement.lang
+  // ou déclenche un évènement, ce script suivra automatiquement au prochain mot tapé.
   </script>
 
     <script src="https://unpkg.com/typed.js@2.0.12"></script>
